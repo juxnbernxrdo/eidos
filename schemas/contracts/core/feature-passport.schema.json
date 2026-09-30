@@ -1,0 +1,174 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://eidos.dev/schemas/contracts/core/feature-passport.schema.json",
+  "title": "FeaturePassportContract",
+  "description": "Minimal formal contract schema for the Eidos Feature Passport, guaranteeing 12-dimensional traceability across development phases.",
+  "type": "object",
+  "properties": {
+    "contract_id": { "type": "string", "const": "CORE-CONTRACT-010" },
+    "contract_version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+    "passport_id": { "type": "string", "pattern": "^PASS-[A-Za-z0-9_-]+$" },
+    "feature_id": { "type": "string", "minLength": 1 },
+    "status": {
+      "type": "string",
+      "enum": ["DRAFT", "VERIFIED", "CONVERGED"]
+    },
+    "dimensions": {
+      "type": "object",
+      "properties": {
+        "requirement": {
+          "type": "object",
+          "properties": {
+            "req_id": { "type": "string" },
+            "statement": { "type": "string" },
+            "provenance": { "type": "string", "enum": ["USER_CONFIRMED"] }
+          },
+          "required": ["req_id", "statement", "provenance"],
+          "additionalProperties": false
+        },
+        "spec": {
+          "type": "object",
+          "properties": {
+            "spec_id": { "type": "string" },
+            "status": { "type": "string" }
+          },
+          "required": ["spec_id", "status"],
+          "additionalProperties": false
+        },
+        "architecture": {
+          "type": "object",
+          "properties": {
+            "touched_nodes": {
+              "type": "array",
+              "items": { "type": "string" }
+            }
+          },
+          "required": ["touched_nodes"],
+          "additionalProperties": false
+        },
+        "dependencies": {
+          "type": "object",
+          "properties": {
+            "records": {
+              "type": "array",
+              "items": { "type": "string" }
+            }
+          },
+          "required": ["records"],
+          "additionalProperties": false
+        },
+        "contracts": {
+          "type": "object",
+          "properties": {
+            "contract_ids": {
+              "type": "array",
+              "items": { "type": "string" }
+            }
+          },
+          "required": ["contract_ids"],
+          "additionalProperties": false
+        },
+        "implementation": {
+          "type": "object",
+          "properties": {
+            "commit_sha": { "type": "string" },
+            "diff_hash": { "type": "string" }
+          },
+          "required": ["commit_sha", "diff_hash"],
+          "additionalProperties": false
+        },
+        "tests": {
+          "type": "object",
+          "properties": {
+            "test_node_ids": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "passed_count": { "type": "integer", "minimum": 0 }
+          },
+          "required": ["test_node_ids", "passed_count"],
+          "additionalProperties": false
+        },
+        "security": {
+          "type": "object",
+          "properties": {
+            "sandbox_policy_id": { "type": "string" },
+            "gateway_verdict": { "type": "string", "enum": ["PASS", "FAIL"] }
+          },
+          "required": ["sandbox_policy_id", "gateway_verdict"],
+          "additionalProperties": false
+        },
+        "documentation": {
+          "type": "object",
+          "properties": {
+            "doc_node_ids": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "doc_drift_status": { "type": "string", "enum": ["PASS", "FAIL"] }
+          },
+          "required": ["doc_node_ids", "doc_drift_status"],
+          "additionalProperties": false
+        },
+        "evidence": {
+          "type": "object",
+          "properties": {
+            "evidence_ids": {
+              "type": "array",
+              "items": { "type": "string" }
+            }
+          },
+          "required": ["evidence_ids"],
+          "additionalProperties": false
+        },
+        "git": {
+          "type": "object",
+          "properties": {
+            "base_commit": { "type": "string" },
+            "head_commit": { "type": "string" },
+            "branch": { "type": "string" }
+          },
+          "required": ["base_commit", "head_commit", "branch"],
+          "additionalProperties": false
+        },
+        "verification": {
+          "type": "object",
+          "properties": {
+            "verification_id": { "type": "string" },
+            "converged": { "type": "boolean" }
+          },
+          "required": ["verification_id", "converged"],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "requirement",
+        "spec",
+        "architecture",
+        "dependencies",
+        "contracts",
+        "implementation",
+        "tests",
+        "security",
+        "documentation",
+        "evidence",
+        "git",
+        "verification"
+      ],
+      "additionalProperties": false
+    },
+    "stamped_at": { "type": "string", "format": "date-time" },
+    "stamped_by": { "type": "string" }
+  },
+  "required": [
+    "contract_id",
+    "contract_version",
+    "passport_id",
+    "feature_id",
+    "status",
+    "dimensions",
+    "stamped_at",
+    "stamped_by"
+  ],
+  "additionalProperties": false
+}

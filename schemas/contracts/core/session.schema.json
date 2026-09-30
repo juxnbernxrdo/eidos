@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://eidos.dev/schemas/contracts/core/session.schema.json",
+  "title": "SessionContract",
+  "description": "Formal contract schema for tracking developer or autonomous sessions, token consumption, and cost bounds.",
+  "type": "object",
+  "properties": {
+    "contract_id": { "type": "string", "const": "CORE-CONTRACT-004" },
+    "contract_version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+    "session_id": { "type": "string", "pattern": "^[A-Za-z0-9_-]+$" },
+    "project_id": { "type": "string" },
+    "harness": {
+      "type": "string",
+      "enum": ["antigravity", "claude_code", "opencode", "codex", "hermes", "headless", "custom"]
+    },
+    "operator_id": { "type": "string" },
+    "started_at": { "type": "string", "format": "date-time" },
+    "ended_at": { "type": "string", "format": "date-time" },
+    "active_spec_id": { "type": "string" },
+    "total_tokens_consumed": { "type": "integer", "minimum": 0, "default": 0 },
+    "total_cost_usd": { "type": "number", "minimum": 0.0, "default": 0.0 },
+    "tasks_completed": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "required": [
+    "contract_id",
+    "contract_version",
+    "session_id",
+    "project_id",
+    "harness",
+    "started_at"
+  ],
+  "additionalProperties": false
+}

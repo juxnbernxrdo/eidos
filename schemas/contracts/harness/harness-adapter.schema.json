@@ -1,0 +1,189 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://eidos.dev/schemas/contracts/harness/harness-adapter.schema.json",
+  "title": "HarnessAdapterContract",
+  "description": "Formal contract schema for Eidos Harness Adapters, governing host isolation, dispatch, and trace collection.",
+  "type": "object",
+  "properties": {
+    "contract_id": {
+      "type": "string",
+      "const": "HARN-CONTRACT-001"
+    },
+    "contract_version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "harness_id": {
+      "type": "string",
+      "enum": ["antigravity", "claude_code", "opencode", "codex", "hermes", "headless", "custom"]
+    },
+    "lifecycle_state": {
+      "type": "string",
+      "enum": [
+        "UNDETECTED",
+        "DETECTED",
+        "AVAILABLE",
+        "CONFIGURED",
+        "READY",
+        "RUNNING",
+        "COMPLETED",
+        "FAILED",
+        "UNAVAILABLE"
+      ]
+    },
+    "capabilities": {
+      "type": "object",
+      "properties": {
+        "supports_subagents": { "type": "boolean" },
+        "supports_codeact": { "type": "boolean" },
+        "supports_mcp": { "type": "boolean" },
+        "supports_worktrees": { "type": "boolean" },
+        "supports_sandbox": { "type": "boolean" },
+        "trace_fidelity": {
+          "type": "string",
+          "enum": ["full_raw", "tool_calls_only", "summary_only", "unobservable"]
+        }
+      },
+      "required": ["supports_subagents", "supports_codeact", "supports_mcp", "trace_fidelity"],
+      "additionalProperties": false
+    },
+    "dispatch_request": {
+      "type": "object",
+      "properties": {
+        "execution_id": { "type": "string" },
+        "task": {
+          "type": "object",
+          "properties": {
+            "task_id": { "type": "string" },
+            "objective": { "type": "string" },
+            "target_files": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "allowed_tools": {
+              "type": "array",
+              "items": { "type": "string" }
+            }
+          },
+          "required": ["task_id", "objective", "target_files", "allowed_tools"],
+          "additionalProperties": false
+        },
+        "context_payload": {
+          "type": "object",
+          "properties": {
+            "msc_id": { "type": "string" },
+            "content": { "type": "string" },
+            "token_count": { "type": "integer", "minimum": 0 }
+          },
+          "required": ["msc_id", "content", "token_count"],
+          "additionalProperties": false
+        },
+        "permissions": {
+          "type": "object",
+          "properties": {
+            "filesystem_scope": {
+              "type": "string",
+              "enum": ["repo_read_only", "worktree_write", "repo_write", "isolated_sandbox"]
+            },
+            "network_scope": {
+              "type": "string",
+              "enum": ["disabled", "local_only", "explicit_whitelist", "unrestricted"]
+            },
+            "max_turns": { "type": "integer", "minimum": 1, "maximum": 100 },
+            "timeout_seconds": { "type": "integer", "minimum": 1, "maximum": 7200 }
+          },
+          "required": ["filesystem_scope", "network_scope", "max_turns", "timeout_seconds"],
+          "additionalProperties": false
+        },
+        "environment": {
+          "type": "object",
+          "additionalProperties": { "type": "string" }
+        }
+      },
+      "required": ["execution_id", "task", "context_payload", "permissions"],
+      "additionalProperties": false
+    },
+    "execution_response": {
+      "type": "object",
+      "properties": {
+        "execution_id": { "type": "string" },
+        "status": {
+          "type": "string",
+          "enum": ["COMPLETED", "FAILED", "TIMED_OUT", "CANCELLED"]
+        },
+        "result_summary": { "type": "string" },
+        "patch_diff": { "type": "string" },
+        "artifacts": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "path": { "type": "string" },
+              "sha256": { "type": "string" },
+              "action": { "type": "string", "enum": ["created", "modified", "deleted"] }
+            },
+            "required": ["path", "sha256", "action"],
+            "additionalProperties": false
+          }
+        },
+        "observation_trace": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "turn_index": { "type": "integer" },
+              "timestamp": { "type": "string", "format": "date-time" },
+              "action": { "type": "string" },
+              "input": { "type": "object" },
+              "output": { "type": "string" },
+              "exit_code": { "type": "integer" }
+            },
+            "required": ["turn_index", "timestamp", "action"],
+            "additionalProperties": true
+          }
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "errors": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "code": {
+                "type": "string",
+                "enum": [
+                  "INVALID_INPUT",
+                  "UNSUPPORTED_CAPABILITY",
+                  "PERMISSION_DENIED",
+                  "CONTRACT_VIOLATION",
+                  "RESOURCE_UNAVAILABLE",
+                  "VERIFICATION_FAILED",
+                  "PROVENANCE_INVALID",
+                  "VERSION_MISMATCH",
+                  "INVARIANT_VIOLATION",
+                  "EXECUTION_TIMEOUT"
+                ]
+              },
+              "message": { "type": "string" },
+              "details": { "type": "object" }
+            },
+            "required": ["code", "message"],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": ["execution_id", "status"],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "contract_id",
+    "contract_version",
+    "harness_id",
+    "lifecycle_state",
+    "capabilities"
+  ],
+  "additionalProperties": false
+}

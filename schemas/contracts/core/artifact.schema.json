@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://eidos.dev/schemas/contracts/core/artifact.schema.json",
+  "title": "ArtifactContract",
+  "description": "Formal contract schema for code, diff, or document artifacts produced during task execution.",
+  "type": "object",
+  "properties": {
+    "contract_id": { "type": "string", "const": "CORE-CONTRACT-007" },
+    "contract_version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+    "artifact_id": { "type": "string", "pattern": "^ART-[A-Za-z0-9_-]+$" },
+    "task_id": { "type": "string" },
+    "path": { "type": "string", "minLength": 1 },
+    "action": {
+      "type": "string",
+      "enum": ["created", "modified", "deleted"]
+    },
+    "mime_type": { "type": "string" },
+    "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "size_bytes": { "type": "integer", "minimum": 0 },
+    "provenance": {
+      "type": "string",
+      "enum": ["EXTRACTED", "INFERRED", "USER_CONFIRMED", "AGENT_PROPOSED"]
+    },
+    "created_at": { "type": "string", "format": "date-time" }
+  },
+  "required": [
+    "contract_id",
+    "contract_version",
+    "artifact_id",
+    "task_id",
+    "path",
+    "action",
+    "sha256",
+    "size_bytes",
+    "provenance",
+    "created_at"
+  ],
+  "additionalProperties": false
+}

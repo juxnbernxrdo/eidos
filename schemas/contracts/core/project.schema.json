@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://eidos.dev/schemas/contracts/core/project.schema.json",
+  "title": "ProjectContract",
+  "description": "Formal contract schema for an Eidos project, defining repository root identity, primary harness, language, and governance.",
+  "type": "object",
+  "properties": {
+    "contract_id": { "type": "string", "const": "CORE-CONTRACT-001" },
+    "contract_version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+    "project_id": { "type": "string", "pattern": "^[A-Za-z0-9_-]+$" },
+    "name": { "type": "string", "minLength": 1 },
+    "version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+    "documentation_language": {
+      "type": "string",
+      "enum": ["es", "en", "pt", "fr", "de", "zh"]
+    },
+    "lifecycle_state": {
+      "type": "string",
+      "enum": ["greenfield", "existing", "maintenance"]
+    },
+    "primary_harness": {
+      "type": "string",
+      "enum": ["antigravity", "claude_code", "opencode", "codex", "hermes", "headless", "custom"]
+    },
+    "secondary_harnesses": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "target_environments": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" }
+  },
+  "required": [
+    "contract_id",
+    "contract_version",
+    "project_id",
+    "name",
+    "version",
+    "documentation_language",
+    "lifecycle_state",
+    "primary_harness"
+  ],
+  "additionalProperties": false
+}

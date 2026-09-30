@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://eidos.dev/schemas/contracts/core/agent.schema.json",
+  "title": "AgentContract",
+  "description": "Formal contract schema for subagent declaration, capabilities, and isolation parameters.",
+  "type": "object",
+  "properties": {
+    "contract_id": { "type": "string", "const": "CORE-CONTRACT-003" },
+    "contract_version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+    "agent_id": { "type": "string", "pattern": "^[A-Za-z0-9_-]+$" },
+    "role": { "type": "string", "minLength": 1 },
+    "harness": {
+      "type": "string",
+      "enum": ["antigravity", "claude_code", "opencode", "codex", "hermes", "headless", "custom"]
+    },
+    "model_id": { "type": "string" },
+    "context_budget": { "type": "integer", "minimum": 1000, "maximum": 200000 },
+    "tools": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "skills": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "isolation_level": {
+      "type": "string",
+      "enum": ["in_process", "worktree", "container", "sandbox"]
+    }
+  },
+  "required": [
+    "contract_id",
+    "contract_version",
+    "agent_id",
+    "role",
+    "harness",
+    "model_id",
+    "context_budget",
+    "isolation_level"
+  ],
+  "additionalProperties": false
+}

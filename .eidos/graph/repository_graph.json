@@ -881,6 +881,67 @@
       "label": "networkx"
     },
     {
+      "id": "file:src/eidos/contracts/validator.py",
+      "type": "File",
+      "label": "src/eidos/contracts/validator.py",
+      "line_count": 171
+    },
+    {
+      "id": "class:src/eidos/contracts/validator.py#ContractValidationError",
+      "type": "Class",
+      "label": "ContractValidationError",
+      "file_path": "src/eidos/contracts/validator.py",
+      "line_range": [
+        13,
+        15
+      ]
+    },
+    {
+      "id": "class:src/eidos/contracts/validator.py#ContractSchemaValidator",
+      "type": "Class",
+      "label": "ContractSchemaValidator",
+      "file_path": "src/eidos/contracts/validator.py",
+      "line_range": [
+        18,
+        171
+      ]
+    },
+    {
+      "id": "fn:src/eidos/contracts/validator.py#validate_schema_structure",
+      "type": "Function",
+      "label": "validate_schema_structure",
+      "file_path": "src/eidos/contracts/validator.py",
+      "line_range": [
+        24,
+        56
+      ]
+    },
+    {
+      "id": "fn:src/eidos/contracts/validator.py#validate_payload",
+      "type": "Function",
+      "label": "validate_payload",
+      "file_path": "src/eidos/contracts/validator.py",
+      "line_range": [
+        59,
+        135
+      ]
+    },
+    {
+      "id": "fn:src/eidos/contracts/validator.py#_check_type",
+      "type": "Function",
+      "label": "_check_type",
+      "file_path": "src/eidos/contracts/validator.py",
+      "line_range": [
+        138,
+        171
+      ]
+    },
+    {
+      "id": "dep:re",
+      "type": "Dependency",
+      "label": "re"
+    },
+    {
       "id": "file:src/eidos/contracts/models.py",
       "type": "File",
       "label": "src/eidos/contracts/models.py",
@@ -1020,6 +1081,147 @@
       "id": "dep:pydantic.Field",
       "type": "Dependency",
       "label": "pydantic.Field"
+    },
+    {
+      "id": "file:tests/contracts/test_contract_schemas.py",
+      "type": "File",
+      "label": "tests/contracts/test_contract_schemas.py",
+      "line_count": 521
+    },
+    {
+      "id": "fn:tests/contracts/test_contract_schemas.py#get_all_schema_paths",
+      "type": "Function",
+      "label": "get_all_schema_paths",
+      "file_path": "tests/contracts/test_contract_schemas.py",
+      "line_range": [
+        17,
+        19
+      ]
+    },
+    {
+      "id": "fn:tests/contracts/test_contract_schemas.py#test_schema_inventory_count",
+      "type": "Function",
+      "label": "test_schema_inventory_count",
+      "file_path": "tests/contracts/test_contract_schemas.py",
+      "line_range": [
+        22,
+        25
+      ]
+    },
+    {
+      "id": "fn:tests/contracts/test_contract_schemas.py#test_all_schemas_syntax_and_structure",
+      "type": "Function",
+      "label": "test_all_schemas_syntax_and_structure",
+      "file_path": "tests/contracts/test_contract_schemas.py",
+      "line_range": [
+        28,
+        39
+      ]
+    },
+    {
+      "id": "fn:tests/contracts/test_contract_schemas.py#test_schema_identifiers_are_unique",
+      "type": "Function",
+      "label": "test_schema_identifiers_are_unique",
+      "file_path": "tests/contracts/test_contract_schemas.py",
+      "line_range": [
+        42,
+        61
+      ]
+    },
+    {
+      "id": "fn:tests/contracts/test_contract_schemas.py#test_harness_adapter_contract_valid_payload",
+      "type": "Function",
+      "label": "test_harness_adapter_contract_valid_payload",
+      "file_path": "tests/contracts/test_contract_schemas.py",
+      "line_range": [
+        64,
+        125
+      ]
+    },
+    {
+      "id": "fn:tests/contracts/test_contract_schemas.py#test_context_router_contract_valid_payload",
+      "type": "Function",
+      "label": "test_context_router_contract_valid_payload",
+      "file_path": "tests/contracts/test_contract_schemas.py",
+      "line_range": [
+        128,
+        193
+      ]
+    },
+    {
+      "id": "fn:tests/contracts/test_contract_schemas.py#test_graph_store_contract_valid_payload",
+      "type": "Function",
+      "label": "test_graph_store_contract_valid_payload",
+      "file_path": "tests/contracts/test_contract_schemas.py",
+      "line_range": [
+        196,
+        249
+      ]
+    },
+    {
+      "id": "fn:tests/contracts/test_contract_schemas.py#test_verifier_contract_valid_payload",
+      "type": "Function",
+      "label": "test_verifier_contract_valid_payload",
+      "file_path": "tests/contracts/test_contract_schemas.py",
+      "line_range": [
+        252,
+        312
+      ]
+    },
+    {
+      "id": "fn:tests/contracts/test_contract_schemas.py#test_event_log_contract_valid_payload",
+      "type": "Function",
+      "label": "test_event_log_contract_valid_payload",
+      "file_path": "tests/contracts/test_contract_schemas.py",
+      "line_range": [
+        315,
+        368
+      ]
+    },
+    {
+      "id": "fn:tests/contracts/test_contract_schemas.py#test_feature_passport_contract_valid_payload",
+      "type": "Function",
+      "label": "test_feature_passport_contract_valid_payload",
+      "file_path": "tests/contracts/test_contract_schemas.py",
+      "line_range": [
+        371,
+        436
+      ]
+    },
+    {
+      "id": "fn:tests/contracts/test_contract_schemas.py#test_fail_closed_on_uncontracted_additional_properties",
+      "type": "Function",
+      "label": "test_fail_closed_on_uncontracted_additional_properties",
+      "file_path": "tests/contracts/test_contract_schemas.py",
+      "line_range": [
+        439,
+        462
+      ]
+    },
+    {
+      "id": "fn:tests/contracts/test_contract_schemas.py#test_fail_closed_on_secret_access_violation",
+      "type": "Function",
+      "label": "test_fail_closed_on_secret_access_violation",
+      "file_path": "tests/contracts/test_contract_schemas.py",
+      "line_range": [
+        465,
+        498
+      ]
+    },
+    {
+      "id": "fn:tests/contracts/test_contract_schemas.py#test_fail_closed_on_invalid_enum_status",
+      "type": "Function",
+      "label": "test_fail_closed_on_invalid_enum_status",
+      "file_path": "tests/contracts/test_contract_schemas.py",
+      "line_range": [
+        501,
+        521
+      ]
+    },
+    {
+      "id": "dep:eidos.contracts.validator.ContractSchemaValidator",
+      "type": "Dependency",
+      "label": "eidos.contracts.validator.ContractSchemaValidator"
     }
   ],
   "edges": [
@@ -1822,6 +2024,60 @@
       "epistemic": "EXTRACTED"
     },
     {
+      "source": "file:src/eidos/contracts/validator.py",
+      "target": "class:src/eidos/contracts/validator.py#ContractValidationError",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/contracts/validator.py",
+      "target": "class:src/eidos/contracts/validator.py#ContractSchemaValidator",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/contracts/validator.py",
+      "target": "fn:src/eidos/contracts/validator.py#validate_schema_structure",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/contracts/validator.py",
+      "target": "fn:src/eidos/contracts/validator.py#validate_payload",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/contracts/validator.py",
+      "target": "fn:src/eidos/contracts/validator.py#_check_type",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/contracts/validator.py",
+      "target": "dep:json",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/contracts/validator.py",
+      "target": "dep:re",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/contracts/validator.py",
+      "target": "dep:pathlib.Path",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/contracts/validator.py",
+      "target": "dep:typing.Any",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
       "source": "file:src/eidos/contracts/models.py",
       "target": "class:src/eidos/contracts/models.py#NodeType",
       "relation": "DEFINED_BY",
@@ -1934,11 +2190,113 @@
       "target": "dep:pydantic.Field",
       "relation": "DEPENDS_ON",
       "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/contracts/test_contract_schemas.py",
+      "target": "fn:tests/contracts/test_contract_schemas.py#get_all_schema_paths",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/contracts/test_contract_schemas.py",
+      "target": "fn:tests/contracts/test_contract_schemas.py#test_schema_inventory_count",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/contracts/test_contract_schemas.py",
+      "target": "fn:tests/contracts/test_contract_schemas.py#test_all_schemas_syntax_and_structure",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/contracts/test_contract_schemas.py",
+      "target": "fn:tests/contracts/test_contract_schemas.py#test_schema_identifiers_are_unique",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/contracts/test_contract_schemas.py",
+      "target": "fn:tests/contracts/test_contract_schemas.py#test_harness_adapter_contract_valid_payload",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/contracts/test_contract_schemas.py",
+      "target": "fn:tests/contracts/test_contract_schemas.py#test_context_router_contract_valid_payload",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/contracts/test_contract_schemas.py",
+      "target": "fn:tests/contracts/test_contract_schemas.py#test_graph_store_contract_valid_payload",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/contracts/test_contract_schemas.py",
+      "target": "fn:tests/contracts/test_contract_schemas.py#test_verifier_contract_valid_payload",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/contracts/test_contract_schemas.py",
+      "target": "fn:tests/contracts/test_contract_schemas.py#test_event_log_contract_valid_payload",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/contracts/test_contract_schemas.py",
+      "target": "fn:tests/contracts/test_contract_schemas.py#test_feature_passport_contract_valid_payload",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/contracts/test_contract_schemas.py",
+      "target": "fn:tests/contracts/test_contract_schemas.py#test_fail_closed_on_uncontracted_additional_properties",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/contracts/test_contract_schemas.py",
+      "target": "fn:tests/contracts/test_contract_schemas.py#test_fail_closed_on_secret_access_violation",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/contracts/test_contract_schemas.py",
+      "target": "fn:tests/contracts/test_contract_schemas.py#test_fail_closed_on_invalid_enum_status",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/contracts/test_contract_schemas.py",
+      "target": "dep:json",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/contracts/test_contract_schemas.py",
+      "target": "dep:pathlib.Path",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/contracts/test_contract_schemas.py",
+      "target": "dep:pytest",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/contracts/test_contract_schemas.py",
+      "target": "dep:eidos.contracts.validator.ContractSchemaValidator",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
     }
   ],
   "metrics": {
-    "node_count": 129,
-    "edge_count": 152,
+    "node_count": 151,
+    "edge_count": 178,
     "god_nodes": [
       {
         "node_id": "file:src/eidos/cli/main.py",
@@ -1951,6 +2309,11 @@
         "label": "src/eidos/contracts/models.py"
       },
       {
+        "node_id": "file:tests/contracts/test_contract_schemas.py",
+        "degree": 17,
+        "label": "tests/contracts/test_contract_schemas.py"
+      },
+      {
         "node_id": "file:tests/test_contracts.py",
         "degree": 16,
         "label": "tests/test_contracts.py"
@@ -1959,14 +2322,9 @@
         "node_id": "file:src/eidos/graph/engine.py",
         "degree": 14,
         "label": "src/eidos/graph/engine.py"
-      },
-      {
-        "node_id": "file:src/eidos/intelligence/parser.py",
-        "degree": 12,
-        "label": "src/eidos/intelligence/parser.py"
       }
     ],
-    "community_count": 85,
-    "density": 0.009205426356589148
+    "community_count": 104,
+    "density": 0.007858719646799118
   }
 }

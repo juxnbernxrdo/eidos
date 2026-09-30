@@ -1,0 +1,155 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://eidos.dev/schemas/contracts/graph/graph-store.schema.json",
+  "title": "GraphStoreContract",
+  "description": "Formal contract schema for the Eidos Repository Graph Store, governing storage-agnostic node/edge representations, epistemic provenance, snapshots, and query payloads.",
+  "type": "object",
+  "properties": {
+    "contract_id": {
+      "type": "string",
+      "const": "GRAPH-CONTRACT-001"
+    },
+    "contract_version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "snapshot": {
+      "type": "object",
+      "properties": {
+        "snapshot_id": { "type": "string" },
+        "project_id": { "type": "string" },
+        "git_commit": { "type": "string" },
+        "created_at": { "type": "string", "format": "date-time" },
+        "graph_freshness": {
+          "type": "string",
+          "enum": ["FRESH", "STALE", "REBUILD_REQUIRED"]
+        },
+        "node_count": { "type": "integer", "minimum": 0 },
+        "edge_count": { "type": "integer", "minimum": 0 },
+        "nodes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": { "type": "string" },
+              "type": {
+                "type": "string",
+                "enum": [
+                  "File",
+                  "Directory",
+                  "Module",
+                  "Class",
+                  "Function",
+                  "API",
+                  "Database",
+                  "Dependency",
+                  "Test",
+                  "Spec",
+                  "SubSpec",
+                  "Task",
+                  "Contract",
+                  "Skill",
+                  "Rule",
+                  "Commit",
+                  "Finding",
+                  "Session",
+                  "Agent",
+                  "Feature",
+                  "Evidence"
+                ]
+              },
+              "label": { "type": "string" },
+              "file_path": { "type": "string" },
+              "line_range": {
+                "type": "array",
+                "items": { "type": "integer" },
+                "minItems": 2,
+                "maxItems": 2
+              },
+              "community_id": { "type": "integer" },
+              "centrality": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
+              "metadata": { "type": "object" }
+            },
+            "required": ["id", "type", "label"],
+            "additionalProperties": false
+          }
+        },
+        "edges": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "source": { "type": "string" },
+              "target": { "type": "string" },
+              "relation": {
+                "type": "string",
+                "enum": [
+                  "IMPLEMENTS",
+                  "DEPENDS_ON",
+                  "TESTED_BY",
+                  "DOCUMENTED_BY",
+                  "DEFINED_BY",
+                  "MODIFIED_BY",
+                  "VIOLATES",
+                  "SATISFIES",
+                  "DERIVED_FROM",
+                  "CONFLICTS_WITH",
+                  "SUPERSEDES"
+                ]
+              },
+              "epistemic_provenance": {
+                "type": "string",
+                "enum": ["EXTRACTED", "INFERRED", "USER_CONFIRMED", "AGENT_PROPOSED"]
+              },
+              "confidence": {
+                "type": "number",
+                "minimum": 0.0,
+                "maximum": 1.0
+              },
+              "evidence_ref": { "type": "string" }
+            },
+            "required": ["source", "target", "relation", "epistemic_provenance", "confidence"],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": ["snapshot_id", "project_id", "git_commit", "created_at", "graph_freshness", "nodes", "edges"],
+      "additionalProperties": false
+    },
+    "query_interface": {
+      "type": "object",
+      "properties": {
+        "query_type": {
+          "type": "string",
+          "enum": ["traverse", "callers", "callees", "dataflow_slice", "path", "explain", "community"]
+        },
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "seed_ids": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "k_hops": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 3,
+              "default": 2
+            },
+            "edge_whitelist": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "target_id": { "type": "string" }
+          },
+          "required": ["seed_ids"],
+          "additionalProperties": false
+        }
+      },
+      "required": ["query_type", "parameters"],
+      "additionalProperties": false
+    }
+  },
+  "required": ["contract_id", "contract_version", "snapshot", "query_interface"],
+  "additionalProperties": false
+}

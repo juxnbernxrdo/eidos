@@ -1,0 +1,219 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://eidos.dev/schemas/contracts/verification/verifier.schema.json",
+  "title": "VerifierContract",
+  "description": "Formal contract schema for the Eidos Verifier, governing 7-layer verification, machine oracles, repair eligibility, and convergence/escalation verdicts.",
+  "type": "object",
+  "properties": {
+    "contract_id": {
+      "type": "string",
+      "const": "VERIF-CONTRACT-001"
+    },
+    "contract_version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "verification_target": {
+      "type": "object",
+      "properties": {
+        "task_id": { "type": "string" },
+        "spec_id": { "type": "string" },
+        "target_files": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "git_head_sha": { "type": "string" },
+        "attempt_index": { "type": "integer", "minimum": 1 }
+      },
+      "required": ["task_id", "spec_id", "target_files", "git_head_sha", "attempt_index"],
+      "additionalProperties": false
+    },
+    "verification_policy": {
+      "type": "object",
+      "properties": {
+        "max_repair_attempts_k": {
+          "type": ["integer", "string"],
+          "description": "Configurable bound K; defaults to 5 (DESIGN_CHOICE), marked OPEN pending EXP-004."
+        },
+        "active_layers": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "tests",
+              "static_types",
+              "lint",
+              "contracts",
+              "invariants",
+              "security",
+              "drift"
+            ]
+          },
+          "minItems": 1
+        }
+      },
+      "required": ["max_repair_attempts_k", "active_layers"],
+      "additionalProperties": false
+    },
+    "layer_results": {
+      "type": "object",
+      "properties": {
+        "tests": {
+          "type": "object",
+          "properties": {
+            "status": { "type": "string", "enum": ["PASS", "FAIL", "SKIPPED"] },
+            "passed": { "type": "integer", "minimum": 0 },
+            "failed": { "type": "integer", "minimum": 0 },
+            "errors": { "type": "integer", "minimum": 0 },
+            "oracle_trace": { "type": "string" }
+          },
+          "required": ["status", "passed", "failed"],
+          "additionalProperties": false
+        },
+        "static_types": {
+          "type": "object",
+          "properties": {
+            "status": { "type": "string", "enum": ["PASS", "FAIL", "SKIPPED"] },
+            "error_count": { "type": "integer", "minimum": 0 },
+            "diagnostic_messages": {
+              "type": "array",
+              "items": { "type": "string" }
+            }
+          },
+          "required": ["status", "error_count"],
+          "additionalProperties": false
+        },
+        "lint": {
+          "type": "object",
+          "properties": {
+            "status": { "type": "string", "enum": ["PASS", "FAIL", "SKIPPED"] },
+            "violation_count": { "type": "integer", "minimum": 0 },
+            "details": {
+              "type": "array",
+              "items": { "type": "string" }
+            }
+          },
+          "required": ["status", "violation_count"],
+          "additionalProperties": false
+        },
+        "contracts": {
+          "type": "object",
+          "properties": {
+            "status": { "type": "string", "enum": ["PASS", "FAIL", "SKIPPED"] },
+            "schema_errors": {
+              "type": "array",
+              "items": { "type": "string" }
+            }
+          },
+          "required": ["status"],
+          "additionalProperties": false
+        },
+        "invariants": {
+          "type": "object",
+          "properties": {
+            "status": { "type": "string", "enum": ["PASS", "FAIL", "SKIPPED"] },
+            "violations": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "invariant_id": { "type": "string" },
+                  "severity": { "type": "string", "enum": ["CRITICAL", "HIGH", "MEDIUM", "LOW", "INFO"] },
+                  "description": { "type": "string" }
+                },
+                "required": ["invariant_id", "severity", "description"],
+                "additionalProperties": false
+              }
+            }
+          },
+          "required": ["status", "violations"],
+          "additionalProperties": false
+        },
+        "security": {
+          "type": "object",
+          "properties": {
+            "status": { "type": "string", "enum": ["PASS", "FAIL", "SKIPPED"] },
+            "sandbox_violations": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "unauthorized_grants": {
+              "type": "array",
+              "items": { "type": "string" }
+            }
+          },
+          "required": ["status"],
+          "additionalProperties": false
+        },
+        "drift": {
+          "type": "object",
+          "properties": {
+            "status": { "type": "string", "enum": ["PASS", "FAIL", "SKIPPED"] },
+            "drift_types": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": ["DOC_DRIFT", "SPEC_DRIFT", "ARCH_DRIFT", "CONTRACT_DRIFT"]
+              }
+            },
+            "tolerance_exceeded": { "type": "boolean" }
+          },
+          "required": ["status", "drift_types"],
+          "additionalProperties": false
+        }
+      },
+      "required": ["tests", "static_types", "lint", "contracts", "invariants"],
+      "additionalProperties": false
+    },
+    "verdict_payload": {
+      "type": "object",
+      "properties": {
+        "verdict": {
+          "type": "string",
+          "enum": ["CONVERGED", "REPAIR_ELIGIBLE", "ESCALATED"]
+        },
+        "converged": { "type": "boolean" },
+        "repair_eligibility": {
+          "type": "object",
+          "properties": {
+            "is_eligible": { "type": "boolean" },
+            "reason": { "type": "string" },
+            "external_oracle_trace": { "type": "string" }
+          },
+          "required": ["is_eligible", "reason"],
+          "additionalProperties": false
+        },
+        "escalation_payload": {
+          "type": "object",
+          "properties": {
+            "reason": {
+              "type": "string",
+              "enum": ["ATTEMPTS_EXHAUSTED", "UNREPAIRABLE_INVARIANT", "SECURITY_BREACH", "MANUAL_INTERVENTION_REQUESTED"]
+            },
+            "diagnostic_diff": { "type": "string" },
+            "failure_summary": { "type": "string" },
+            "suggested_actions": {
+              "type": "array",
+              "items": { "type": "string" }
+            }
+          },
+          "required": ["reason", "failure_summary"],
+          "additionalProperties": false
+        },
+        "evidence_id": { "type": "string" },
+        "timestamp": { "type": "string", "format": "date-time" }
+      },
+      "required": ["verdict", "converged", "repair_eligibility", "evidence_id", "timestamp"],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "contract_id",
+    "contract_version",
+    "verification_target",
+    "verification_policy",
+    "layer_results",
+    "verdict_payload"
+  ],
+  "additionalProperties": false
+}

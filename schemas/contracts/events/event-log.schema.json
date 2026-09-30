@@ -1,0 +1,146 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://eidos.dev/schemas/contracts/events/event-log.schema.json",
+  "title": "EventLogContract",
+  "description": "Formal contract schema for the Eidos Event Log, governing append-only audit trails, Git HEAD anchoring, and state fold replay.",
+  "type": "object",
+  "properties": {
+    "contract_id": {
+      "type": "string",
+      "const": "EVENT-CONTRACT-001"
+    },
+    "contract_version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "event": {
+      "type": "object",
+      "properties": {
+        "event_id": {
+          "type": "string",
+          "description": "Monotonically ordered or hash-chained unique event identifier."
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "event_type": {
+          "type": "string",
+          "enum": [
+            "SESSION_STARTED",
+            "SESSION_TERMINATED",
+            "TASK_INITIALIZED",
+            "TOOL_INVOKED",
+            "TOOL_COMPLETED",
+            "TOOL_FAILED",
+            "VERIFICATION_STARTED",
+            "VERIFICATION_PASSED",
+            "VERIFICATION_FAILED",
+            "REPAIR_ATTEMPTED",
+            "PATCH_APPLIED",
+            "TASK_CONVERGED",
+            "TASK_ESCALATED",
+            "DRIFT_DETECTED",
+            "HUMAN_FEEDBACK_RECORDED",
+            "SUPERSEDING_CORRECTION"
+          ]
+        },
+        "actor": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": ["HUMAN", "AGENT", "HARNESS", "SYSTEM"]
+            },
+            "id": { "type": "string" }
+          },
+          "required": ["type", "id"],
+          "additionalProperties": false
+        },
+        "session_id": { "type": "string" },
+        "project_id": { "type": "string" },
+        "git_commit": {
+          "type": "string",
+          "description": "Git HEAD SHA-1 or SHA-256 anchor at time of event emission."
+        },
+        "payload": {
+          "type": "object",
+          "description": "Typed data payload corresponding to the event_type."
+        },
+        "provenance": {
+          "type": "string",
+          "enum": ["EXTRACTED", "OBSERVED", "USER_CONFIRMED", "AGENT_PROPOSED"]
+        },
+        "schema_version": { "type": "string" },
+        "supersedes_event_id": {
+          "type": "string",
+          "description": "Optional reference to an earlier event corrected by this event."
+        }
+      },
+      "required": [
+        "event_id",
+        "timestamp",
+        "event_type",
+        "actor",
+        "session_id",
+        "project_id",
+        "git_commit",
+        "payload",
+        "provenance",
+        "schema_version"
+      ],
+      "additionalProperties": false
+    },
+    "operations": {
+      "type": "object",
+      "properties": {
+        "append": {
+          "type": "object",
+          "properties": {
+            "accepted": { "type": "boolean" },
+            "persisted_event_id": { "type": "string" },
+            "log_offset": { "type": "integer", "minimum": 0 }
+          },
+          "required": ["accepted", "persisted_event_id", "log_offset"],
+          "additionalProperties": false
+        },
+        "read": {
+          "type": "object",
+          "properties": {
+            "since_event_id": { "type": "string" },
+            "limit": { "type": "integer", "minimum": 1, "maximum": 1000 },
+            "returned_count": { "type": "integer", "minimum": 0 }
+          },
+          "required": ["limit", "returned_count"],
+          "additionalProperties": false
+        },
+        "replay": {
+          "type": "object",
+          "properties": {
+            "from_event_id": { "type": "string" },
+            "to_event_id": { "type": "string" },
+            "events_folded": { "type": "integer", "minimum": 0 },
+            "projected_state_hash": { "type": "string" }
+          },
+          "required": ["events_folded", "projected_state_hash"],
+          "additionalProperties": false
+        },
+        "snapshot": {
+          "type": "object",
+          "properties": {
+            "snapshot_id": { "type": "string" },
+            "anchored_event_id": { "type": "string" },
+            "projected_state": { "type": "object" },
+            "timestamp": { "type": "string", "format": "date-time" }
+          },
+          "required": ["snapshot_id", "anchored_event_id", "projected_state", "timestamp"],
+          "additionalProperties": false
+        }
+      },
+      "required": ["append", "read", "replay", "snapshot"],
+      "additionalProperties": false
+    }
+  },
+  "required": ["contract_id", "contract_version", "event", "operations"],
+  "additionalProperties": false
+}
