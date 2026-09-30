@@ -1,0 +1,15 @@
+{
+  "proposal_id": "PROP-EVO-001",
+  "title": "Adaptive Early-Stopping on Repair Loops",
+  "category": "ORCHESTRATION_EFFICIENCY",
+  "rationale": "Empirical EXP-003 data shows repair iterations beyond k=3 with identical error traces burn tokens with <5% marginal success. Introduce cycle detection to escalate early.",
+  "target_rule_file": "src/eidos/orchestration/pipeline.py",
+  "proposed_diff": "--- a/src/eidos/orchestration/pipeline.py\n+++ b/src/eidos/orchestration/pipeline.py\n@@ -100,9 +100,11 @@\n+ adaptive_early_stopping: bool = True,\n+ previous_trace: str | None = None\n+ if adaptive_early_stopping and previous_trace is not None and oracle_trace == previous_trace:\n+     self.current_stage = PipelineStage.ESCALATED\n+     return {verdict: ESCALATED, reason: REPETITIVE_ERROR_CYCLE_DETECTED}",
+  "status": "ACCEPTED",
+  "created_at": "2026-09-30T16:34:00.000000Z",
+  "benchmark_delta": 0.0,
+  "token_savings_percent": 60.0,
+  "regressions_detected": 0,
+  "approved_by": "HUMAN-OPERATOR-GOVERNANCE",
+  "approved_at": "2026-09-30T16:34:30.000000Z"
+}

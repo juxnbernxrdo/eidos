@@ -2,13 +2,13 @@
   "contract_id": "GRAPH-CONTRACT-001",
   "contract_version": "1.0.0",
   "snapshot": {
-    "snapshot_id": "SNAP-CC9EE17A",
+    "snapshot_id": "SNAP-A2897B8A",
     "project_id": "PROJ-EIDOS",
-    "git_commit": "eba994766ba79ad415811ee22144ab78cd9802ad",
-    "created_at": "2026-09-30T21:32:10.097644+00:00",
+    "git_commit": "90e36df45c40c865b8ca2cc8d068c538d6b6d37b",
+    "created_at": "2026-09-30T21:38:03.561771+00:00",
     "graph_freshness": "FRESH",
-    "node_count": 497,
-    "edge_count": 758,
+    "node_count": 509,
+    "edge_count": 783,
     "nodes": [
       {
         "id": "file:tests/test_graph.py",
@@ -2058,8 +2058,8 @@
         "label": "init",
         "file_path": "src/eidos/cli/main.py",
         "line_range": [
-          50,
-          81
+          53,
+          84
         ]
       },
       {
@@ -2068,8 +2068,8 @@
         "label": "doctor",
         "file_path": "src/eidos/cli/main.py",
         "line_range": [
-          84,
-          121
+          87,
+          124
         ]
       },
       {
@@ -2078,8 +2078,8 @@
         "label": "analyze",
         "file_path": "src/eidos/cli/main.py",
         "line_range": [
-          124,
-          141
+          127,
+          144
         ]
       },
       {
@@ -2088,8 +2088,8 @@
         "label": "graph_build",
         "file_path": "src/eidos/cli/main.py",
         "line_range": [
-          144,
-          171
+          147,
+          174
         ]
       },
       {
@@ -2098,8 +2098,8 @@
         "label": "graph_query",
         "file_path": "src/eidos/cli/main.py",
         "line_range": [
-          174,
-          188
+          177,
+          191
         ]
       },
       {
@@ -2108,8 +2108,8 @@
         "label": "spec_new",
         "file_path": "src/eidos/cli/main.py",
         "line_range": [
-          191,
-          213
+          194,
+          216
         ]
       },
       {
@@ -2118,8 +2118,8 @@
         "label": "spec_list",
         "file_path": "src/eidos/cli/main.py",
         "line_range": [
-          216,
-          236
+          219,
+          239
         ]
       },
       {
@@ -2128,8 +2128,8 @@
         "label": "invariant_list",
         "file_path": "src/eidos/cli/main.py",
         "line_range": [
-          239,
-          251
+          242,
+          254
         ]
       },
       {
@@ -2138,8 +2138,8 @@
         "label": "invariant_check",
         "file_path": "src/eidos/cli/main.py",
         "line_range": [
-          254,
-          264
+          257,
+          267
         ]
       },
       {
@@ -2148,8 +2148,8 @@
         "label": "verify",
         "file_path": "src/eidos/cli/main.py",
         "line_range": [
-          267,
-          290
+          270,
+          293
         ]
       },
       {
@@ -2158,8 +2158,8 @@
         "label": "progress_show",
         "file_path": "src/eidos/cli/main.py",
         "line_range": [
-          293,
-          312
+          296,
+          315
         ]
       },
       {
@@ -2168,8 +2168,8 @@
         "label": "passport_list",
         "file_path": "src/eidos/cli/main.py",
         "line_range": [
-          315,
-          333
+          318,
+          336
         ]
       },
       {
@@ -2178,8 +2178,8 @@
         "label": "context_assemble",
         "file_path": "src/eidos/cli/main.py",
         "line_range": [
-          336,
-          364
+          339,
+          367
         ]
       },
       {
@@ -2188,8 +2188,8 @@
         "label": "skills_list",
         "file_path": "src/eidos/cli/main.py",
         "line_range": [
-          367,
-          384
+          370,
+          387
         ]
       },
       {
@@ -2198,8 +2198,8 @@
         "label": "eval_tasks",
         "file_path": "src/eidos/cli/main.py",
         "line_range": [
-          388,
-          407
+          391,
+          410
         ]
       },
       {
@@ -2208,8 +2208,8 @@
         "label": "eval_run",
         "file_path": "src/eidos/cli/main.py",
         "line_range": [
-          411,
-          473
+          414,
+          476
         ]
       },
       {
@@ -2218,8 +2218,8 @@
         "label": "eval_ablation",
         "file_path": "src/eidos/cli/main.py",
         "line_range": [
-          477,
-          516
+          480,
+          519
         ]
       },
       {
@@ -2228,8 +2228,48 @@
         "label": "eval_report",
         "file_path": "src/eidos/cli/main.py",
         "line_range": [
-          520,
-          542
+          523,
+          545
+        ]
+      },
+      {
+        "id": "fn:src/eidos/cli/main.py#evolve_list",
+        "type": "Function",
+        "label": "evolve_list",
+        "file_path": "src/eidos/cli/main.py",
+        "line_range": [
+          549,
+          578
+        ]
+      },
+      {
+        "id": "fn:src/eidos/cli/main.py#evolve_propose",
+        "type": "Function",
+        "label": "evolve_propose",
+        "file_path": "src/eidos/cli/main.py",
+        "line_range": [
+          582,
+          597
+        ]
+      },
+      {
+        "id": "fn:src/eidos/cli/main.py#evolve_eval",
+        "type": "Function",
+        "label": "evolve_eval",
+        "file_path": "src/eidos/cli/main.py",
+        "line_range": [
+          601,
+          613
+        ]
+      },
+      {
+        "id": "fn:src/eidos/cli/main.py#evolve_approve",
+        "type": "Function",
+        "label": "evolve_approve",
+        "file_path": "src/eidos/cli/main.py",
+        "line_range": [
+          617,
+          627
         ]
       },
       {
@@ -2292,6 +2332,20 @@
         "id": "dep:eidos.skills.gateway.SkillGateway",
         "type": "Dependency",
         "label": "eidos.skills.gateway.SkillGateway",
+        "file_path": null,
+        "line_range": null
+      },
+      {
+        "id": "dep:eidos.evolution.pipeline.EvolutionPipeline",
+        "type": "Dependency",
+        "label": "eidos.evolution.pipeline.EvolutionPipeline",
+        "file_path": null,
+        "line_range": null
+      },
+      {
+        "id": "dep:eidos.evolution.pipeline.ProposalState",
+        "type": "Dependency",
+        "label": "eidos.evolution.pipeline.ProposalState",
         "file_path": null,
         "line_range": null
       },
@@ -2682,7 +2736,7 @@
         "file_path": "src/eidos/orchestration/pipeline.py",
         "line_range": [
           50,
-          153
+          174
         ]
       },
       {
@@ -2722,7 +2776,7 @@
         "file_path": "src/eidos/orchestration/pipeline.py",
         "line_range": [
           98,
-          153
+          174
         ]
       },
       {
@@ -4037,20 +4091,6 @@
         ]
       },
       {
-        "id": "dep:eidos.evolution.pipeline.EvolutionPipeline",
-        "type": "Dependency",
-        "label": "eidos.evolution.pipeline.EvolutionPipeline",
-        "file_path": null,
-        "line_range": null
-      },
-      {
-        "id": "dep:eidos.evolution.pipeline.ProposalState",
-        "type": "Dependency",
-        "label": "eidos.evolution.pipeline.ProposalState",
-        "file_path": null,
-        "line_range": null
-      },
-      {
         "id": "file:tests/unit/test_core_state.py",
         "type": "File",
         "label": "tests/unit/test_core_state.py",
@@ -4420,6 +4460,83 @@
         "line_range": [
           501,
           521
+        ]
+      },
+      {
+        "id": "file:tests/evolution/test_evolution_governance.py",
+        "type": "File",
+        "label": "tests/evolution/test_evolution_governance.py",
+        "file_path": "tests/evolution/test_evolution_governance.py",
+        "line_range": null
+      },
+      {
+        "id": "class:tests/evolution/test_evolution_governance.py#MockFailingResult",
+        "type": "Class",
+        "label": "MockFailingResult",
+        "file_path": "tests/evolution/test_evolution_governance.py",
+        "line_range": [
+          81,
+          83
+        ]
+      },
+      {
+        "id": "fn:tests/evolution/test_evolution_governance.py#test_evolution_lifecycle_complete_progression",
+        "type": "Function",
+        "label": "test_evolution_lifecycle_complete_progression",
+        "file_path": "tests/evolution/test_evolution_governance.py",
+        "line_range": [
+          16,
+          48
+        ]
+      },
+      {
+        "id": "fn:tests/evolution/test_evolution_governance.py#test_blocking_direct_unapproved_edits",
+        "type": "Function",
+        "label": "test_blocking_direct_unapproved_edits",
+        "file_path": "tests/evolution/test_evolution_governance.py",
+        "line_range": [
+          51,
+          60
+        ]
+      },
+      {
+        "id": "fn:tests/evolution/test_evolution_governance.py#test_evo_001_adaptive_early_stopping",
+        "type": "Function",
+        "label": "test_evo_001_adaptive_early_stopping",
+        "file_path": "tests/evolution/test_evolution_governance.py",
+        "line_range": [
+          63,
+          105
+        ]
+      },
+      {
+        "id": "fn:tests/evolution/test_evolution_governance.py#mock_cyclic_verifier",
+        "type": "Function",
+        "label": "mock_cyclic_verifier",
+        "file_path": "tests/evolution/test_evolution_governance.py",
+        "line_range": [
+          85,
+          86
+        ]
+      },
+      {
+        "id": "fn:tests/evolution/test_evolution_governance.py#mock_repair_fn",
+        "type": "Function",
+        "label": "mock_repair_fn",
+        "file_path": "tests/evolution/test_evolution_governance.py",
+        "line_range": [
+          89,
+          90
+        ]
+      },
+      {
+        "id": "fn:tests/evolution/test_evolution_governance.py#test_cli_evolve_subcommands",
+        "type": "Function",
+        "label": "test_cli_evolve_subcommands",
+        "file_path": "tests/evolution/test_evolution_governance.py",
+        "line_range": [
+          108,
+          124
         ]
       }
     ],
@@ -7130,6 +7247,38 @@
       },
       {
         "source": "file:src/eidos/cli/main.py",
+        "target": "fn:src/eidos/cli/main.py#evolve_list",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/cli/main.py",
+        "target": "fn:src/eidos/cli/main.py#evolve_propose",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/cli/main.py",
+        "target": "fn:src/eidos/cli/main.py#evolve_eval",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/cli/main.py",
+        "target": "fn:src/eidos/cli/main.py#evolve_approve",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/cli/main.py",
         "target": "dep:pathlib.Path",
         "relation": "DEPENDS_ON",
         "epistemic_provenance": "EXTRACTED",
@@ -7291,6 +7440,22 @@
       {
         "source": "file:src/eidos/cli/main.py",
         "target": "dep:eidos.evaluation.models.ExperimentalArm",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/cli/main.py",
+        "target": "dep:eidos.evolution.pipeline.EvolutionPipeline",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/cli/main.py",
+        "target": "dep:eidos.evolution.pipeline.ProposalState",
         "relation": "DEPENDS_ON",
         "epistemic_provenance": "EXTRACTED",
         "confidence": 1.0,
@@ -10483,6 +10648,158 @@
       {
         "source": "file:tests/contracts/test_contract_schemas.py",
         "target": "dep:eidos.contracts.validator.ContractSchemaValidator",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/evolution/test_evolution_governance.py",
+        "target": "class:tests/evolution/test_evolution_governance.py#MockFailingResult",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/evolution/test_evolution_governance.py",
+        "target": "fn:tests/evolution/test_evolution_governance.py#test_evolution_lifecycle_complete_progression",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/evolution/test_evolution_governance.py",
+        "target": "fn:tests/evolution/test_evolution_governance.py#test_blocking_direct_unapproved_edits",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/evolution/test_evolution_governance.py",
+        "target": "fn:tests/evolution/test_evolution_governance.py#test_evo_001_adaptive_early_stopping",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/evolution/test_evolution_governance.py",
+        "target": "fn:tests/evolution/test_evolution_governance.py#mock_cyclic_verifier",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/evolution/test_evolution_governance.py",
+        "target": "fn:tests/evolution/test_evolution_governance.py#mock_repair_fn",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/evolution/test_evolution_governance.py",
+        "target": "fn:tests/evolution/test_evolution_governance.py#test_cli_evolve_subcommands",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/evolution/test_evolution_governance.py",
+        "target": "dep:pathlib.Path",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/evolution/test_evolution_governance.py",
+        "target": "dep:typer.testing.CliRunner",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/evolution/test_evolution_governance.py",
+        "target": "dep:pytest",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/evolution/test_evolution_governance.py",
+        "target": "dep:eidos.cli.main.app",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/evolution/test_evolution_governance.py",
+        "target": "dep:eidos.core.exceptions.PermissionDeniedError",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/evolution/test_evolution_governance.py",
+        "target": "dep:eidos.core.exceptions.ContractViolationError",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/evolution/test_evolution_governance.py",
+        "target": "dep:eidos.evolution.pipeline.EvolutionPipeline",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/evolution/test_evolution_governance.py",
+        "target": "dep:eidos.evolution.pipeline.ProposalState",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/evolution/test_evolution_governance.py",
+        "target": "dep:eidos.orchestration.pipeline.PhasedPipeline",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/evolution/test_evolution_governance.py",
+        "target": "dep:eidos.orchestration.pipeline.PipelineStage",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/evolution/test_evolution_governance.py",
+        "target": "dep:eidos.orchestration.task.TaskRecord",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/evolution/test_evolution_governance.py",
+        "target": "dep:eidos.orchestration.task.TaskStatus",
         "relation": "DEPENDS_ON",
         "epistemic_provenance": "EXTRACTED",
         "confidence": 1.0,

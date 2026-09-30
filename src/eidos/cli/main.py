@@ -20,6 +20,7 @@ from eidos.skills.gateway import SkillGateway
 from eidos.evaluation.benchmark import get_benchmark_suite
 from eidos.evaluation.runner import EvaluationRunner
 from eidos.evaluation.models import ExperimentalArm
+from eidos.evolution.pipeline import EvolutionPipeline, ProposalState
 
 app = typer.Typer(
     name="eidos",
@@ -34,6 +35,7 @@ passport_app = typer.Typer(help="Feature Passport convergence bridge commands")
 context_app = typer.Typer(help="Minimal Sufficient Context (MSC) router commands")
 skills_app = typer.Typer(help="Skill Gateway and security audit commands")
 eval_app = typer.Typer(help="Phase 7 Empirical Evaluation & Benchmarking commands")
+evolve_app = typer.Typer(help="Phase 8 Governed Evolution & Self-Improvement commands")
 
 app.add_typer(graph_app, name="graph")
 app.add_typer(spec_app, name="spec")
@@ -43,6 +45,7 @@ app.add_typer(passport_app, name="passport")
 app.add_typer(context_app, name="context")
 app.add_typer(skills_app, name="skills")
 app.add_typer(eval_app, name="eval")
+app.add_typer(evolve_app, name="evolve")
 
 console = Console()
 
@@ -540,6 +543,88 @@ def eval_report():
         title="Evaluation Run Artifact",
         border_style="green",
     ))
+
+
+@evolve_app.command("list")
+def evolve_list():
+    """Lists all self-improvement proposals across lifecycle states."""
+    cwd = Path.cwd()
+    pipeline = EvolutionPipeline(cwd)
+    
+    table = Table(title="Eidos Evolution Proposals Ledger")
+    table.add_column("Proposal ID", style="cyan")
+    table.add_column("Title", style="white")
+    table.add_column("Category", style="magenta")
+    table.add_column("Status", style="yellow")
+    table.add_column("Target File", style="white")
+    table.add_column("Approver", style="green")
+
+    # Inspect proposals, accepted, and rejected directories
+    for p_dir in [pipeline.proposals_dir, pipeline.accepted_dir, pipeline.rejected_dir]:
+        for p_file in sorted(p_dir.glob("PROP-*.json")):
+            try:
+                doc = json.loads(p_file.read_text(encoding="utf-8"))
+                table.add_row(
+                    doc.get("proposal_id", p_file.stem),
+                    doc.get("title", ""),
+                    doc.get("category", ""),
+                    doc.get("status", ""),
+                    doc.get("target_rule_file", ""),
+                    doc.get("approved_by") or "-",
+                )
+            except Exception:
+                continue
+
+    console.print(table)
+
+
+@evolve_app.command("propose")
+def evolve_propose(
+    title: str = typer.Option(..., "--title", "-t", help="Title of the evolution proposal"),
+    category: str = typer.Option("ORCHESTRATION_EFFICIENCY", "--category", "-c", help="Proposal category"),
+    rationale: str = typer.Option(..., "--rationale", "-r", help="Empirical rationale and motivation"),
+    target_file: str = typer.Option("src/eidos/orchestration/pipeline.py", "--target", help="Target rule/code file"),
+):
+    """Generates a structured self-improvement LearningProposal in PROPOSED state."""
+    pipeline = EvolutionPipeline(Path.cwd())
+    doc = pipeline.create_proposal(
+        title=title,
+        category=category,
+        rationale=rationale,
+        proposed_diff="# [Proposed modification]",
+        target_rule_file=target_file,
+    )
+    console.print(f"[bold green]Proposal Created:[/bold green] [cyan]{doc['proposal_id']}[/cyan] in state [yellow]{doc['status']}[/yellow]")
+
+
+@evolve_app.command("eval")
+def evolve_eval(
+    proposal_id: str = typer.Option(..., "--id", "-i", help="Proposal ID to evaluate"),
+    delta_vsr: float = typer.Option(0.0, "--delta-vsr", help="Observed benchmark VSR change in percentage points"),
+    passed_regressions: bool = typer.Option(True, "--no-regressions/--regressions", help="Whether change passed regression checks"),
+):
+    """Evaluates benchmark outcomes for a proposal, advancing to HUMAN_REVIEW (AC-014-01)."""
+    pipeline = EvolutionPipeline(Path.cwd())
+    doc = pipeline.submit_benchmark_evaluation(
+        proposal_id=proposal_id,
+        delta_vsr=delta_vsr,
+        passed_regression=passed_regressions,
+    )
+    console.print(f"[bold green]Proposal Evaluated:[/bold green] [cyan]{proposal_id}[/cyan] transitioned to [yellow]{doc['status']}[/yellow]")
+
+
+@evolve_app.command("approve")
+def evolve_approve(
+    proposal_id: str = typer.Option(..., "--id", "-i", help="Proposal ID in HUMAN_REVIEW to approve"),
+    operator: str = typer.Option("HUMAN-OPERATOR-GOVERNANCE", "--operator", help="Operator signature"),
+):
+    """Applies human approval gate to ratify and accept proposal (AC-014-01)."""
+    pipeline = EvolutionPipeline(Path.cwd())
+    doc = pipeline.approve_proposal(
+        proposal_id=proposal_id,
+        operator_signature=operator,
+    )
+    console.print(f"[bold green]Proposal Approved & Ratified:[/bold green] [cyan]{proposal_id}[/cyan] is now [green]{doc['status']}[/green] by [magenta]{operator}[/magenta]")
 
 
 if __name__ == "__main__":

@@ -100,9 +100,11 @@ class PhasedPipeline:
         task: TaskRecord,
         verifier_fn: Callable[[int], Any],
         repair_fn: Callable[[str], None],
+        adaptive_early_stopping: bool = False,
     ) -> dict[str, Any]:
-        """Executes bounded repair loop up to K iterations (AC-002-02, AC-002-03)."""
+        """Executes bounded repair loop up to K iterations with adaptive early-stopping (AC-002-02, PROP-EVO-001)."""
         attempt = 1
+        previous_trace: str | None = None
 
         while attempt <= self.max_repair_k:
             # 1. Run verification
@@ -119,13 +121,32 @@ class PhasedPipeline:
                     "verification_result": verif_result,
                 }
 
+            oracle_trace = getattr(verif_result, "oracle_trace", "") or str(verif_result)
+
+            # EVO-001: Adaptive early-stopping when repetitive failure cycles occur
+            if adaptive_early_stopping and previous_trace is not None and oracle_trace == previous_trace:
+                self.current_stage = PipelineStage.ESCALATED
+                task.status = TaskStatus.ESCALATED
+                diff = self.capture_diagnostic_diff()
+                return {
+                    "verdict": "ESCALATED",
+                    "converged": False,
+                    "attempts": attempt,
+                    "escalation_payload": {
+                        "reason": "REPETITIVE_ERROR_CYCLE_DETECTED",
+                        "failure_summary": f"Task '{task.task_id}' aborted early at attempt {attempt} due to repetitive failure cycle",
+                        "diagnostic_diff": diff,
+                        "oracle_trace": oracle_trace,
+                        "suggested_actions": ["Inspect repetitive error cycle", "Refactor task specification"],
+                    },
+                }
+
             # 2. Check exhaustion bound
             if attempt >= self.max_repair_k:
                 # AC-002-02: Strict upper bound at K iterations; transitions to ESCALATED
                 self.current_stage = PipelineStage.ESCALATED
                 task.status = TaskStatus.ESCALATED
                 diff = self.capture_diagnostic_diff()
-                oracle_trace = getattr(verif_result, "oracle_trace", "") or str(verif_result)
                 
                 return {
                     "verdict": "ESCALATED",
@@ -143,7 +164,7 @@ class PhasedPipeline:
             # 3. Trigger repair cycle
             self.current_stage = PipelineStage.REPAIR
             task.status = TaskStatus.REPAIRING
-            oracle_trace = getattr(verif_result, "oracle_trace", "") or "Unknown test failure"
+            previous_trace = oracle_trace
             repair_fn(oracle_trace)
             attempt += 1
 
