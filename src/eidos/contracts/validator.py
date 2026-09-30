@@ -30,7 +30,7 @@ class ContractSchemaValidator:
             errors.append(f"Invalid $schema: expected '{cls.SUPPORTED_METASCHEMA}', got '{schema.get('$schema')}'")
 
         # 2. Identification
-        if not schema.get("$id") or not str(schema.get("$id")).startswith("https://eidos.dev/schemas/contracts/"):
+        if not schema.get("$id") or not str(schema.get("$id")).startswith("https://eidos.dev/schemas/"):
             errors.append(f"Invalid or missing $id URI: '{schema.get('$id')}'")
 
         if not schema.get("title"):

@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://eidos.dev/schemas/specs/requirement.schema.json",
+  "title": "EidosRequirement",
+  "description": "Formal schema for atomic system requirements in Eidos Phase 4.",
+  "type": "object",
+  "properties": {
+    "req_id": {
+      "type": "string",
+      "pattern": "^REQ-[A-Z]+-[0-9]{3}$"
+    },
+    "title": { "type": "string", "minLength": 1 },
+    "description": { "type": "string", "minLength": 1 },
+    "source": { "type": "string" },
+    "priority": {
+      "type": "string",
+      "enum": ["MUST", "SHOULD", "MAY"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["DRAFT", "REVIEW", "ACCEPTED"]
+    },
+    "acceptance_criteria": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^AC-[0-9]{3}-[0-9]{2}$" },
+      "minItems": 1
+    },
+    "security_impact": {
+      "type": "string",
+      "enum": ["CRITICAL", "HIGH", "MEDIUM", "LOW", "NONE"]
+    },
+    "verification_method": {
+      "type": "string",
+      "enum": ["UNIT_TEST", "INTEGRATION_TEST", "INVARIANT_CHECK", "SCHEMA_VALIDATION"]
+    }
+  },
+  "required": [
+    "req_id",
+    "title",
+    "description",
+    "source",
+    "priority",
+    "status",
+    "acceptance_criteria",
+    "security_impact",
+    "verification_method"
+  ],
+  "additionalProperties": false
+}

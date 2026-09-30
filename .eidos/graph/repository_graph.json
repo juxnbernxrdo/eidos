@@ -1083,6 +1083,117 @@
       "label": "pydantic.Field"
     },
     {
+      "id": "file:tests/specs/test_spec_consistency.py",
+      "type": "File",
+      "label": "tests/specs/test_spec_consistency.py",
+      "line_count": 182
+    },
+    {
+      "id": "fn:tests/specs/test_spec_consistency.py#get_all_spec_files",
+      "type": "Function",
+      "label": "get_all_spec_files",
+      "file_path": "tests/specs/test_spec_consistency.py",
+      "line_range": [
+        53,
+        55
+      ]
+    },
+    {
+      "id": "fn:tests/specs/test_spec_consistency.py#test_spec_inventory_count",
+      "type": "Function",
+      "label": "test_spec_inventory_count",
+      "file_path": "tests/specs/test_spec_consistency.py",
+      "line_range": [
+        58,
+        61
+      ]
+    },
+    {
+      "id": "fn:tests/specs/test_spec_consistency.py#test_spec_mandatory_sections_present",
+      "type": "Function",
+      "label": "test_spec_mandatory_sections_present",
+      "file_path": "tests/specs/test_spec_consistency.py",
+      "line_range": [
+        64,
+        72
+      ]
+    },
+    {
+      "id": "fn:tests/specs/test_spec_consistency.py#test_spec_schemas_valid_draft2020_12",
+      "type": "Function",
+      "label": "test_spec_schemas_valid_draft2020_12",
+      "file_path": "tests/specs/test_spec_consistency.py",
+      "line_range": [
+        75,
+        87
+      ]
+    },
+    {
+      "id": "fn:tests/specs/test_spec_consistency.py#test_unique_requirement_and_criteria_ids",
+      "type": "Function",
+      "label": "test_unique_requirement_and_criteria_ids",
+      "file_path": "tests/specs/test_spec_consistency.py",
+      "line_range": [
+        90,
+        108
+      ]
+    },
+    {
+      "id": "fn:tests/specs/test_spec_consistency.py#test_acceptance_criteria_contain_given_when_then",
+      "type": "Function",
+      "label": "test_acceptance_criteria_contain_given_when_then",
+      "file_path": "tests/specs/test_spec_consistency.py",
+      "line_range": [
+        111,
+        118
+      ]
+    },
+    {
+      "id": "fn:tests/specs/test_spec_consistency.py#test_no_orphan_requirements_in_traceability",
+      "type": "Function",
+      "label": "test_no_orphan_requirements_in_traceability",
+      "file_path": "tests/specs/test_spec_consistency.py",
+      "line_range": [
+        121,
+        130
+      ]
+    },
+    {
+      "id": "fn:tests/specs/test_spec_consistency.py#test_contract_references_valid",
+      "type": "Function",
+      "label": "test_contract_references_valid",
+      "file_path": "tests/specs/test_spec_consistency.py",
+      "line_range": [
+        133,
+        144
+      ]
+    },
+    {
+      "id": "fn:tests/specs/test_spec_consistency.py#test_adr_references_valid",
+      "type": "Function",
+      "label": "test_adr_references_valid",
+      "file_path": "tests/specs/test_spec_consistency.py",
+      "line_range": [
+        147,
+        157
+      ]
+    },
+    {
+      "id": "fn:tests/specs/test_spec_consistency.py#test_no_architectural_contradictions",
+      "type": "Function",
+      "label": "test_no_architectural_contradictions",
+      "file_path": "tests/specs/test_spec_consistency.py",
+      "line_range": [
+        160,
+        182
+      ]
+    },
+    {
+      "id": "dep:eidos.contracts.validator.ContractSchemaValidator",
+      "type": "Dependency",
+      "label": "eidos.contracts.validator.ContractSchemaValidator"
+    },
+    {
       "id": "file:tests/contracts/test_contract_schemas.py",
       "type": "File",
       "label": "tests/contracts/test_contract_schemas.py",
@@ -1217,11 +1328,6 @@
         501,
         521
       ]
-    },
-    {
-      "id": "dep:eidos.contracts.validator.ContractSchemaValidator",
-      "type": "Dependency",
-      "label": "eidos.contracts.validator.ContractSchemaValidator"
     }
   ],
   "edges": [
@@ -2192,6 +2298,96 @@
       "epistemic": "EXTRACTED"
     },
     {
+      "source": "file:tests/specs/test_spec_consistency.py",
+      "target": "fn:tests/specs/test_spec_consistency.py#get_all_spec_files",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/specs/test_spec_consistency.py",
+      "target": "fn:tests/specs/test_spec_consistency.py#test_spec_inventory_count",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/specs/test_spec_consistency.py",
+      "target": "fn:tests/specs/test_spec_consistency.py#test_spec_mandatory_sections_present",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/specs/test_spec_consistency.py",
+      "target": "fn:tests/specs/test_spec_consistency.py#test_spec_schemas_valid_draft2020_12",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/specs/test_spec_consistency.py",
+      "target": "fn:tests/specs/test_spec_consistency.py#test_unique_requirement_and_criteria_ids",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/specs/test_spec_consistency.py",
+      "target": "fn:tests/specs/test_spec_consistency.py#test_acceptance_criteria_contain_given_when_then",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/specs/test_spec_consistency.py",
+      "target": "fn:tests/specs/test_spec_consistency.py#test_no_orphan_requirements_in_traceability",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/specs/test_spec_consistency.py",
+      "target": "fn:tests/specs/test_spec_consistency.py#test_contract_references_valid",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/specs/test_spec_consistency.py",
+      "target": "fn:tests/specs/test_spec_consistency.py#test_adr_references_valid",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/specs/test_spec_consistency.py",
+      "target": "fn:tests/specs/test_spec_consistency.py#test_no_architectural_contradictions",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/specs/test_spec_consistency.py",
+      "target": "dep:json",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/specs/test_spec_consistency.py",
+      "target": "dep:re",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/specs/test_spec_consistency.py",
+      "target": "dep:pathlib.Path",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/specs/test_spec_consistency.py",
+      "target": "dep:pytest",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/specs/test_spec_consistency.py",
+      "target": "dep:eidos.contracts.validator.ContractSchemaValidator",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
       "source": "file:tests/contracts/test_contract_schemas.py",
       "target": "fn:tests/contracts/test_contract_schemas.py#get_all_schema_paths",
       "relation": "DEFINED_BY",
@@ -2295,8 +2491,8 @@
     }
   ],
   "metrics": {
-    "node_count": 151,
-    "edge_count": 178,
+    "node_count": 162,
+    "edge_count": 193,
     "god_nodes": [
       {
         "node_id": "file:src/eidos/cli/main.py",
@@ -2319,12 +2515,12 @@
         "label": "tests/test_contracts.py"
       },
       {
-        "node_id": "file:src/eidos/graph/engine.py",
-        "degree": 14,
-        "label": "src/eidos/graph/engine.py"
+        "node_id": "file:tests/specs/test_spec_consistency.py",
+        "degree": 15,
+        "label": "tests/specs/test_spec_consistency.py"
       }
     ],
-    "community_count": 104,
-    "density": 0.007858719646799118
+    "community_count": 114,
+    "density": 0.007399739283797255
   }
 }

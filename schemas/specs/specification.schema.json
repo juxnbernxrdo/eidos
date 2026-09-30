@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://eidos.dev/schemas/specs/specification.schema.json",
+  "title": "EidosSpecification",
+  "description": "Formal schema for Phase 4 capability specifications.",
+  "type": "object",
+  "properties": {
+    "spec_id": {
+      "type": "string",
+      "pattern": "^SPEC-[0-9]{3}(-[A-Z0-9_-]+)?$"
+    },
+    "title": { "type": "string", "minLength": 1 },
+    "status": {
+      "type": "string",
+      "enum": ["DRAFT", "REVIEW", "ACCEPTED", "IMPLEMENTED", "VERIFIED", "SUPERSEDED", "DEPRECATED"]
+    },
+    "source_requirements": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "architectural_basis": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "contract_dependencies": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "acceptance_criteria": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "phase_5_target_module": { "type": "string" },
+    "phase_6_test_suite": { "type": "string" }
+  },
+  "required": [
+    "spec_id",
+    "title",
+    "status",
+    "source_requirements",
+    "architectural_basis",
+    "contract_dependencies",
+    "acceptance_criteria",
+    "phase_5_target_module",
+    "phase_6_test_suite"
+  ],
+  "additionalProperties": false
+}
