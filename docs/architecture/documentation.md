@@ -21,7 +21,8 @@ article; ARR-01..05 are recorded in `research/architecture-traceability.md` and
 
 ```text
 AGENTS.md → CONSTITUTION.md → docs/architecture/overview.md → (this layer) →
-docs/adr/ + docs/architecture/adr/ → Phase 3 contracts → Phase 4 specs
+docs/adr/ (ADR-001..008 + P2-ADR-001..008, single canonical location) →
+Phase 3 contracts → Phase 4 specs
 ```
 
 Living-documentation rule (Art. VII): any Phase-3 contract change must update the

@@ -84,7 +84,8 @@ DISCOVERY → SPECIFY → PLAN → IMPLEMENT → VERIFY → CONVERGE
 |---|---|---|
 | `docs/research/*` (12 files) | EXISTING / APPROVED research | Phase 1 + reinforcement; basis for all below |
 | `docs/architecture/ARCHITECTURE_PROPOSAL.md`, `CLI_AND_REPOSITORY_SPEC.md`, `SCHEMAS_SPECIFICATION.md`, `INVARIANTS_AND_DRIFT_SPEC.md`, `DEPENDENCY_DECISION_RECORDS.md`, `RISK_REGISTER_AND_RESEARCH_GAPS.md` | PROPOSED (pre-baseline concepts) | Referenced, not duplicated; this baseline reclassifies their claims |
-| `docs/adr/ADR-001..008` | APPROVED (old format) | Retained; Phase-2 ADRs in `adr/` re-express them with evidence/assumptions/experiments |
+| `docs/adr/ADR-001..008` | APPROVED (old format, historical) | Retained; re-expressed in new format as `docs/adr/P2-ADR-001..008` |
+| `docs/adr/P2-ADR-001..008` | ARCHITECTED (canonical Phase-2 ADRs) | **Single canonical ADR location: `docs/adr/`** (ADR-001..008 + P2-ADR-001..008) |
 | `src/eidos/*`, `tests/*` (17 tests pass), `.eidos/*` | IMPLEMENTED-bootstrap / EXPERIMENTAL | Early code; documents existence only — NOT validated architecture (§27) |
 | `CONSTITUTION.md`, `AGENTS.md`, `ARCHITECTURE.md` | APPROVED governance | Unchanged by Phase 2 |
 
@@ -93,4 +94,26 @@ DISCOVERY → SPECIFY → PLAN → IMPLEMENT → VERIFY → CONVERGE
 principles.md → domains.md → components.md → data-model.md → graph.md →
 context.md → harness.md → agents.md → skills.md → memory.md → progress.md →
 verification.md → security.md → evolution.md → documentation.md → invariants.md →
-adr/ → research-traceability.md → phase-2-status.md (roadmap + gates).
+boundaries.md → `docs/adr/P2-ADR-001..008` → research-traceability.md →
+interface-contract-readiness.md → phase-2-status.md (roadmap + gates).
+
+## Phase scope contract (corrective governance, binding)
+
+```text
+Phase 2 produces:
+- architectural principles
+- domains
+- component boundaries
+- interface sketches (NOT contracts)
+- ADRs (canonical location: docs/adr/)
+- architectural invariants (models, NOT gates)
+- research traceability
+- Phase-3 readiness map
+
+Phase 2 does NOT produce:
+- machine contracts
+- frozen APIs
+- executable specifications
+- validated implementation
+- benchmark results
+```

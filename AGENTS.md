@@ -25,7 +25,7 @@ Navigate to specific sub-systems using the targeted links below:
 | **Invariants & Drift** | [docs/architecture/INVARIANTS_AND_DRIFT_SPEC.md](file:///home/juxnbernxrdo/Documentos/eidos/docs/architecture/INVARIANTS_AND_DRIFT_SPEC.md) | Machine-checkable invariants (`ARCH-001`) and drift detection. |
 | **Dependencies (DDR)** | [docs/architecture/DEPENDENCY_DECISION_RECORDS.md](file:///home/juxnbernxrdo/Documentos/eidos/docs/architecture/DEPENDENCY_DECISION_RECORDS.md) | Dependency vetting policy and accepted package records. |
 | **Risk Register** | [docs/architecture/RISK_REGISTER_AND_RESEARCH_GAPS.md](file:///home/juxnbernxrdo/Documentos/eidos/docs/architecture/RISK_REGISTER_AND_RESEARCH_GAPS.md) | Hazard analysis, mitigations, and open research questions. |
-| **Decisions (ADRs)** | [docs/adr/](file:///home/juxnbernxrdo/Documentos/eidos/docs/adr/) | Accepted Architectural Decision Records (ADR-001 through ADR-008). |
+| **Decisions (ADRs)** | [docs/adr/](file:///home/juxnbernxrdo/Documentos/eidos/docs/adr/) | Canonical ADR location: ADR-001 through ADR-008 (historical) + P2-ADR-001 through P2-ADR-008 (Phase-2 baseline, binding). |
 
 ---
 

@@ -52,3 +52,48 @@ PHASE 8 Evolution — entry: evaluation + human approval infra; exit: first gate
 ARR-01 memory opt-in · ARR-02 invariants advisory-first · ARR-03 constants
 (K/risk/ΔQ/k) as DESIGN_CHOICE · ARR-04 evolution prohibited-by-default ·
 ARR-05 no 2026-aggregator citations. Clearing any item requires its EXP + ADR update.
+
+## 5. Completed (§10 — Phase 2 closure)
+
+- Research-derived principles (P1–P12, tagged)
+- Domain decomposition (19 domains, dependency direction)
+- Component boundaries + interface sketches (NOT contracts)
+- Security architecture (boundaries + mechanism lineage, guarantees OPEN)
+- Graph architecture (taxonomy + epistemics + query abstractions)
+- Context architecture (MSC pipeline + contamination classes)
+- Harness architecture (method verdicts + observability limits)
+- Memory architecture (tiers + gating, opt-in only)
+- Progress architecture (event hierarchy + fold semantics)
+- Verification architecture (layers + loop model, thresholds OPEN)
+- Evolution architecture (gated pipeline, forbidden-by-default)
+- ADRs: `docs/adr/P2-ADR-001..008` (canonical, §4 format)
+- Research traceability (single-status rows) + Phase-3 readiness map
+
+## 6. Not Started (explicit — no phase confusion)
+
+```text
+Phase 3 — Contracts (schemas + validators)
+Phase 4 — Specs (SDD artefacts)
+Phase 5 — Implementation (components)
+Phase 6 — Verification (layers green, K calibrated)
+Phase 7 — Evaluation (EXP-001..007 runs)
+Phase 8 — Evolution (first gated improvement)
+```
+
+## 7. Experimental Bootstrap (exists, is NOT the architecture)
+
+| Path | What it is | Phase-2 verdict |
+|---|---|---|
+| `src/eidos/core/state.py` | Early pipeline-state sketch | EXPERIMENTAL |
+| `src/eidos/cli/main.py` | Early CLI surface | EXPERIMENTAL |
+| `src/eidos/graph/engine.py` | Early AST/graph builder | EXPERIMENTAL |
+| `src/eidos/intelligence/fingerprint.py` | Early repo fingerprinter | EXPERIMENTAL |
+| `src/eidos/intelligence/parser.py` | Early parser helpers | EXPERIMENTAL |
+| `src/eidos/intelligence/invariants.py` | Early invariant checks | EXPERIMENTAL |
+| `src/eidos/contracts/models.py` | Early contract models (pre-Phase-3, non-binding) | EXPERIMENTAL |
+| `src/eidos/verification/runner.py` | Early test/type/lint runner | EXPERIMENTAL |
+| `src/eidos/progress/logger.py` | Early event logger | EXPERIMENTAL |
+| `tests/*` (17 green) | Bootstrap regression net | Passing; covers bootstrap only |
+| `.eidos/*` | Bootstrap governance artefacts | Working files, not contracts |
+
+None of the above satisfies, replaces, or pre-empts a Phase-3 contract.

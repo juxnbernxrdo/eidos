@@ -2,6 +2,25 @@
 
 **Status:** ARCHITECTED (interfaces are sketches for Phase 3 contracts, NOT APIs).
 
+> **Phase-2 corrective governance (binding):** the interfaces described in this
+> document represent architectural boundaries and conceptual capabilities
+> identified during Phase 2. They do NOT constitute public APIs or
+> machine-readable contracts. No schema is frozen here, no field name is frozen
+> here, no validator is created here. Method lists (including the `HarnessAdapter`
+> sketch) record *candidate* operations for Phase-3 contract design — see
+> `harness.md` for per-method verdicts (REQUIRED / OPTIONAL / DROPPED) and
+> `interface-contract-readiness.md` for the Phase-3 readiness map.
+>
+> ```text
+> PHASE 2 — Architectural Interface Sketch
+>     ↓
+> PHASE 3 — Machine Contract
+>     ↓
+> PHASE 4 — Specification
+>     ↓
+> PHASE 5 — Implementation
+> ```
+
 ## Component map (domain → component → consumes/produces)
 
 | Component | Domain | Consumes | Produces | Status |
@@ -19,7 +38,17 @@
 | Evolution Pipeline | Evolution | Proposals + evidence | Accepted/Rejected versions | CONCEPTUAL, forbidden-by-default |
 | Harness Adapters (×N) | Harness | Contracts | Traces | PROPOSED |
 
-## Interface sketches (Phase 3 will formalize; §6 reference shape retained, NOT frozen)
+## Interface sketches (ARCHITECTURAL SKETCH — Phase 3 formalizes; nothing frozen)
+
+| Interface | Phase 2 Purpose | Research Basis | Status | Phase 3 Contract |
+|---|---|---|---|---|
+| HarnessAdapter | Harness abstraction boundary (portability without Core coupling) | EVD-001 (SWE-agent ACI deltas), EVD-002 (Agentless cost) | ARCHITECTURAL SKETCH | FUTURE |
+| ContextRouter | Deliberate context-selection boundary (MSC assembly) | EVD-003 (Lost-in-the-Middle U-curve), EVD-016 (Self-Route, order preservation) | ARCHITECTURAL SKETCH | FUTURE |
+| GraphStore | Repository-knowledge abstraction (extract/traverse/query with provenance) | EVD-005 (RepoGraph +32.8% relative) | ARCHITECTURAL SKETCH | FUTURE |
+| Verifier | Verification boundary (layers + bounded repair + escalation) | EVD-009 (oracle-gated repair), EVD-015 (test-suite weakness) | ARCHITECTURAL SKETCH | FUTURE |
+| EventLog | Event-persistence boundary (append/replay/anchor for audit + ablation) | EVD-015 (reproducibility need) | ARCHITECTURAL SKETCH | FUTURE |
+
+Candidate operations (NOT signatures — names, arities, and shapes are Phase-3 work):
 
 - `HarnessAdapter`: `detect / capabilities / install / configure / invoke /
   collect_output / collect_trace / verify` — necessity evaluated per-method in harness.md.
