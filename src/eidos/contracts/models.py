@@ -5,7 +5,9 @@ from enum import Enum
 from typing import Any, Optional
 from pydantic import BaseModel, Field
 
+
 class NodeType(str, Enum):
+    """The 21 formal heterogeneous entity types in the Repository Intelligence Graph."""
     FILE = "File"
     DIRECTORY = "Directory"
     MODULE = "Module"
@@ -28,7 +30,9 @@ class NodeType(str, Enum):
     FEATURE = "Feature"
     EVIDENCE = "Evidence"
 
+
 class EdgeRelation(str, Enum):
+    """The 11 closed relational edge types in the Repository Intelligence Graph."""
     IMPLEMENTS = "IMPLEMENTS"
     DEPENDS_ON = "DEPENDS_ON"
     TESTED_BY = "TESTED_BY"
@@ -41,13 +45,17 @@ class EdgeRelation(str, Enum):
     CONFLICTS_WITH = "CONFLICTS_WITH"
     SUPERSEDES = "SUPERSEDES"
 
+
 class EpistemicType(str, Enum):
+    """Epistemic classification of knowledge and graph relations."""
     EXTRACTED = "EXTRACTED"
     INFERRED = "INFERRED"
     USER_CONFIRMED = "USER_CONFIRMED"
     AGENT_PROPOSED = "AGENT_PROPOSED"
 
+
 class ProjectContract(BaseModel):
+    """Formal Project Contract representation conforming to CORE-CONTRACT-001."""
     project_id: str
     name: str
     version: str = "0.1.0"
@@ -62,7 +70,9 @@ class ProjectContract(BaseModel):
     updated_at: str = Field(default_factory=lambda: datetime.now(timezone.utc).isoformat())
     governance: dict[str, Any] = Field(default_factory=dict)
 
+
 class InvariantRuleModel(BaseModel):
+    """Formal Architectural Invariant definition model."""
     id: str
     name: str
     description: str = ""
@@ -72,7 +82,9 @@ class InvariantRuleModel(BaseModel):
     forbidden_imports: list[str] = Field(default_factory=list)
     required_interfaces: list[str] = Field(default_factory=list)
 
+
 class GraphNodeModel(BaseModel):
+    """Representation of an entity node in the Repository Intelligence Graph."""
     id: str
     type: NodeType
     label: str
@@ -82,7 +94,9 @@ class GraphNodeModel(BaseModel):
     centrality: Optional[float] = None
     metadata: dict[str, Any] = Field(default_factory=dict)
 
+
 class GraphEdgeModel(BaseModel):
+    """Representation of a directed relational edge in the Repository Intelligence Graph."""
     source: str
     target: str
     relation: EdgeRelation
@@ -90,7 +104,9 @@ class GraphEdgeModel(BaseModel):
     confidence: float = 1.0
     evidence_ref: Optional[str] = None
 
+
 class TaskModel(BaseModel):
+    """Contract-bounded task specification model conforming to CORE-CONTRACT-002."""
     task_id: str
     spec_id: str
     subspec_id: Optional[str] = None
@@ -102,7 +118,9 @@ class TaskModel(BaseModel):
     assigned_agent_id: Optional[str] = None
     convergence_attempts: int = 0
 
+
 class SpecModel(BaseModel):
+    """Specification model conforming to Specification-Driven Development standards."""
     spec_id: str
     title: str
     status: str = "draft"
@@ -112,7 +130,9 @@ class SpecModel(BaseModel):
     created_at: str = Field(default_factory=lambda: datetime.now(timezone.utc).isoformat())
     updated_at: str = Field(default_factory=lambda: datetime.now(timezone.utc).isoformat())
 
+
 class EvidenceModel(BaseModel):
+    """Formal machine-verifiable evidence artifact model."""
     evidence_id: str
     claim: str
     type: str = "observed"
@@ -127,7 +147,9 @@ class EvidenceModel(BaseModel):
     timestamp: str = Field(default_factory=lambda: datetime.now(timezone.utc).isoformat())
     git_commit: str = "HEAD"
 
+
 class VerificationResultModel(BaseModel):
+    """Multi-layer verification outcome model conforming to VERIF-CONTRACT-001."""
     verification_id: str
     task_id: str
     converged: bool
@@ -144,7 +166,9 @@ class VerificationResultModel(BaseModel):
     layer_results: dict[str, Any] = Field(default_factory=dict)
     timestamp: str = Field(default_factory=lambda: datetime.now(timezone.utc).isoformat())
 
+
 class ProgressEventModel(BaseModel):
+    """Append-only progress event record conforming to EVENT-CONTRACT-001."""
     event_id: str
     timestamp: str = Field(default_factory=lambda: datetime.now(timezone.utc).isoformat())
     session_id: str

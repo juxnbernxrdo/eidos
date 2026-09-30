@@ -22,7 +22,7 @@ SECRET_PATTERNS = [
     re.compile(r"ghp_[a-zA-Z0-9]{36,}", re.IGNORECASE),
     re.compile(r"github_pat_[a-zA-Z0-9_]{40,}", re.IGNORECASE),
     re.compile(r"AKIA[0-9A-Z]{16}", re.IGNORECASE),
-    re.compile(r"AIza[0-9A-Za-z-_]{35}", re.IGNORECASE),
+    re.compile(r"AIza[0-9A-Za-z\-_]{30,}", re.IGNORECASE),
     re.compile(r"bearer\s+[a-zA-Z0-9\._-]{20,}", re.IGNORECASE),
 ]
 

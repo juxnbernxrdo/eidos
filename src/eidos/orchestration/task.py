@@ -21,6 +21,7 @@ from eidos.security.permissions import canonicalize_and_confine_path
 
 
 class TaskStatus(str, Enum):
+    """The 10 formal lifecycle states of an engineering task conforming to SPEC-003."""
     CREATED = "CREATED"
     PLANNED = "PLANNED"
     READY = "READY"

@@ -22,6 +22,7 @@ from eidos.orchestration.task import TaskRecord, TaskStatus
 
 
 class PipelineStage(str, Enum):
+    """The sequential, non-bypassable engineering stages of the orchestration pipeline."""
     DISCOVERY = "DISCOVERY"
     SPECIFY = "SPECIFY"
     PLAN = "PLAN"

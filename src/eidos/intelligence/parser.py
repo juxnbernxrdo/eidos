@@ -5,6 +5,7 @@ from pathlib import Path
 from typing import Any
 
 class EntityExtractor(ast.NodeVisitor):
+    """AST node visitor extracting classes, functions, imports, and calls from Python source."""
     def __init__(self, relative_path: str):
         self.relative_path = relative_path
         self.classes: list[dict[str, Any]] = []

@@ -2,13 +2,13 @@
   "contract_id": "GRAPH-CONTRACT-001",
   "contract_version": "1.0.0",
   "snapshot": {
-    "snapshot_id": "SNAP-8D6EFBF2",
+    "snapshot_id": "SNAP-23A1C565",
     "project_id": "PROJ-EIDOS",
-    "git_commit": "46e0849f423d8c2c9a77c6280afb3d7650c65651",
-    "created_at": "2026-09-30T21:13:03.839640+00:00",
+    "git_commit": "73083be6b0453f9a9c18b503ab10a3f5f0d9bee6",
+    "created_at": "2026-09-30T21:22:08.750049+00:00",
     "graph_freshness": "FRESH",
-    "node_count": 387,
-    "edge_count": 558,
+    "node_count": 436,
+    "edge_count": 647,
     "nodes": [
       {
         "id": "file:tests/test_graph.py",
@@ -908,7 +908,7 @@
         "file_path": "src/eidos/intelligence/parser.py",
         "line_range": [
           7,
-          63
+          64
         ]
       },
       {
@@ -917,8 +917,8 @@
         "label": "__init__",
         "file_path": "src/eidos/intelligence/parser.py",
         "line_range": [
-          8,
-          13
+          9,
+          14
         ]
       },
       {
@@ -927,8 +927,8 @@
         "label": "visit_ClassDef",
         "file_path": "src/eidos/intelligence/parser.py",
         "line_range": [
-          15,
-          24
+          16,
+          25
         ]
       },
       {
@@ -937,8 +937,8 @@
         "label": "visit_FunctionDef",
         "file_path": "src/eidos/intelligence/parser.py",
         "line_range": [
-          26,
-          34
+          27,
+          35
         ]
       },
       {
@@ -947,8 +947,8 @@
         "label": "visit_AsyncFunctionDef",
         "file_path": "src/eidos/intelligence/parser.py",
         "line_range": [
-          36,
-          37
+          37,
+          38
         ]
       },
       {
@@ -957,8 +957,8 @@
         "label": "visit_Import",
         "file_path": "src/eidos/intelligence/parser.py",
         "line_range": [
-          39,
-          46
+          40,
+          47
         ]
       },
       {
@@ -967,8 +967,8 @@
         "label": "visit_ImportFrom",
         "file_path": "src/eidos/intelligence/parser.py",
         "line_range": [
-          48,
-          56
+          49,
+          57
         ]
       },
       {
@@ -977,8 +977,8 @@
         "label": "visit_Call",
         "file_path": "src/eidos/intelligence/parser.py",
         "line_range": [
-          58,
-          63
+          59,
+          64
         ]
       },
       {
@@ -987,8 +987,8 @@
         "label": "parse_python_file",
         "file_path": "src/eidos/intelligence/parser.py",
         "line_range": [
-          65,
-          83
+          66,
+          84
         ]
       },
       {
@@ -2131,7 +2131,7 @@
         "file_path": "src/eidos/orchestration/task.py",
         "line_range": [
           23,
-          33
+          34
         ]
       },
       {
@@ -2140,8 +2140,8 @@
         "label": "TaskRecord",
         "file_path": "src/eidos/orchestration/task.py",
         "line_range": [
-          51,
-          171
+          52,
+          172
         ]
       },
       {
@@ -2150,8 +2150,8 @@
         "label": "__init__",
         "file_path": "src/eidos/orchestration/task.py",
         "line_range": [
-          54,
-          93
+          55,
+          94
         ]
       },
       {
@@ -2160,8 +2160,8 @@
         "label": "transition_to",
         "file_path": "src/eidos/orchestration/task.py",
         "line_range": [
-          95,
-          153
+          96,
+          154
         ]
       },
       {
@@ -2170,8 +2170,8 @@
         "label": "to_contract_dict",
         "file_path": "src/eidos/orchestration/task.py",
         "line_range": [
-          155,
-          171
+          156,
+          172
         ]
       },
       {
@@ -2188,7 +2188,7 @@
         "file_path": "src/eidos/orchestration/pipeline.py",
         "line_range": [
           24,
-          33
+          34
         ]
       },
       {
@@ -2197,8 +2197,8 @@
         "label": "PhasedPipeline",
         "file_path": "src/eidos/orchestration/pipeline.py",
         "line_range": [
-          49,
-          152
+          50,
+          153
         ]
       },
       {
@@ -2207,8 +2207,8 @@
         "label": "__init__",
         "file_path": "src/eidos/orchestration/pipeline.py",
         "line_range": [
-          52,
-          58
+          53,
+          59
         ]
       },
       {
@@ -2217,8 +2217,8 @@
         "label": "advance_stage",
         "file_path": "src/eidos/orchestration/pipeline.py",
         "line_range": [
-          60,
-          80
+          61,
+          81
         ]
       },
       {
@@ -2227,8 +2227,8 @@
         "label": "capture_diagnostic_diff",
         "file_path": "src/eidos/orchestration/pipeline.py",
         "line_range": [
-          82,
-          95
+          83,
+          96
         ]
       },
       {
@@ -2237,8 +2237,8 @@
         "label": "execute_bounded_repair_loop",
         "file_path": "src/eidos/orchestration/pipeline.py",
         "line_range": [
-          97,
-          152
+          98,
+          153
         ]
       },
       {
@@ -2325,8 +2325,8 @@
         "label": "NodeType",
         "file_path": "src/eidos/contracts/models.py",
         "line_range": [
-          8,
-          29
+          9,
+          31
         ]
       },
       {
@@ -2335,8 +2335,8 @@
         "label": "EdgeRelation",
         "file_path": "src/eidos/contracts/models.py",
         "line_range": [
-          31,
-          42
+          34,
+          46
         ]
       },
       {
@@ -2345,8 +2345,8 @@
         "label": "EpistemicType",
         "file_path": "src/eidos/contracts/models.py",
         "line_range": [
-          44,
-          48
+          49,
+          54
         ]
       },
       {
@@ -2355,8 +2355,8 @@
         "label": "ProjectContract",
         "file_path": "src/eidos/contracts/models.py",
         "line_range": [
-          50,
-          63
+          57,
+          71
         ]
       },
       {
@@ -2365,8 +2365,8 @@
         "label": "InvariantRuleModel",
         "file_path": "src/eidos/contracts/models.py",
         "line_range": [
-          65,
-          73
+          74,
+          83
         ]
       },
       {
@@ -2375,8 +2375,8 @@
         "label": "GraphNodeModel",
         "file_path": "src/eidos/contracts/models.py",
         "line_range": [
-          75,
-          83
+          86,
+          95
         ]
       },
       {
@@ -2385,8 +2385,8 @@
         "label": "GraphEdgeModel",
         "file_path": "src/eidos/contracts/models.py",
         "line_range": [
-          85,
-          91
+          98,
+          105
         ]
       },
       {
@@ -2395,8 +2395,8 @@
         "label": "TaskModel",
         "file_path": "src/eidos/contracts/models.py",
         "line_range": [
-          93,
-          103
+          108,
+          119
         ]
       },
       {
@@ -2405,8 +2405,8 @@
         "label": "SpecModel",
         "file_path": "src/eidos/contracts/models.py",
         "line_range": [
-          105,
-          113
+          122,
+          131
         ]
       },
       {
@@ -2415,8 +2415,8 @@
         "label": "EvidenceModel",
         "file_path": "src/eidos/contracts/models.py",
         "line_range": [
-          115,
-          128
+          134,
+          148
         ]
       },
       {
@@ -2425,8 +2425,8 @@
         "label": "VerificationResultModel",
         "file_path": "src/eidos/contracts/models.py",
         "line_range": [
-          130,
-          145
+          151,
+          167
         ]
       },
       {
@@ -2435,8 +2435,8 @@
         "label": "ProgressEventModel",
         "file_path": "src/eidos/contracts/models.py",
         "line_range": [
-          147,
-          155
+          170,
+          179
         ]
       },
       {
@@ -2474,7 +2474,7 @@
         "file_path": "src/eidos/evolution/pipeline.py",
         "line_range": [
           24,
-          30
+          31
         ]
       },
       {
@@ -2483,8 +2483,8 @@
         "label": "EvolutionPipeline",
         "file_path": "src/eidos/evolution/pipeline.py",
         "line_range": [
-          33,
-          141
+          34,
+          142
         ]
       },
       {
@@ -2493,8 +2493,8 @@
         "label": "__init__",
         "file_path": "src/eidos/evolution/pipeline.py",
         "line_range": [
-          36,
-          45
+          37,
+          46
         ]
       },
       {
@@ -2503,8 +2503,8 @@
         "label": "create_proposal",
         "file_path": "src/eidos/evolution/pipeline.py",
         "line_range": [
-          47,
-          72
+          48,
+          73
         ]
       },
       {
@@ -2513,8 +2513,8 @@
         "label": "submit_benchmark_evaluation",
         "file_path": "src/eidos/evolution/pipeline.py",
         "line_range": [
-          74,
-          102
+          75,
+          103
         ]
       },
       {
@@ -2523,8 +2523,8 @@
         "label": "approve_proposal",
         "file_path": "src/eidos/evolution/pipeline.py",
         "line_range": [
-          104,
-          130
+          105,
+          131
         ]
       },
       {
@@ -2533,8 +2533,8 @@
         "label": "intercept_direct_modification",
         "file_path": "src/eidos/evolution/pipeline.py",
         "line_range": [
-          132,
-          141
+          133,
+          142
         ]
       },
       {
@@ -2700,6 +2700,453 @@
         "line_range": [
           63,
           85
+        ]
+      },
+      {
+        "id": "file:tests/verification/test_level1_syntax_build.py",
+        "type": "File",
+        "label": "tests/verification/test_level1_syntax_build.py",
+        "file_path": "tests/verification/test_level1_syntax_build.py",
+        "line_range": null
+      },
+      {
+        "id": "fn:tests/verification/test_level1_syntax_build.py#test_all_source_files_syntactically_valid",
+        "type": "Function",
+        "label": "test_all_source_files_syntactically_valid",
+        "file_path": "tests/verification/test_level1_syntax_build.py",
+        "line_range": [
+          9,
+          22
+        ]
+      },
+      {
+        "id": "fn:tests/verification/test_level1_syntax_build.py#test_cli_entrypoint_execution",
+        "type": "Function",
+        "label": "test_cli_entrypoint_execution",
+        "file_path": "tests/verification/test_level1_syntax_build.py",
+        "line_range": [
+          25,
+          34
+        ]
+      },
+      {
+        "id": "fn:tests/verification/test_level1_syntax_build.py#test_clean_module_importability",
+        "type": "Function",
+        "label": "test_clean_module_importability",
+        "file_path": "tests/verification/test_level1_syntax_build.py",
+        "line_range": [
+          37,
+          58
+        ]
+      },
+      {
+        "id": "dep:eidos.core.state",
+        "type": "Dependency",
+        "label": "eidos.core.state",
+        "file_path": null,
+        "line_range": null
+      },
+      {
+        "id": "dep:eidos.core.exceptions",
+        "type": "Dependency",
+        "label": "eidos.core.exceptions",
+        "file_path": null,
+        "line_range": null
+      },
+      {
+        "id": "dep:eidos.orchestration.pipeline",
+        "type": "Dependency",
+        "label": "eidos.orchestration.pipeline",
+        "file_path": null,
+        "line_range": null
+      },
+      {
+        "id": "dep:eidos.orchestration.task",
+        "type": "Dependency",
+        "label": "eidos.orchestration.task",
+        "file_path": null,
+        "line_range": null
+      },
+      {
+        "id": "dep:eidos.context.router",
+        "type": "Dependency",
+        "label": "eidos.context.router",
+        "file_path": null,
+        "line_range": null
+      },
+      {
+        "id": "dep:eidos.graph.engine",
+        "type": "Dependency",
+        "label": "eidos.graph.engine",
+        "file_path": null,
+        "line_range": null
+      },
+      {
+        "id": "dep:eidos.verification.runner",
+        "type": "Dependency",
+        "label": "eidos.verification.runner",
+        "file_path": null,
+        "line_range": null
+      },
+      {
+        "id": "dep:eidos.security.supervisor",
+        "type": "Dependency",
+        "label": "eidos.security.supervisor",
+        "file_path": null,
+        "line_range": null
+      },
+      {
+        "id": "dep:eidos.security.permissions",
+        "type": "Dependency",
+        "label": "eidos.security.permissions",
+        "file_path": null,
+        "line_range": null
+      },
+      {
+        "id": "dep:eidos.progress.logger",
+        "type": "Dependency",
+        "label": "eidos.progress.logger",
+        "file_path": null,
+        "line_range": null
+      },
+      {
+        "id": "dep:eidos.progress.projector",
+        "type": "Dependency",
+        "label": "eidos.progress.projector",
+        "file_path": null,
+        "line_range": null
+      },
+      {
+        "id": "dep:eidos.progress.passport",
+        "type": "Dependency",
+        "label": "eidos.progress.passport",
+        "file_path": null,
+        "line_range": null
+      },
+      {
+        "id": "dep:eidos.harness.base",
+        "type": "Dependency",
+        "label": "eidos.harness.base",
+        "file_path": null,
+        "line_range": null
+      },
+      {
+        "id": "dep:eidos.harness.headless",
+        "type": "Dependency",
+        "label": "eidos.harness.headless",
+        "file_path": null,
+        "line_range": null
+      },
+      {
+        "id": "dep:eidos.harness.antigravity",
+        "type": "Dependency",
+        "label": "eidos.harness.antigravity",
+        "file_path": null,
+        "line_range": null
+      },
+      {
+        "id": "dep:eidos.memory.manager",
+        "type": "Dependency",
+        "label": "eidos.memory.manager",
+        "file_path": null,
+        "line_range": null
+      },
+      {
+        "id": "dep:eidos.skills.gateway",
+        "type": "Dependency",
+        "label": "eidos.skills.gateway",
+        "file_path": null,
+        "line_range": null
+      },
+      {
+        "id": "dep:eidos.evolution.pipeline",
+        "type": "Dependency",
+        "label": "eidos.evolution.pipeline",
+        "file_path": null,
+        "line_range": null
+      },
+      {
+        "id": "file:tests/verification/test_level2_static_analysis.py",
+        "type": "File",
+        "label": "tests/verification/test_level2_static_analysis.py",
+        "file_path": "tests/verification/test_level2_static_analysis.py",
+        "line_range": null
+      },
+      {
+        "id": "fn:tests/verification/test_level2_static_analysis.py#test_circular_dependency_audit",
+        "type": "Function",
+        "label": "test_circular_dependency_audit",
+        "file_path": "tests/verification/test_level2_static_analysis.py",
+        "line_range": [
+          9,
+          30
+        ]
+      },
+      {
+        "id": "fn:tests/verification/test_level2_static_analysis.py#test_public_api_docstrings_present",
+        "type": "Function",
+        "label": "test_public_api_docstrings_present",
+        "file_path": "tests/verification/test_level2_static_analysis.py",
+        "line_range": [
+          33,
+          47
+        ]
+      },
+      {
+        "id": "file:tests/verification/test_level14_feature_passports.py",
+        "type": "File",
+        "label": "tests/verification/test_level14_feature_passports.py",
+        "file_path": "tests/verification/test_level14_feature_passports.py",
+        "line_range": null
+      },
+      {
+        "id": "fn:tests/verification/test_level14_feature_passports.py#make_test_dimensions",
+        "type": "Function",
+        "label": "make_test_dimensions",
+        "file_path": "tests/verification/test_level14_feature_passports.py",
+        "line_range": [
+          9,
+          57
+        ]
+      },
+      {
+        "id": "fn:tests/verification/test_level14_feature_passports.py#test_12_dimensions_exact_catalog",
+        "type": "Function",
+        "label": "test_12_dimensions_exact_catalog",
+        "file_path": "tests/verification/test_level14_feature_passports.py",
+        "line_range": [
+          60,
+          67
+        ]
+      },
+      {
+        "id": "fn:tests/verification/test_level14_feature_passports.py#test_passport_compilation_all_15_features",
+        "type": "Function",
+        "label": "test_passport_compilation_all_15_features",
+        "file_path": "tests/verification/test_level14_feature_passports.py",
+        "line_range": [
+          70,
+          85
+        ]
+      },
+      {
+        "id": "fn:tests/verification/test_level14_feature_passports.py#test_missing_dimension_rejected",
+        "type": "Function",
+        "label": "test_missing_dimension_rejected",
+        "file_path": "tests/verification/test_level14_feature_passports.py",
+        "line_range": [
+          88,
+          97
+        ]
+      },
+      {
+        "id": "dep:eidos.progress.passport.REQUIRED_DIMENSIONS",
+        "type": "Dependency",
+        "label": "eidos.progress.passport.REQUIRED_DIMENSIONS",
+        "file_path": null,
+        "line_range": null
+      },
+      {
+        "id": "file:tests/verification/test_level6_state_machine.py",
+        "type": "File",
+        "label": "tests/verification/test_level6_state_machine.py",
+        "file_path": "tests/verification/test_level6_state_machine.py",
+        "line_range": null
+      },
+      {
+        "id": "fn:tests/verification/test_level6_state_machine.py#test_state_fold_stress_and_determinism",
+        "type": "Function",
+        "label": "test_state_fold_stress_and_determinism",
+        "file_path": "tests/verification/test_level6_state_machine.py",
+        "line_range": [
+          8,
+          63
+        ]
+      },
+      {
+        "id": "fn:tests/verification/test_level6_state_machine.py#test_checkpoint_snapshot_resumption",
+        "type": "Function",
+        "label": "test_checkpoint_snapshot_resumption",
+        "file_path": "tests/verification/test_level6_state_machine.py",
+        "line_range": [
+          66,
+          102
+        ]
+      },
+      {
+        "id": "dep:eidos.core.state.create_initial_state",
+        "type": "Dependency",
+        "label": "eidos.core.state.create_initial_state",
+        "file_path": null,
+        "line_range": null
+      },
+      {
+        "id": "dep:eidos.core.state.fold_events",
+        "type": "Dependency",
+        "label": "eidos.core.state.fold_events",
+        "file_path": null,
+        "line_range": null
+      },
+      {
+        "id": "dep:eidos.core.state.reduce_event",
+        "type": "Dependency",
+        "label": "eidos.core.state.reduce_event",
+        "file_path": null,
+        "line_range": null
+      },
+      {
+        "id": "dep:eidos.core.state.compute_state_hash",
+        "type": "Dependency",
+        "label": "eidos.core.state.compute_state_hash",
+        "file_path": null,
+        "line_range": null
+      },
+      {
+        "id": "dep:eidos.core.state.TaskState",
+        "type": "Dependency",
+        "label": "eidos.core.state.TaskState",
+        "file_path": null,
+        "line_range": null
+      },
+      {
+        "id": "file:tests/verification/test_level7_invariants_comprehensive.py",
+        "type": "File",
+        "label": "tests/verification/test_level7_invariants_comprehensive.py",
+        "file_path": "tests/verification/test_level7_invariants_comprehensive.py",
+        "line_range": null
+      },
+      {
+        "id": "fn:tests/verification/test_level7_invariants_comprehensive.py#test_arch_001_and_arch_002_live_ast",
+        "type": "Function",
+        "label": "test_arch_001_and_arch_002_live_ast",
+        "file_path": "tests/verification/test_level7_invariants_comprehensive.py",
+        "line_range": [
+          17,
+          21
+        ]
+      },
+      {
+        "id": "fn:tests/verification/test_level7_invariants_comprehensive.py#test_inv_001_zero_model_provider_dependencies",
+        "type": "Function",
+        "label": "test_inv_001_zero_model_provider_dependencies",
+        "file_path": "tests/verification/test_level7_invariants_comprehensive.py",
+        "line_range": [
+          24,
+          34
+        ]
+      },
+      {
+        "id": "fn:tests/verification/test_level7_invariants_comprehensive.py#test_inv_002_path_confinement_physics",
+        "type": "Function",
+        "label": "test_inv_002_path_confinement_physics",
+        "file_path": "tests/verification/test_level7_invariants_comprehensive.py",
+        "line_range": [
+          37,
+          46
+        ]
+      },
+      {
+        "id": "fn:tests/verification/test_level7_invariants_comprehensive.py#test_inv_003_verification_before_done",
+        "type": "Function",
+        "label": "test_inv_003_verification_before_done",
+        "file_path": "tests/verification/test_level7_invariants_comprehensive.py",
+        "line_range": [
+          49,
+          66
+        ]
+      },
+      {
+        "id": "fn:tests/verification/test_level7_invariants_comprehensive.py#test_inv_007_monotonic_event_reduction",
+        "type": "Function",
+        "label": "test_inv_007_monotonic_event_reduction",
+        "file_path": "tests/verification/test_level7_invariants_comprehensive.py",
+        "line_range": [
+          69,
+          75
+        ]
+      },
+      {
+        "id": "fn:tests/verification/test_level7_invariants_comprehensive.py#test_inv_008_default_deny_policy_as_physics",
+        "type": "Function",
+        "label": "test_inv_008_default_deny_policy_as_physics",
+        "file_path": "tests/verification/test_level7_invariants_comprehensive.py",
+        "line_range": [
+          78,
+          85
+        ]
+      },
+      {
+        "id": "fn:tests/verification/test_level7_invariants_comprehensive.py#test_inv_009_epistemic_ground_truth_precedence",
+        "type": "Function",
+        "label": "test_inv_009_epistemic_ground_truth_precedence",
+        "file_path": "tests/verification/test_level7_invariants_comprehensive.py",
+        "line_range": [
+          88,
+          102
+        ]
+      },
+      {
+        "id": "file:tests/verification/test_level8_security_boundaries.py",
+        "type": "File",
+        "label": "tests/verification/test_level8_security_boundaries.py",
+        "file_path": "tests/verification/test_level8_security_boundaries.py",
+        "line_range": null
+      },
+      {
+        "id": "fn:tests/verification/test_level8_security_boundaries.py#test_symlink_directory_traversal_attack",
+        "type": "Function",
+        "label": "test_symlink_directory_traversal_attack",
+        "file_path": "tests/verification/test_level8_security_boundaries.py",
+        "line_range": [
+          11,
+          32
+        ]
+      },
+      {
+        "id": "fn:tests/verification/test_level8_security_boundaries.py#test_comprehensive_secret_scrubbing",
+        "type": "Function",
+        "label": "test_comprehensive_secret_scrubbing",
+        "file_path": "tests/verification/test_level8_security_boundaries.py",
+        "line_range": [
+          35,
+          49
+        ]
+      },
+      {
+        "id": "file:tests/verification/test_level9_graph_semantics.py",
+        "type": "File",
+        "label": "tests/verification/test_level9_graph_semantics.py",
+        "file_path": "tests/verification/test_level9_graph_semantics.py",
+        "line_range": null
+      },
+      {
+        "id": "fn:tests/verification/test_level9_graph_semantics.py#test_closed_edge_relations_conformance",
+        "type": "Function",
+        "label": "test_closed_edge_relations_conformance",
+        "file_path": "tests/verification/test_level9_graph_semantics.py",
+        "line_range": [
+          8,
+          24
+        ]
+      },
+      {
+        "id": "fn:tests/verification/test_level9_graph_semantics.py#test_heterogeneous_21_node_types_conformance",
+        "type": "Function",
+        "label": "test_heterogeneous_21_node_types_conformance",
+        "file_path": "tests/verification/test_level9_graph_semantics.py",
+        "line_range": [
+          27,
+          36
+        ]
+      },
+      {
+        "id": "fn:tests/verification/test_level9_graph_semantics.py#test_epistemic_provenance_types",
+        "type": "Function",
+        "label": "test_epistemic_provenance_types",
+        "file_path": "tests/verification/test_level9_graph_semantics.py",
+        "line_range": [
+          39,
+          43
         ]
       },
       {
@@ -3139,41 +3586,6 @@
           97,
           138
         ]
-      },
-      {
-        "id": "dep:eidos.core.state.create_initial_state",
-        "type": "Dependency",
-        "label": "eidos.core.state.create_initial_state",
-        "file_path": null,
-        "line_range": null
-      },
-      {
-        "id": "dep:eidos.core.state.reduce_event",
-        "type": "Dependency",
-        "label": "eidos.core.state.reduce_event",
-        "file_path": null,
-        "line_range": null
-      },
-      {
-        "id": "dep:eidos.core.state.fold_events",
-        "type": "Dependency",
-        "label": "eidos.core.state.fold_events",
-        "file_path": null,
-        "line_range": null
-      },
-      {
-        "id": "dep:eidos.core.state.compute_state_hash",
-        "type": "Dependency",
-        "label": "eidos.core.state.compute_state_hash",
-        "file_path": null,
-        "line_range": null
-      },
-      {
-        "id": "dep:eidos.core.state.TaskState",
-        "type": "Dependency",
-        "label": "eidos.core.state.TaskState",
-        "file_path": null,
-        "line_range": null
       },
       {
         "id": "file:tests/unit/test_event_log.py",
@@ -6959,6 +7371,718 @@
       {
         "source": "file:tests/integration/test_verifier.py",
         "target": "dep:eidos.verification.runner.run_verification",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level1_syntax_build.py",
+        "target": "fn:tests/verification/test_level1_syntax_build.py#test_all_source_files_syntactically_valid",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level1_syntax_build.py",
+        "target": "fn:tests/verification/test_level1_syntax_build.py#test_cli_entrypoint_execution",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level1_syntax_build.py",
+        "target": "fn:tests/verification/test_level1_syntax_build.py#test_clean_module_importability",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level1_syntax_build.py",
+        "target": "dep:ast",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level1_syntax_build.py",
+        "target": "dep:subprocess",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level1_syntax_build.py",
+        "target": "dep:sys",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level1_syntax_build.py",
+        "target": "dep:pathlib.Path",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level1_syntax_build.py",
+        "target": "dep:eidos.core.state",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level1_syntax_build.py",
+        "target": "dep:eidos.core.exceptions",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level1_syntax_build.py",
+        "target": "dep:eidos.orchestration.pipeline",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level1_syntax_build.py",
+        "target": "dep:eidos.orchestration.task",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level1_syntax_build.py",
+        "target": "dep:eidos.context.router",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level1_syntax_build.py",
+        "target": "dep:eidos.graph.engine",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level1_syntax_build.py",
+        "target": "dep:eidos.verification.runner",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level1_syntax_build.py",
+        "target": "dep:eidos.security.supervisor",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level1_syntax_build.py",
+        "target": "dep:eidos.security.permissions",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level1_syntax_build.py",
+        "target": "dep:eidos.progress.logger",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level1_syntax_build.py",
+        "target": "dep:eidos.progress.projector",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level1_syntax_build.py",
+        "target": "dep:eidos.progress.passport",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level1_syntax_build.py",
+        "target": "dep:eidos.harness.base",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level1_syntax_build.py",
+        "target": "dep:eidos.harness.headless",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level1_syntax_build.py",
+        "target": "dep:eidos.harness.antigravity",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level1_syntax_build.py",
+        "target": "dep:eidos.memory.manager",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level1_syntax_build.py",
+        "target": "dep:eidos.skills.gateway",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level1_syntax_build.py",
+        "target": "dep:eidos.evolution.pipeline",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level2_static_analysis.py",
+        "target": "fn:tests/verification/test_level2_static_analysis.py#test_circular_dependency_audit",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level2_static_analysis.py",
+        "target": "fn:tests/verification/test_level2_static_analysis.py#test_public_api_docstrings_present",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level2_static_analysis.py",
+        "target": "dep:ast",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level2_static_analysis.py",
+        "target": "dep:pathlib.Path",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level2_static_analysis.py",
+        "target": "dep:networkx",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level2_static_analysis.py",
+        "target": "dep:eidos.intelligence.parser.parse_python_file",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level14_feature_passports.py",
+        "target": "fn:tests/verification/test_level14_feature_passports.py#make_test_dimensions",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level14_feature_passports.py",
+        "target": "fn:tests/verification/test_level14_feature_passports.py#test_12_dimensions_exact_catalog",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level14_feature_passports.py",
+        "target": "fn:tests/verification/test_level14_feature_passports.py#test_passport_compilation_all_15_features",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level14_feature_passports.py",
+        "target": "fn:tests/verification/test_level14_feature_passports.py#test_missing_dimension_rejected",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level14_feature_passports.py",
+        "target": "dep:pathlib.Path",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level14_feature_passports.py",
+        "target": "dep:pytest",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level14_feature_passports.py",
+        "target": "dep:eidos.core.exceptions.ContractViolationError",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level14_feature_passports.py",
+        "target": "dep:eidos.core.exceptions.VerificationError",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level14_feature_passports.py",
+        "target": "dep:eidos.progress.passport.FeaturePassportManager",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level14_feature_passports.py",
+        "target": "dep:eidos.progress.passport.REQUIRED_DIMENSIONS",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level6_state_machine.py",
+        "target": "fn:tests/verification/test_level6_state_machine.py#test_state_fold_stress_and_determinism",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level6_state_machine.py",
+        "target": "fn:tests/verification/test_level6_state_machine.py#test_checkpoint_snapshot_resumption",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level6_state_machine.py",
+        "target": "dep:pathlib.Path",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level6_state_machine.py",
+        "target": "dep:eidos.core.state.create_initial_state",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level6_state_machine.py",
+        "target": "dep:eidos.core.state.fold_events",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level6_state_machine.py",
+        "target": "dep:eidos.core.state.reduce_event",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level6_state_machine.py",
+        "target": "dep:eidos.core.state.compute_state_hash",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level6_state_machine.py",
+        "target": "dep:eidos.core.state.TaskState",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level6_state_machine.py",
+        "target": "dep:eidos.core.exceptions.ContractViolationError",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level7_invariants_comprehensive.py",
+        "target": "fn:tests/verification/test_level7_invariants_comprehensive.py#test_arch_001_and_arch_002_live_ast",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level7_invariants_comprehensive.py",
+        "target": "fn:tests/verification/test_level7_invariants_comprehensive.py#test_inv_001_zero_model_provider_dependencies",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level7_invariants_comprehensive.py",
+        "target": "fn:tests/verification/test_level7_invariants_comprehensive.py#test_inv_002_path_confinement_physics",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level7_invariants_comprehensive.py",
+        "target": "fn:tests/verification/test_level7_invariants_comprehensive.py#test_inv_003_verification_before_done",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level7_invariants_comprehensive.py",
+        "target": "fn:tests/verification/test_level7_invariants_comprehensive.py#test_inv_007_monotonic_event_reduction",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level7_invariants_comprehensive.py",
+        "target": "fn:tests/verification/test_level7_invariants_comprehensive.py#test_inv_008_default_deny_policy_as_physics",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level7_invariants_comprehensive.py",
+        "target": "fn:tests/verification/test_level7_invariants_comprehensive.py#test_inv_009_epistemic_ground_truth_precedence",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level7_invariants_comprehensive.py",
+        "target": "dep:pathlib.Path",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level7_invariants_comprehensive.py",
+        "target": "dep:pytest",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level7_invariants_comprehensive.py",
+        "target": "dep:eidos.core.exceptions.ContractViolationError",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level7_invariants_comprehensive.py",
+        "target": "dep:eidos.core.exceptions.PermissionDeniedError",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level7_invariants_comprehensive.py",
+        "target": "dep:eidos.core.exceptions.VerificationError",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level7_invariants_comprehensive.py",
+        "target": "dep:eidos.core.state.create_initial_state",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level7_invariants_comprehensive.py",
+        "target": "dep:eidos.core.state.reduce_event",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level7_invariants_comprehensive.py",
+        "target": "dep:eidos.intelligence.invariants.check_invariants",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level7_invariants_comprehensive.py",
+        "target": "dep:eidos.intelligence.invariants.load_default_invariants",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level7_invariants_comprehensive.py",
+        "target": "dep:eidos.security.permissions.canonicalize_and_confine_path",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level7_invariants_comprehensive.py",
+        "target": "dep:eidos.security.supervisor.SandboxSupervisor",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level7_invariants_comprehensive.py",
+        "target": "dep:eidos.progress.passport.FeaturePassportManager",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level7_invariants_comprehensive.py",
+        "target": "dep:eidos.graph.engine.RepositoryGraphEngine",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level7_invariants_comprehensive.py",
+        "target": "dep:eidos.contracts.models.EdgeRelation",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level7_invariants_comprehensive.py",
+        "target": "dep:eidos.contracts.models.EpistemicType",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level8_security_boundaries.py",
+        "target": "fn:tests/verification/test_level8_security_boundaries.py#test_symlink_directory_traversal_attack",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level8_security_boundaries.py",
+        "target": "fn:tests/verification/test_level8_security_boundaries.py#test_comprehensive_secret_scrubbing",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level8_security_boundaries.py",
+        "target": "dep:os",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level8_security_boundaries.py",
+        "target": "dep:pathlib.Path",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level8_security_boundaries.py",
+        "target": "dep:pytest",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level8_security_boundaries.py",
+        "target": "dep:eidos.core.exceptions.PermissionDeniedError",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level8_security_boundaries.py",
+        "target": "dep:eidos.security.permissions.canonicalize_and_confine_path",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level8_security_boundaries.py",
+        "target": "dep:eidos.security.permissions.redact_secrets",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level8_security_boundaries.py",
+        "target": "dep:eidos.security.supervisor.SandboxSupervisor",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level9_graph_semantics.py",
+        "target": "fn:tests/verification/test_level9_graph_semantics.py#test_closed_edge_relations_conformance",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level9_graph_semantics.py",
+        "target": "fn:tests/verification/test_level9_graph_semantics.py#test_heterogeneous_21_node_types_conformance",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level9_graph_semantics.py",
+        "target": "fn:tests/verification/test_level9_graph_semantics.py#test_epistemic_provenance_types",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level9_graph_semantics.py",
+        "target": "dep:pathlib.Path",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level9_graph_semantics.py",
+        "target": "dep:eidos.contracts.models.NodeType",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level9_graph_semantics.py",
+        "target": "dep:eidos.contracts.models.EdgeRelation",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level9_graph_semantics.py",
+        "target": "dep:eidos.contracts.models.EpistemicType",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/verification/test_level9_graph_semantics.py",
+        "target": "dep:eidos.graph.engine.RepositoryGraphEngine",
         "relation": "DEPENDS_ON",
         "epistemic_provenance": "EXTRACTED",
         "confidence": 1.0,

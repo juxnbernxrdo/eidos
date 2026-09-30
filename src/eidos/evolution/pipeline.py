@@ -22,6 +22,7 @@ from eidos.core.exceptions import (
 
 
 class ProposalState(str, Enum):
+    """The 6 formal lifecycle states of a self-improvement learning proposal."""
     PROPOSED = "PROPOSED"
     TESTING = "TESTING"
     EVALUATED = "EVALUATED"
