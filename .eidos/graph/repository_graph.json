@@ -1,0 +1,1972 @@
+{
+  "nodes": [
+    {
+      "id": "file:tests/test_graph.py",
+      "type": "File",
+      "label": "tests/test_graph.py",
+      "line_count": 26
+    },
+    {
+      "id": "fn:tests/test_graph.py#test_graph_builder_and_analyzer",
+      "type": "Function",
+      "label": "test_graph_builder_and_analyzer",
+      "file_path": "tests/test_graph.py",
+      "line_range": [
+        6,
+        16
+      ]
+    },
+    {
+      "id": "fn:tests/test_graph.py#test_graph_path_query",
+      "type": "Function",
+      "label": "test_graph_path_query",
+      "file_path": "tests/test_graph.py",
+      "line_range": [
+        18,
+        26
+      ]
+    },
+    {
+      "id": "dep:pathlib.Path",
+      "type": "Dependency",
+      "label": "pathlib.Path"
+    },
+    {
+      "id": "dep:eidos.graph.engine.RepositoryGraphEngine",
+      "type": "Dependency",
+      "label": "eidos.graph.engine.RepositoryGraphEngine"
+    },
+    {
+      "id": "file:tests/test_invariants.py",
+      "type": "File",
+      "label": "tests/test_invariants.py",
+      "line_count": 34
+    },
+    {
+      "id": "fn:tests/test_invariants.py#test_load_default_invariants",
+      "type": "Function",
+      "label": "test_load_default_invariants",
+      "file_path": "tests/test_invariants.py",
+      "line_range": [
+        7,
+        12
+      ]
+    },
+    {
+      "id": "fn:tests/test_invariants.py#test_check_invariants_clean_workspace",
+      "type": "Function",
+      "label": "test_check_invariants_clean_workspace",
+      "file_path": "tests/test_invariants.py",
+      "line_range": [
+        14,
+        18
+      ]
+    },
+    {
+      "id": "fn:tests/test_invariants.py#test_detect_synthetic_violation",
+      "type": "Function",
+      "label": "test_detect_synthetic_violation",
+      "file_path": "tests/test_invariants.py",
+      "line_range": [
+        20,
+        34
+      ]
+    },
+    {
+      "id": "dep:eidos.intelligence.invariants.check_invariants",
+      "type": "Dependency",
+      "label": "eidos.intelligence.invariants.check_invariants"
+    },
+    {
+      "id": "dep:eidos.intelligence.invariants.load_default_invariants",
+      "type": "Dependency",
+      "label": "eidos.intelligence.invariants.load_default_invariants"
+    },
+    {
+      "id": "dep:eidos.contracts.models.InvariantRuleModel",
+      "type": "Dependency",
+      "label": "eidos.contracts.models.InvariantRuleModel"
+    },
+    {
+      "id": "file:tests/test_fingerprint.py",
+      "type": "File",
+      "label": "tests/test_fingerprint.py",
+      "line_count": 34
+    },
+    {
+      "id": "fn:tests/test_fingerprint.py#test_fingerprint_repository",
+      "type": "Function",
+      "label": "test_fingerprint_repository",
+      "file_path": "tests/test_fingerprint.py",
+      "line_range": [
+        7,
+        16
+      ]
+    },
+    {
+      "id": "fn:tests/test_fingerprint.py#test_get_git_info",
+      "type": "Function",
+      "label": "test_get_git_info",
+      "file_path": "tests/test_fingerprint.py",
+      "line_range": [
+        18,
+        22
+      ]
+    },
+    {
+      "id": "fn:tests/test_fingerprint.py#test_parse_python_file",
+      "type": "Function",
+      "label": "test_parse_python_file",
+      "file_path": "tests/test_fingerprint.py",
+      "line_range": [
+        24,
+        34
+      ]
+    },
+    {
+      "id": "dep:eidos.intelligence.fingerprint.fingerprint_repository",
+      "type": "Dependency",
+      "label": "eidos.intelligence.fingerprint.fingerprint_repository"
+    },
+    {
+      "id": "dep:eidos.intelligence.fingerprint.get_git_info",
+      "type": "Dependency",
+      "label": "eidos.intelligence.fingerprint.get_git_info"
+    },
+    {
+      "id": "dep:eidos.intelligence.parser.parse_python_file",
+      "type": "Dependency",
+      "label": "eidos.intelligence.parser.parse_python_file"
+    },
+    {
+      "id": "file:tests/test_cli.py",
+      "type": "File",
+      "label": "tests/test_cli.py",
+      "line_count": 38
+    },
+    {
+      "id": "fn:tests/test_cli.py#test_cli_help",
+      "type": "Function",
+      "label": "test_cli_help",
+      "file_path": "tests/test_cli.py",
+      "line_range": [
+        8,
+        11
+      ]
+    },
+    {
+      "id": "fn:tests/test_cli.py#test_cli_doctor",
+      "type": "Function",
+      "label": "test_cli_doctor",
+      "file_path": "tests/test_cli.py",
+      "line_range": [
+        13,
+        17
+      ]
+    },
+    {
+      "id": "fn:tests/test_cli.py#test_cli_analyze",
+      "type": "Function",
+      "label": "test_cli_analyze",
+      "file_path": "tests/test_cli.py",
+      "line_range": [
+        19,
+        23
+      ]
+    },
+    {
+      "id": "fn:tests/test_cli.py#test_cli_invariants",
+      "type": "Function",
+      "label": "test_cli_invariants",
+      "file_path": "tests/test_cli.py",
+      "line_range": [
+        25,
+        32
+      ]
+    },
+    {
+      "id": "fn:tests/test_cli.py#test_cli_graph_build",
+      "type": "Function",
+      "label": "test_cli_graph_build",
+      "file_path": "tests/test_cli.py",
+      "line_range": [
+        34,
+        38
+      ]
+    },
+    {
+      "id": "dep:typer.testing.CliRunner",
+      "type": "Dependency",
+      "label": "typer.testing.CliRunner"
+    },
+    {
+      "id": "dep:eidos.cli.main.app",
+      "type": "Dependency",
+      "label": "eidos.cli.main.app"
+    },
+    {
+      "id": "file:tests/test_contracts.py",
+      "type": "File",
+      "label": "tests/test_contracts.py",
+      "line_count": 77
+    },
+    {
+      "id": "fn:tests/test_contracts.py#test_project_contract_validation",
+      "type": "Function",
+      "label": "test_project_contract_validation",
+      "file_path": "tests/test_contracts.py",
+      "line_range": [
+        18,
+        28
+      ]
+    },
+    {
+      "id": "fn:tests/test_contracts.py#test_spec_and_task_models",
+      "type": "Function",
+      "label": "test_spec_and_task_models",
+      "file_path": "tests/test_contracts.py",
+      "line_range": [
+        30,
+        46
+      ]
+    },
+    {
+      "id": "fn:tests/test_contracts.py#test_graph_node_and_edge_models",
+      "type": "Function",
+      "label": "test_graph_node_and_edge_models",
+      "file_path": "tests/test_contracts.py",
+      "line_range": [
+        48,
+        66
+      ]
+    },
+    {
+      "id": "fn:tests/test_contracts.py#test_verification_result_model",
+      "type": "Function",
+      "label": "test_verification_result_model",
+      "file_path": "tests/test_contracts.py",
+      "line_range": [
+        68,
+        77
+      ]
+    },
+    {
+      "id": "dep:pytest",
+      "type": "Dependency",
+      "label": "pytest"
+    },
+    {
+      "id": "dep:eidos.contracts.models.ProjectContract",
+      "type": "Dependency",
+      "label": "eidos.contracts.models.ProjectContract"
+    },
+    {
+      "id": "dep:eidos.contracts.models.SpecModel",
+      "type": "Dependency",
+      "label": "eidos.contracts.models.SpecModel"
+    },
+    {
+      "id": "dep:eidos.contracts.models.TaskModel",
+      "type": "Dependency",
+      "label": "eidos.contracts.models.TaskModel"
+    },
+    {
+      "id": "dep:eidos.contracts.models.GraphNodeModel",
+      "type": "Dependency",
+      "label": "eidos.contracts.models.GraphNodeModel"
+    },
+    {
+      "id": "dep:eidos.contracts.models.NodeType",
+      "type": "Dependency",
+      "label": "eidos.contracts.models.NodeType"
+    },
+    {
+      "id": "dep:eidos.contracts.models.GraphEdgeModel",
+      "type": "Dependency",
+      "label": "eidos.contracts.models.GraphEdgeModel"
+    },
+    {
+      "id": "dep:eidos.contracts.models.EdgeRelation",
+      "type": "Dependency",
+      "label": "eidos.contracts.models.EdgeRelation"
+    },
+    {
+      "id": "dep:eidos.contracts.models.EpistemicType",
+      "type": "Dependency",
+      "label": "eidos.contracts.models.EpistemicType"
+    },
+    {
+      "id": "dep:eidos.contracts.models.EvidenceModel",
+      "type": "Dependency",
+      "label": "eidos.contracts.models.EvidenceModel"
+    },
+    {
+      "id": "dep:eidos.contracts.models.VerificationResultModel",
+      "type": "Dependency",
+      "label": "eidos.contracts.models.VerificationResultModel"
+    },
+    {
+      "id": "dep:eidos.contracts.models.ProgressEventModel",
+      "type": "Dependency",
+      "label": "eidos.contracts.models.ProgressEventModel"
+    },
+    {
+      "id": "file:src/eidos/__init__.py",
+      "type": "File",
+      "label": "src/eidos/__init__.py",
+      "line_count": 4
+    },
+    {
+      "id": "file:src/eidos/intelligence/parser.py",
+      "type": "File",
+      "label": "src/eidos/intelligence/parser.py",
+      "line_count": 83
+    },
+    {
+      "id": "class:src/eidos/intelligence/parser.py#EntityExtractor",
+      "type": "Class",
+      "label": "EntityExtractor",
+      "file_path": "src/eidos/intelligence/parser.py",
+      "line_range": [
+        7,
+        63
+      ]
+    },
+    {
+      "id": "fn:src/eidos/intelligence/parser.py#__init__",
+      "type": "Function",
+      "label": "__init__",
+      "file_path": "src/eidos/intelligence/parser.py",
+      "line_range": [
+        8,
+        13
+      ]
+    },
+    {
+      "id": "fn:src/eidos/intelligence/parser.py#visit_ClassDef",
+      "type": "Function",
+      "label": "visit_ClassDef",
+      "file_path": "src/eidos/intelligence/parser.py",
+      "line_range": [
+        15,
+        24
+      ]
+    },
+    {
+      "id": "fn:src/eidos/intelligence/parser.py#visit_FunctionDef",
+      "type": "Function",
+      "label": "visit_FunctionDef",
+      "file_path": "src/eidos/intelligence/parser.py",
+      "line_range": [
+        26,
+        34
+      ]
+    },
+    {
+      "id": "fn:src/eidos/intelligence/parser.py#visit_AsyncFunctionDef",
+      "type": "Function",
+      "label": "visit_AsyncFunctionDef",
+      "file_path": "src/eidos/intelligence/parser.py",
+      "line_range": [
+        36,
+        37
+      ]
+    },
+    {
+      "id": "fn:src/eidos/intelligence/parser.py#visit_Import",
+      "type": "Function",
+      "label": "visit_Import",
+      "file_path": "src/eidos/intelligence/parser.py",
+      "line_range": [
+        39,
+        46
+      ]
+    },
+    {
+      "id": "fn:src/eidos/intelligence/parser.py#visit_ImportFrom",
+      "type": "Function",
+      "label": "visit_ImportFrom",
+      "file_path": "src/eidos/intelligence/parser.py",
+      "line_range": [
+        48,
+        56
+      ]
+    },
+    {
+      "id": "fn:src/eidos/intelligence/parser.py#visit_Call",
+      "type": "Function",
+      "label": "visit_Call",
+      "file_path": "src/eidos/intelligence/parser.py",
+      "line_range": [
+        58,
+        63
+      ]
+    },
+    {
+      "id": "fn:src/eidos/intelligence/parser.py#parse_python_file",
+      "type": "Function",
+      "label": "parse_python_file",
+      "file_path": "src/eidos/intelligence/parser.py",
+      "line_range": [
+        65,
+        83
+      ]
+    },
+    {
+      "id": "dep:ast",
+      "type": "Dependency",
+      "label": "ast"
+    },
+    {
+      "id": "dep:typing.Any",
+      "type": "Dependency",
+      "label": "typing.Any"
+    },
+    {
+      "id": "file:src/eidos/intelligence/invariants.py",
+      "type": "File",
+      "label": "src/eidos/intelligence/invariants.py",
+      "line_count": 62
+    },
+    {
+      "id": "fn:src/eidos/intelligence/invariants.py#load_default_invariants",
+      "type": "Function",
+      "label": "load_default_invariants",
+      "file_path": "src/eidos/intelligence/invariants.py",
+      "line_range": [
+        8,
+        29
+      ]
+    },
+    {
+      "id": "fn:src/eidos/intelligence/invariants.py#check_invariants",
+      "type": "Function",
+      "label": "check_invariants",
+      "file_path": "src/eidos/intelligence/invariants.py",
+      "line_range": [
+        31,
+        62
+      ]
+    },
+    {
+      "id": "file:src/eidos/intelligence/fingerprint.py",
+      "type": "File",
+      "label": "src/eidos/intelligence/fingerprint.py",
+      "line_count": 98
+    },
+    {
+      "id": "fn:src/eidos/intelligence/fingerprint.py#get_git_info",
+      "type": "Function",
+      "label": "get_git_info",
+      "file_path": "src/eidos/intelligence/fingerprint.py",
+      "line_range": [
+        7,
+        35
+      ]
+    },
+    {
+      "id": "fn:src/eidos/intelligence/fingerprint.py#fingerprint_repository",
+      "type": "Function",
+      "label": "fingerprint_repository",
+      "file_path": "src/eidos/intelligence/fingerprint.py",
+      "line_range": [
+        37,
+        98
+      ]
+    },
+    {
+      "id": "dep:subprocess",
+      "type": "Dependency",
+      "label": "subprocess"
+    },
+    {
+      "id": "file:src/eidos/core/state.py",
+      "type": "File",
+      "label": "src/eidos/core/state.py",
+      "line_count": 31
+    },
+    {
+      "id": "class:src/eidos/core/state.py#TaskState",
+      "type": "Class",
+      "label": "TaskState",
+      "file_path": "src/eidos/core/state.py",
+      "line_range": [
+        5,
+        14
+      ]
+    },
+    {
+      "id": "fn:src/eidos/core/state.py#can_transition",
+      "type": "Function",
+      "label": "can_transition",
+      "file_path": "src/eidos/core/state.py",
+      "line_range": [
+        29,
+        31
+      ]
+    },
+    {
+      "id": "dep:enum.Enum",
+      "type": "Dependency",
+      "label": "enum.Enum"
+    },
+    {
+      "id": "file:src/eidos/core/exceptions.py",
+      "type": "File",
+      "label": "src/eidos/core/exceptions.py",
+      "line_count": 29
+    },
+    {
+      "id": "class:src/eidos/core/exceptions.py#EidosError",
+      "type": "Class",
+      "label": "EidosError",
+      "file_path": "src/eidos/core/exceptions.py",
+      "line_range": [
+        3,
+        5
+      ]
+    },
+    {
+      "id": "class:src/eidos/core/exceptions.py#ConfigurationError",
+      "type": "Class",
+      "label": "ConfigurationError",
+      "file_path": "src/eidos/core/exceptions.py",
+      "line_range": [
+        7,
+        9
+      ]
+    },
+    {
+      "id": "class:src/eidos/core/exceptions.py#SpecificationError",
+      "type": "Class",
+      "label": "SpecificationError",
+      "file_path": "src/eidos/core/exceptions.py",
+      "line_range": [
+        11,
+        13
+      ]
+    },
+    {
+      "id": "class:src/eidos/core/exceptions.py#VerificationError",
+      "type": "Class",
+      "label": "VerificationError",
+      "file_path": "src/eidos/core/exceptions.py",
+      "line_range": [
+        15,
+        17
+      ]
+    },
+    {
+      "id": "class:src/eidos/core/exceptions.py#InvariantViolationError",
+      "type": "Class",
+      "label": "InvariantViolationError",
+      "file_path": "src/eidos/core/exceptions.py",
+      "line_range": [
+        19,
+        25
+      ]
+    },
+    {
+      "id": "class:src/eidos/core/exceptions.py#DriftError",
+      "type": "Class",
+      "label": "DriftError",
+      "file_path": "src/eidos/core/exceptions.py",
+      "line_range": [
+        27,
+        29
+      ]
+    },
+    {
+      "id": "fn:src/eidos/core/exceptions.py#__init__",
+      "type": "Function",
+      "label": "__init__",
+      "file_path": "src/eidos/core/exceptions.py",
+      "line_range": [
+        21,
+        25
+      ]
+    },
+    {
+      "id": "file:src/eidos/progress/logger.py",
+      "type": "File",
+      "label": "src/eidos/progress/logger.py",
+      "line_count": 46
+    },
+    {
+      "id": "class:src/eidos/progress/logger.py#ProgressLogger",
+      "type": "Class",
+      "label": "ProgressLogger",
+      "file_path": "src/eidos/progress/logger.py",
+      "line_range": [
+        11,
+        46
+      ]
+    },
+    {
+      "id": "fn:src/eidos/progress/logger.py#__init__",
+      "type": "Function",
+      "label": "__init__",
+      "file_path": "src/eidos/progress/logger.py",
+      "line_range": [
+        12,
+        17
+      ]
+    },
+    {
+      "id": "fn:src/eidos/progress/logger.py#log_event",
+      "type": "Function",
+      "label": "log_event",
+      "file_path": "src/eidos/progress/logger.py",
+      "line_range": [
+        19,
+        36
+      ]
+    },
+    {
+      "id": "fn:src/eidos/progress/logger.py#_update_state",
+      "type": "Function",
+      "label": "_update_state",
+      "file_path": "src/eidos/progress/logger.py",
+      "line_range": [
+        38,
+        46
+      ]
+    },
+    {
+      "id": "dep:json",
+      "type": "Dependency",
+      "label": "json"
+    },
+    {
+      "id": "dep:uuid",
+      "type": "Dependency",
+      "label": "uuid"
+    },
+    {
+      "id": "dep:datetime.datetime",
+      "type": "Dependency",
+      "label": "datetime.datetime"
+    },
+    {
+      "id": "dep:datetime.timezone",
+      "type": "Dependency",
+      "label": "datetime.timezone"
+    },
+    {
+      "id": "file:src/eidos/verification/runner.py",
+      "type": "File",
+      "label": "src/eidos/verification/runner.py",
+      "line_count": 60
+    },
+    {
+      "id": "fn:src/eidos/verification/runner.py#run_verification",
+      "type": "Function",
+      "label": "run_verification",
+      "file_path": "src/eidos/verification/runner.py",
+      "line_range": [
+        10,
+        60
+      ]
+    },
+    {
+      "id": "dep:sys",
+      "type": "Dependency",
+      "label": "sys"
+    },
+    {
+      "id": "file:src/eidos/cli/main.py",
+      "type": "File",
+      "label": "src/eidos/cli/main.py",
+      "line_count": 276
+    },
+    {
+      "id": "fn:src/eidos/cli/main.py#init",
+      "type": "Function",
+      "label": "init",
+      "file_path": "src/eidos/cli/main.py",
+      "line_range": [
+        33,
+        64
+      ]
+    },
+    {
+      "id": "fn:src/eidos/cli/main.py#doctor",
+      "type": "Function",
+      "label": "doctor",
+      "file_path": "src/eidos/cli/main.py",
+      "line_range": [
+        67,
+        104
+      ]
+    },
+    {
+      "id": "fn:src/eidos/cli/main.py#analyze",
+      "type": "Function",
+      "label": "analyze",
+      "file_path": "src/eidos/cli/main.py",
+      "line_range": [
+        107,
+        124
+      ]
+    },
+    {
+      "id": "fn:src/eidos/cli/main.py#graph_build",
+      "type": "Function",
+      "label": "graph_build",
+      "file_path": "src/eidos/cli/main.py",
+      "line_range": [
+        127,
+        154
+      ]
+    },
+    {
+      "id": "fn:src/eidos/cli/main.py#graph_query",
+      "type": "Function",
+      "label": "graph_query",
+      "file_path": "src/eidos/cli/main.py",
+      "line_range": [
+        157,
+        171
+      ]
+    },
+    {
+      "id": "fn:src/eidos/cli/main.py#spec_new",
+      "type": "Function",
+      "label": "spec_new",
+      "file_path": "src/eidos/cli/main.py",
+      "line_range": [
+        174,
+        196
+      ]
+    },
+    {
+      "id": "fn:src/eidos/cli/main.py#spec_list",
+      "type": "Function",
+      "label": "spec_list",
+      "file_path": "src/eidos/cli/main.py",
+      "line_range": [
+        199,
+        219
+      ]
+    },
+    {
+      "id": "fn:src/eidos/cli/main.py#invariant_list",
+      "type": "Function",
+      "label": "invariant_list",
+      "file_path": "src/eidos/cli/main.py",
+      "line_range": [
+        222,
+        234
+      ]
+    },
+    {
+      "id": "fn:src/eidos/cli/main.py#invariant_check",
+      "type": "Function",
+      "label": "invariant_check",
+      "file_path": "src/eidos/cli/main.py",
+      "line_range": [
+        237,
+        247
+      ]
+    },
+    {
+      "id": "fn:src/eidos/cli/main.py#verify",
+      "type": "Function",
+      "label": "verify",
+      "file_path": "src/eidos/cli/main.py",
+      "line_range": [
+        250,
+        273
+      ]
+    },
+    {
+      "id": "dep:typer",
+      "type": "Dependency",
+      "label": "typer"
+    },
+    {
+      "id": "dep:rich.console.Console",
+      "type": "Dependency",
+      "label": "rich.console.Console"
+    },
+    {
+      "id": "dep:rich.table.Table",
+      "type": "Dependency",
+      "label": "rich.table.Table"
+    },
+    {
+      "id": "dep:rich.panel.Panel",
+      "type": "Dependency",
+      "label": "rich.panel.Panel"
+    },
+    {
+      "id": "dep:eidos.verification.runner.run_verification",
+      "type": "Dependency",
+      "label": "eidos.verification.runner.run_verification"
+    },
+    {
+      "id": "dep:eidos.progress.logger.ProgressLogger",
+      "type": "Dependency",
+      "label": "eidos.progress.logger.ProgressLogger"
+    },
+    {
+      "id": "file:src/eidos/graph/engine.py",
+      "type": "File",
+      "label": "src/eidos/graph/engine.py",
+      "line_count": 110
+    },
+    {
+      "id": "class:src/eidos/graph/engine.py#RepositoryGraphEngine",
+      "type": "Class",
+      "label": "RepositoryGraphEngine",
+      "file_path": "src/eidos/graph/engine.py",
+      "line_range": [
+        10,
+        110
+      ]
+    },
+    {
+      "id": "fn:src/eidos/graph/engine.py#__init__",
+      "type": "Function",
+      "label": "__init__",
+      "file_path": "src/eidos/graph/engine.py",
+      "line_range": [
+        11,
+        13
+      ]
+    },
+    {
+      "id": "fn:src/eidos/graph/engine.py#build",
+      "type": "Function",
+      "label": "build",
+      "file_path": "src/eidos/graph/engine.py",
+      "line_range": [
+        15,
+        65
+      ]
+    },
+    {
+      "id": "fn:src/eidos/graph/engine.py#analyze",
+      "type": "Function",
+      "label": "analyze",
+      "file_path": "src/eidos/graph/engine.py",
+      "line_range": [
+        67,
+        89
+      ]
+    },
+    {
+      "id": "fn:src/eidos/graph/engine.py#query_path",
+      "type": "Function",
+      "label": "query_path",
+      "file_path": "src/eidos/graph/engine.py",
+      "line_range": [
+        91,
+        100
+      ]
+    },
+    {
+      "id": "fn:src/eidos/graph/engine.py#export_json",
+      "type": "Function",
+      "label": "export_json",
+      "file_path": "src/eidos/graph/engine.py",
+      "line_range": [
+        102,
+        110
+      ]
+    },
+    {
+      "id": "dep:networkx",
+      "type": "Dependency",
+      "label": "networkx"
+    },
+    {
+      "id": "file:src/eidos/contracts/models.py",
+      "type": "File",
+      "label": "src/eidos/contracts/models.py",
+      "line_count": 144
+    },
+    {
+      "id": "class:src/eidos/contracts/models.py#NodeType",
+      "type": "Class",
+      "label": "NodeType",
+      "file_path": "src/eidos/contracts/models.py",
+      "line_range": [
+        8,
+        23
+      ]
+    },
+    {
+      "id": "class:src/eidos/contracts/models.py#EdgeRelation",
+      "type": "Class",
+      "label": "EdgeRelation",
+      "file_path": "src/eidos/contracts/models.py",
+      "line_range": [
+        25,
+        36
+      ]
+    },
+    {
+      "id": "class:src/eidos/contracts/models.py#EpistemicType",
+      "type": "Class",
+      "label": "EpistemicType",
+      "file_path": "src/eidos/contracts/models.py",
+      "line_range": [
+        38,
+        42
+      ]
+    },
+    {
+      "id": "class:src/eidos/contracts/models.py#ProjectContract",
+      "type": "Class",
+      "label": "ProjectContract",
+      "file_path": "src/eidos/contracts/models.py",
+      "line_range": [
+        44,
+        57
+      ]
+    },
+    {
+      "id": "class:src/eidos/contracts/models.py#InvariantRuleModel",
+      "type": "Class",
+      "label": "InvariantRuleModel",
+      "file_path": "src/eidos/contracts/models.py",
+      "line_range": [
+        59,
+        67
+      ]
+    },
+    {
+      "id": "class:src/eidos/contracts/models.py#GraphNodeModel",
+      "type": "Class",
+      "label": "GraphNodeModel",
+      "file_path": "src/eidos/contracts/models.py",
+      "line_range": [
+        69,
+        77
+      ]
+    },
+    {
+      "id": "class:src/eidos/contracts/models.py#GraphEdgeModel",
+      "type": "Class",
+      "label": "GraphEdgeModel",
+      "file_path": "src/eidos/contracts/models.py",
+      "line_range": [
+        79,
+        85
+      ]
+    },
+    {
+      "id": "class:src/eidos/contracts/models.py#TaskModel",
+      "type": "Class",
+      "label": "TaskModel",
+      "file_path": "src/eidos/contracts/models.py",
+      "line_range": [
+        87,
+        97
+      ]
+    },
+    {
+      "id": "class:src/eidos/contracts/models.py#SpecModel",
+      "type": "Class",
+      "label": "SpecModel",
+      "file_path": "src/eidos/contracts/models.py",
+      "line_range": [
+        99,
+        107
+      ]
+    },
+    {
+      "id": "class:src/eidos/contracts/models.py#EvidenceModel",
+      "type": "Class",
+      "label": "EvidenceModel",
+      "file_path": "src/eidos/contracts/models.py",
+      "line_range": [
+        109,
+        122
+      ]
+    },
+    {
+      "id": "class:src/eidos/contracts/models.py#VerificationResultModel",
+      "type": "Class",
+      "label": "VerificationResultModel",
+      "file_path": "src/eidos/contracts/models.py",
+      "line_range": [
+        124,
+        134
+      ]
+    },
+    {
+      "id": "class:src/eidos/contracts/models.py#ProgressEventModel",
+      "type": "Class",
+      "label": "ProgressEventModel",
+      "file_path": "src/eidos/contracts/models.py",
+      "line_range": [
+        136,
+        144
+      ]
+    },
+    {
+      "id": "dep:typing.Optional",
+      "type": "Dependency",
+      "label": "typing.Optional"
+    },
+    {
+      "id": "dep:pydantic.BaseModel",
+      "type": "Dependency",
+      "label": "pydantic.BaseModel"
+    },
+    {
+      "id": "dep:pydantic.Field",
+      "type": "Dependency",
+      "label": "pydantic.Field"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:tests/test_graph.py",
+      "target": "fn:tests/test_graph.py#test_graph_builder_and_analyzer",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/test_graph.py",
+      "target": "fn:tests/test_graph.py#test_graph_path_query",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/test_graph.py",
+      "target": "dep:pathlib.Path",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/test_graph.py",
+      "target": "dep:eidos.graph.engine.RepositoryGraphEngine",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/test_invariants.py",
+      "target": "fn:tests/test_invariants.py#test_load_default_invariants",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/test_invariants.py",
+      "target": "fn:tests/test_invariants.py#test_check_invariants_clean_workspace",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/test_invariants.py",
+      "target": "fn:tests/test_invariants.py#test_detect_synthetic_violation",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/test_invariants.py",
+      "target": "dep:pathlib.Path",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/test_invariants.py",
+      "target": "dep:eidos.intelligence.invariants.check_invariants",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/test_invariants.py",
+      "target": "dep:eidos.intelligence.invariants.load_default_invariants",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/test_invariants.py",
+      "target": "dep:eidos.contracts.models.InvariantRuleModel",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/test_fingerprint.py",
+      "target": "fn:tests/test_fingerprint.py#test_fingerprint_repository",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/test_fingerprint.py",
+      "target": "fn:tests/test_fingerprint.py#test_get_git_info",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/test_fingerprint.py",
+      "target": "fn:tests/test_fingerprint.py#test_parse_python_file",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/test_fingerprint.py",
+      "target": "dep:pathlib.Path",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/test_fingerprint.py",
+      "target": "dep:eidos.intelligence.fingerprint.fingerprint_repository",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/test_fingerprint.py",
+      "target": "dep:eidos.intelligence.fingerprint.get_git_info",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/test_fingerprint.py",
+      "target": "dep:eidos.intelligence.parser.parse_python_file",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/test_cli.py",
+      "target": "fn:tests/test_cli.py#test_cli_help",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/test_cli.py",
+      "target": "fn:tests/test_cli.py#test_cli_doctor",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/test_cli.py",
+      "target": "fn:tests/test_cli.py#test_cli_analyze",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/test_cli.py",
+      "target": "fn:tests/test_cli.py#test_cli_invariants",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/test_cli.py",
+      "target": "fn:tests/test_cli.py#test_cli_graph_build",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/test_cli.py",
+      "target": "dep:typer.testing.CliRunner",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/test_cli.py",
+      "target": "dep:eidos.cli.main.app",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/test_contracts.py",
+      "target": "fn:tests/test_contracts.py#test_project_contract_validation",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/test_contracts.py",
+      "target": "fn:tests/test_contracts.py#test_spec_and_task_models",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/test_contracts.py",
+      "target": "fn:tests/test_contracts.py#test_graph_node_and_edge_models",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/test_contracts.py",
+      "target": "fn:tests/test_contracts.py#test_verification_result_model",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/test_contracts.py",
+      "target": "dep:pytest",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/test_contracts.py",
+      "target": "dep:eidos.contracts.models.ProjectContract",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/test_contracts.py",
+      "target": "dep:eidos.contracts.models.SpecModel",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/test_contracts.py",
+      "target": "dep:eidos.contracts.models.TaskModel",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/test_contracts.py",
+      "target": "dep:eidos.contracts.models.GraphNodeModel",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/test_contracts.py",
+      "target": "dep:eidos.contracts.models.NodeType",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/test_contracts.py",
+      "target": "dep:eidos.contracts.models.GraphEdgeModel",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/test_contracts.py",
+      "target": "dep:eidos.contracts.models.EdgeRelation",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/test_contracts.py",
+      "target": "dep:eidos.contracts.models.EpistemicType",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/test_contracts.py",
+      "target": "dep:eidos.contracts.models.EvidenceModel",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/test_contracts.py",
+      "target": "dep:eidos.contracts.models.VerificationResultModel",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:tests/test_contracts.py",
+      "target": "dep:eidos.contracts.models.ProgressEventModel",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/intelligence/parser.py",
+      "target": "class:src/eidos/intelligence/parser.py#EntityExtractor",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/intelligence/parser.py",
+      "target": "fn:src/eidos/intelligence/parser.py#__init__",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/intelligence/parser.py",
+      "target": "fn:src/eidos/intelligence/parser.py#visit_ClassDef",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/intelligence/parser.py",
+      "target": "fn:src/eidos/intelligence/parser.py#visit_FunctionDef",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/intelligence/parser.py",
+      "target": "fn:src/eidos/intelligence/parser.py#visit_AsyncFunctionDef",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/intelligence/parser.py",
+      "target": "fn:src/eidos/intelligence/parser.py#visit_Import",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/intelligence/parser.py",
+      "target": "fn:src/eidos/intelligence/parser.py#visit_ImportFrom",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/intelligence/parser.py",
+      "target": "fn:src/eidos/intelligence/parser.py#visit_Call",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/intelligence/parser.py",
+      "target": "fn:src/eidos/intelligence/parser.py#parse_python_file",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/intelligence/parser.py",
+      "target": "dep:ast",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/intelligence/parser.py",
+      "target": "dep:pathlib.Path",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/intelligence/parser.py",
+      "target": "dep:typing.Any",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/intelligence/invariants.py",
+      "target": "fn:src/eidos/intelligence/invariants.py#load_default_invariants",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/intelligence/invariants.py",
+      "target": "fn:src/eidos/intelligence/invariants.py#check_invariants",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/intelligence/invariants.py",
+      "target": "dep:pathlib.Path",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/intelligence/invariants.py",
+      "target": "dep:typing.Any",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/intelligence/invariants.py",
+      "target": "dep:eidos.contracts.models.InvariantRuleModel",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/intelligence/invariants.py",
+      "target": "dep:eidos.intelligence.parser.parse_python_file",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/intelligence/fingerprint.py",
+      "target": "fn:src/eidos/intelligence/fingerprint.py#get_git_info",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/intelligence/fingerprint.py",
+      "target": "fn:src/eidos/intelligence/fingerprint.py#fingerprint_repository",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/intelligence/fingerprint.py",
+      "target": "dep:pathlib.Path",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/intelligence/fingerprint.py",
+      "target": "dep:subprocess",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/intelligence/fingerprint.py",
+      "target": "dep:typing.Any",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/core/state.py",
+      "target": "class:src/eidos/core/state.py#TaskState",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/core/state.py",
+      "target": "fn:src/eidos/core/state.py#can_transition",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/core/state.py",
+      "target": "dep:enum.Enum",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/core/exceptions.py",
+      "target": "class:src/eidos/core/exceptions.py#EidosError",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/core/exceptions.py",
+      "target": "class:src/eidos/core/exceptions.py#ConfigurationError",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/core/exceptions.py",
+      "target": "class:src/eidos/core/exceptions.py#SpecificationError",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/core/exceptions.py",
+      "target": "class:src/eidos/core/exceptions.py#VerificationError",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/core/exceptions.py",
+      "target": "class:src/eidos/core/exceptions.py#InvariantViolationError",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/core/exceptions.py",
+      "target": "class:src/eidos/core/exceptions.py#DriftError",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/core/exceptions.py",
+      "target": "fn:src/eidos/core/exceptions.py#__init__",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/progress/logger.py",
+      "target": "class:src/eidos/progress/logger.py#ProgressLogger",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/progress/logger.py",
+      "target": "fn:src/eidos/progress/logger.py#__init__",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/progress/logger.py",
+      "target": "fn:src/eidos/progress/logger.py#log_event",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/progress/logger.py",
+      "target": "fn:src/eidos/progress/logger.py#_update_state",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/progress/logger.py",
+      "target": "dep:json",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/progress/logger.py",
+      "target": "dep:uuid",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/progress/logger.py",
+      "target": "dep:pathlib.Path",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/progress/logger.py",
+      "target": "dep:datetime.datetime",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/progress/logger.py",
+      "target": "dep:datetime.timezone",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/progress/logger.py",
+      "target": "dep:typing.Any",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/progress/logger.py",
+      "target": "dep:eidos.contracts.models.ProgressEventModel",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/progress/logger.py",
+      "target": "dep:eidos.intelligence.fingerprint.get_git_info",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/verification/runner.py",
+      "target": "fn:src/eidos/verification/runner.py#run_verification",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/verification/runner.py",
+      "target": "dep:subprocess",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/verification/runner.py",
+      "target": "dep:uuid",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/verification/runner.py",
+      "target": "dep:pathlib.Path",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/verification/runner.py",
+      "target": "dep:datetime.datetime",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/verification/runner.py",
+      "target": "dep:datetime.timezone",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/verification/runner.py",
+      "target": "dep:eidos.contracts.models.VerificationResultModel",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/verification/runner.py",
+      "target": "dep:eidos.intelligence.invariants.check_invariants",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/verification/runner.py",
+      "target": "dep:sys",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/cli/main.py",
+      "target": "fn:src/eidos/cli/main.py#init",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/cli/main.py",
+      "target": "fn:src/eidos/cli/main.py#doctor",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/cli/main.py",
+      "target": "fn:src/eidos/cli/main.py#analyze",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/cli/main.py",
+      "target": "fn:src/eidos/cli/main.py#graph_build",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/cli/main.py",
+      "target": "fn:src/eidos/cli/main.py#graph_query",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/cli/main.py",
+      "target": "fn:src/eidos/cli/main.py#spec_new",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/cli/main.py",
+      "target": "fn:src/eidos/cli/main.py#spec_list",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/cli/main.py",
+      "target": "fn:src/eidos/cli/main.py#invariant_list",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/cli/main.py",
+      "target": "fn:src/eidos/cli/main.py#invariant_check",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/cli/main.py",
+      "target": "fn:src/eidos/cli/main.py#verify",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/cli/main.py",
+      "target": "dep:pathlib.Path",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/cli/main.py",
+      "target": "dep:json",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/cli/main.py",
+      "target": "dep:typer",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/cli/main.py",
+      "target": "dep:rich.console.Console",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/cli/main.py",
+      "target": "dep:rich.table.Table",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/cli/main.py",
+      "target": "dep:rich.panel.Panel",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/cli/main.py",
+      "target": "dep:eidos.contracts.models.ProjectContract",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/cli/main.py",
+      "target": "dep:eidos.contracts.models.SpecModel",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/cli/main.py",
+      "target": "dep:eidos.intelligence.fingerprint.fingerprint_repository",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/cli/main.py",
+      "target": "dep:eidos.intelligence.invariants.check_invariants",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/cli/main.py",
+      "target": "dep:eidos.intelligence.invariants.load_default_invariants",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/cli/main.py",
+      "target": "dep:eidos.graph.engine.RepositoryGraphEngine",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/cli/main.py",
+      "target": "dep:eidos.verification.runner.run_verification",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/cli/main.py",
+      "target": "dep:eidos.progress.logger.ProgressLogger",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/graph/engine.py",
+      "target": "class:src/eidos/graph/engine.py#RepositoryGraphEngine",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/graph/engine.py",
+      "target": "fn:src/eidos/graph/engine.py#__init__",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/graph/engine.py",
+      "target": "fn:src/eidos/graph/engine.py#build",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/graph/engine.py",
+      "target": "fn:src/eidos/graph/engine.py#analyze",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/graph/engine.py",
+      "target": "fn:src/eidos/graph/engine.py#query_path",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/graph/engine.py",
+      "target": "fn:src/eidos/graph/engine.py#export_json",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/graph/engine.py",
+      "target": "dep:json",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/graph/engine.py",
+      "target": "dep:pathlib.Path",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/graph/engine.py",
+      "target": "dep:typing.Any",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/graph/engine.py",
+      "target": "dep:networkx",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/graph/engine.py",
+      "target": "dep:eidos.contracts.models.NodeType",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/graph/engine.py",
+      "target": "dep:eidos.contracts.models.EdgeRelation",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/graph/engine.py",
+      "target": "dep:eidos.contracts.models.EpistemicType",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/graph/engine.py",
+      "target": "dep:eidos.intelligence.parser.parse_python_file",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/contracts/models.py",
+      "target": "class:src/eidos/contracts/models.py#NodeType",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/contracts/models.py",
+      "target": "class:src/eidos/contracts/models.py#EdgeRelation",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/contracts/models.py",
+      "target": "class:src/eidos/contracts/models.py#EpistemicType",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/contracts/models.py",
+      "target": "class:src/eidos/contracts/models.py#ProjectContract",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/contracts/models.py",
+      "target": "class:src/eidos/contracts/models.py#InvariantRuleModel",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/contracts/models.py",
+      "target": "class:src/eidos/contracts/models.py#GraphNodeModel",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/contracts/models.py",
+      "target": "class:src/eidos/contracts/models.py#GraphEdgeModel",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/contracts/models.py",
+      "target": "class:src/eidos/contracts/models.py#TaskModel",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/contracts/models.py",
+      "target": "class:src/eidos/contracts/models.py#SpecModel",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/contracts/models.py",
+      "target": "class:src/eidos/contracts/models.py#EvidenceModel",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/contracts/models.py",
+      "target": "class:src/eidos/contracts/models.py#VerificationResultModel",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/contracts/models.py",
+      "target": "class:src/eidos/contracts/models.py#ProgressEventModel",
+      "relation": "DEFINED_BY",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/contracts/models.py",
+      "target": "dep:datetime.datetime",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/contracts/models.py",
+      "target": "dep:datetime.timezone",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/contracts/models.py",
+      "target": "dep:enum.Enum",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/contracts/models.py",
+      "target": "dep:typing.Any",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/contracts/models.py",
+      "target": "dep:typing.Optional",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/contracts/models.py",
+      "target": "dep:pydantic.BaseModel",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    },
+    {
+      "source": "file:src/eidos/contracts/models.py",
+      "target": "dep:pydantic.Field",
+      "relation": "DEPENDS_ON",
+      "epistemic": "EXTRACTED"
+    }
+  ],
+  "metrics": {
+    "node_count": 129,
+    "edge_count": 152,
+    "god_nodes": [
+      {
+        "node_id": "file:src/eidos/cli/main.py",
+        "degree": 24,
+        "label": "src/eidos/cli/main.py"
+      },
+      {
+        "node_id": "file:src/eidos/contracts/models.py",
+        "degree": 19,
+        "label": "src/eidos/contracts/models.py"
+      },
+      {
+        "node_id": "file:tests/test_contracts.py",
+        "degree": 16,
+        "label": "tests/test_contracts.py"
+      },
+      {
+        "node_id": "file:src/eidos/graph/engine.py",
+        "degree": 14,
+        "label": "src/eidos/graph/engine.py"
+      },
+      {
+        "node_id": "file:src/eidos/intelligence/parser.py",
+        "degree": 12,
+        "label": "src/eidos/intelligence/parser.py"
+      }
+    ],
+    "community_count": 85,
+    "density": 0.009205426356589148
+  }
+}

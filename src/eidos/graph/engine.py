@@ -1,0 +1,110 @@
+"""Repository Intelligence Graph engine utilizing NetworkX."""
+
+import json
+from pathlib import Path
+from typing import Any
+import networkx as nx
+from eidos.contracts.models import NodeType, EdgeRelation, EpistemicType
+from eidos.intelligence.parser import parse_python_file
+
+class RepositoryGraphEngine:
+    def __init__(self, workspace_root: Path):
+        self.workspace_root = workspace_root
+        self.graph = nx.DiGraph()
+
+    def build(self) -> nx.DiGraph:
+        """Parses all Python files and builds the directed code intelligence graph."""
+        self.graph.clear()
+        py_files = [f for f in self.workspace_root.rglob("*.py") if not any(p.startswith((".", "venv", "__pycache__")) for p in f.parts)]
+        
+        for f in py_files:
+            parsed = parse_python_file(f, self.workspace_root)
+            if not parsed:
+                continue
+                
+            file_node_id = f"file:{parsed['file_path']}"
+            self.graph.add_node(
+                file_node_id,
+                type=NodeType.FILE.value,
+                label=parsed["file_path"],
+                line_count=parsed["line_count"],
+            )
+            
+            # Classes
+            for cls in parsed["classes"]:
+                cls_id = f"class:{parsed['file_path']}#{cls['name']}"
+                self.graph.add_node(
+                    cls_id,
+                    type=NodeType.CLASS.value,
+                    label=cls["name"],
+                    file_path=parsed["file_path"],
+                    line_range=cls["line_range"],
+                )
+                self.graph.add_edge(file_node_id, cls_id, relation=EdgeRelation.DEFINED_BY.value, epistemic=EpistemicType.EXTRACTED.value)
+                
+            # Functions
+            for fn in parsed["functions"]:
+                fn_id = f"fn:{parsed['file_path']}#{fn['name']}"
+                self.graph.add_node(
+                    fn_id,
+                    type=NodeType.FUNCTION.value,
+                    label=fn["name"],
+                    file_path=parsed["file_path"],
+                    line_range=fn["line_range"],
+                )
+                self.graph.add_edge(file_node_id, fn_id, relation=EdgeRelation.DEFINED_BY.value, epistemic=EpistemicType.EXTRACTED.value)
+                
+            # Imports / Dependencies
+            for imp in parsed["imports"]:
+                mod = imp["module"]
+                imp_id = f"dep:{mod}"
+                if not self.graph.has_node(imp_id):
+                    self.graph.add_node(imp_id, type=NodeType.DEPENDENCY.value, label=mod)
+                self.graph.add_edge(file_node_id, imp_id, relation=EdgeRelation.DEPENDS_ON.value, epistemic=EpistemicType.EXTRACTED.value)
+
+        return self.graph
+
+    def analyze(self) -> dict[str, Any]:
+        """Computes god nodes, centrality, and architectural metrics."""
+        if len(self.graph) == 0:
+            self.build()
+            
+        degrees = dict(self.graph.degree())
+        sorted_degrees = sorted(degrees.items(), key=lambda x: x[1], reverse=True)
+        god_nodes = [{"node_id": node, "degree": deg, "label": self.graph.nodes[node].get("label", node)} for node, deg in sorted_degrees[:5]]
+        
+        # Simple community clustering by top-level module
+        communities: dict[str, list[str]] = {}
+        for node in self.graph.nodes():
+            label = self.graph.nodes[node].get("label", "")
+            root_domain = label.split("/")[0] if "/" in label else label.split(".")[0]
+            communities.setdefault(root_domain, []).append(node)
+
+        return {
+            "node_count": self.graph.number_of_nodes(),
+            "edge_count": self.graph.number_of_edges(),
+            "god_nodes": god_nodes,
+            "community_count": len(communities),
+            "density": nx.density(self.graph),
+        }
+
+    def query_path(self, source_label: str, target_label: str) -> list[str]:
+        """Finds the shortest directed path between two concepts."""
+        src = next((n for n, d in self.graph.nodes(data=True) if source_label in d.get("label", "")), None)
+        tgt = next((n for n, d in self.graph.nodes(data=True) if target_label in d.get("label", "")), None)
+        if not src or not tgt:
+            return []
+        try:
+            return nx.shortest_path(self.graph, source=src, target=tgt)
+        except nx.NetworkXNoPath:
+            return []
+
+    def export_json(self, target_path: Path):
+        """Exports graph to JSON schema compatible format."""
+        target_path.parent.mkdir(parents=True, exist_ok=True)
+        data = {
+            "nodes": [{"id": n, **d} for n, d in self.graph.nodes(data=True)],
+            "edges": [{"source": u, "target": v, **d} for u, v, d in self.graph.edges(data=True)],
+            "metrics": self.analyze(),
+        }
+        target_path.write_text(json.dumps(data, indent=2), encoding="utf-8")
