@@ -2,13 +2,13 @@
   "contract_id": "GRAPH-CONTRACT-001",
   "contract_version": "1.0.0",
   "snapshot": {
-    "snapshot_id": "SNAP-23A1C565",
+    "snapshot_id": "SNAP-CC9EE17A",
     "project_id": "PROJ-EIDOS",
-    "git_commit": "73083be6b0453f9a9c18b503ab10a3f5f0d9bee6",
-    "created_at": "2026-09-30T21:22:08.750049+00:00",
+    "git_commit": "eba994766ba79ad415811ee22144ab78cd9802ad",
+    "created_at": "2026-09-30T21:32:10.097644+00:00",
     "graph_freshness": "FRESH",
-    "node_count": 436,
-    "edge_count": 647,
+    "node_count": 497,
+    "edge_count": 758,
     "nodes": [
       {
         "id": "file:tests/test_graph.py",
@@ -1369,6 +1369,450 @@
         ]
       },
       {
+        "id": "file:src/eidos/evaluation/benchmark.py",
+        "type": "File",
+        "label": "src/eidos/evaluation/benchmark.py",
+        "file_path": "src/eidos/evaluation/benchmark.py",
+        "line_range": null
+      },
+      {
+        "id": "fn:src/eidos/evaluation/benchmark.py#get_benchmark_suite",
+        "type": "Function",
+        "label": "get_benchmark_suite",
+        "file_path": "src/eidos/evaluation/benchmark.py",
+        "line_range": [
+          7,
+          369
+        ]
+      },
+      {
+        "id": "dep:typing.Dict",
+        "type": "Dependency",
+        "label": "typing.Dict",
+        "file_path": null,
+        "line_range": null
+      },
+      {
+        "id": "dep:typing.List",
+        "type": "Dependency",
+        "label": "typing.List",
+        "file_path": null,
+        "line_range": null
+      },
+      {
+        "id": "dep:eidos.evaluation.models.TaskDefinition",
+        "type": "Dependency",
+        "label": "eidos.evaluation.models.TaskDefinition",
+        "file_path": null,
+        "line_range": null
+      },
+      {
+        "id": "dep:eidos.evaluation.models.TaskDifficulty",
+        "type": "Dependency",
+        "label": "eidos.evaluation.models.TaskDifficulty",
+        "file_path": null,
+        "line_range": null
+      },
+      {
+        "id": "dep:eidos.evaluation.models.TaskType",
+        "type": "Dependency",
+        "label": "eidos.evaluation.models.TaskType",
+        "file_path": null,
+        "line_range": null
+      },
+      {
+        "id": "file:src/eidos/evaluation/models.py",
+        "type": "File",
+        "label": "src/eidos/evaluation/models.py",
+        "file_path": "src/eidos/evaluation/models.py",
+        "line_range": null
+      },
+      {
+        "id": "class:src/eidos/evaluation/models.py#TaskDifficulty",
+        "type": "Class",
+        "label": "TaskDifficulty",
+        "file_path": "src/eidos/evaluation/models.py",
+        "line_range": [
+          7,
+          12
+        ]
+      },
+      {
+        "id": "class:src/eidos/evaluation/models.py#TaskType",
+        "type": "Class",
+        "label": "TaskType",
+        "file_path": "src/eidos/evaluation/models.py",
+        "line_range": [
+          15,
+          26
+        ]
+      },
+      {
+        "id": "class:src/eidos/evaluation/models.py#ExperimentalArm",
+        "type": "Class",
+        "label": "ExperimentalArm",
+        "file_path": "src/eidos/evaluation/models.py",
+        "line_range": [
+          29,
+          43
+        ]
+      },
+      {
+        "id": "class:src/eidos/evaluation/models.py#TaskDefinition",
+        "type": "Class",
+        "label": "TaskDefinition",
+        "file_path": "src/eidos/evaluation/models.py",
+        "line_range": [
+          46,
+          59
+        ]
+      },
+      {
+        "id": "class:src/eidos/evaluation/models.py#TaskResult",
+        "type": "Class",
+        "label": "TaskResult",
+        "file_path": "src/eidos/evaluation/models.py",
+        "line_range": [
+          62,
+          83
+        ]
+      },
+      {
+        "id": "class:src/eidos/evaluation/models.py#ArmSummaryStats",
+        "type": "Class",
+        "label": "ArmSummaryStats",
+        "file_path": "src/eidos/evaluation/models.py",
+        "line_range": [
+          86,
+          101
+        ]
+      },
+      {
+        "id": "class:src/eidos/evaluation/models.py#EvaluationRun",
+        "type": "Class",
+        "label": "EvaluationRun",
+        "file_path": "src/eidos/evaluation/models.py",
+        "line_range": [
+          104,
+          117
+        ]
+      },
+      {
+        "id": "dep:typing.Optional",
+        "type": "Dependency",
+        "label": "typing.Optional",
+        "file_path": null,
+        "line_range": null
+      },
+      {
+        "id": "dep:pydantic.BaseModel",
+        "type": "Dependency",
+        "label": "pydantic.BaseModel",
+        "file_path": null,
+        "line_range": null
+      },
+      {
+        "id": "dep:pydantic.Field",
+        "type": "Dependency",
+        "label": "pydantic.Field",
+        "file_path": null,
+        "line_range": null
+      },
+      {
+        "id": "file:src/eidos/evaluation/stats.py",
+        "type": "File",
+        "label": "src/eidos/evaluation/stats.py",
+        "file_path": "src/eidos/evaluation/stats.py",
+        "line_range": null
+      },
+      {
+        "id": "fn:src/eidos/evaluation/stats.py#mean",
+        "type": "Function",
+        "label": "mean",
+        "file_path": "src/eidos/evaluation/stats.py",
+        "line_range": [
+          16,
+          20
+        ]
+      },
+      {
+        "id": "fn:src/eidos/evaluation/stats.py#median",
+        "type": "Function",
+        "label": "median",
+        "file_path": "src/eidos/evaluation/stats.py",
+        "line_range": [
+          23,
+          32
+        ]
+      },
+      {
+        "id": "fn:src/eidos/evaluation/stats.py#variance",
+        "type": "Function",
+        "label": "variance",
+        "file_path": "src/eidos/evaluation/stats.py",
+        "line_range": [
+          35,
+          41
+        ]
+      },
+      {
+        "id": "fn:src/eidos/evaluation/stats.py#std_dev",
+        "type": "Function",
+        "label": "std_dev",
+        "file_path": "src/eidos/evaluation/stats.py",
+        "line_range": [
+          44,
+          46
+        ]
+      },
+      {
+        "id": "fn:src/eidos/evaluation/stats.py#confidence_interval_95",
+        "type": "Function",
+        "label": "confidence_interval_95",
+        "file_path": "src/eidos/evaluation/stats.py",
+        "line_range": [
+          49,
+          60
+        ]
+      },
+      {
+        "id": "fn:src/eidos/evaluation/stats.py#bootstrap_ci_95",
+        "type": "Function",
+        "label": "bootstrap_ci_95",
+        "file_path": "src/eidos/evaluation/stats.py",
+        "line_range": [
+          63,
+          78
+        ]
+      },
+      {
+        "id": "fn:src/eidos/evaluation/stats.py#cohens_d",
+        "type": "Function",
+        "label": "cohens_d",
+        "file_path": "src/eidos/evaluation/stats.py",
+        "line_range": [
+          81,
+          95
+        ]
+      },
+      {
+        "id": "fn:src/eidos/evaluation/stats.py#permutation_test_p_value",
+        "type": "Function",
+        "label": "permutation_test_p_value",
+        "file_path": "src/eidos/evaluation/stats.py",
+        "line_range": [
+          98,
+          118
+        ]
+      },
+      {
+        "id": "fn:src/eidos/evaluation/stats.py#compute_relative_change",
+        "type": "Function",
+        "label": "compute_relative_change",
+        "file_path": "src/eidos/evaluation/stats.py",
+        "line_range": [
+          121,
+          125
+        ]
+      },
+      {
+        "id": "dep:math",
+        "type": "Dependency",
+        "label": "math",
+        "file_path": null,
+        "line_range": null
+      },
+      {
+        "id": "dep:random",
+        "type": "Dependency",
+        "label": "random",
+        "file_path": null,
+        "line_range": null
+      },
+      {
+        "id": "dep:typing.Tuple",
+        "type": "Dependency",
+        "label": "typing.Tuple",
+        "file_path": null,
+        "line_range": null
+      },
+      {
+        "id": "file:src/eidos/evaluation/runner.py",
+        "type": "File",
+        "label": "src/eidos/evaluation/runner.py",
+        "file_path": "src/eidos/evaluation/runner.py",
+        "line_range": null
+      },
+      {
+        "id": "class:src/eidos/evaluation/runner.py#EvaluationRunner",
+        "type": "Class",
+        "label": "EvaluationRunner",
+        "file_path": "src/eidos/evaluation/runner.py",
+        "line_range": [
+          28,
+          304
+        ]
+      },
+      {
+        "id": "fn:src/eidos/evaluation/runner.py#__init__",
+        "type": "Function",
+        "label": "__init__",
+        "file_path": "src/eidos/evaluation/runner.py",
+        "line_range": [
+          31,
+          35
+        ]
+      },
+      {
+        "id": "fn:src/eidos/evaluation/runner.py#run_trial",
+        "type": "Function",
+        "label": "run_trial",
+        "file_path": "src/eidos/evaluation/runner.py",
+        "line_range": [
+          37,
+          173
+        ]
+      },
+      {
+        "id": "fn:src/eidos/evaluation/runner.py#execute_evaluation",
+        "type": "Function",
+        "label": "execute_evaluation",
+        "file_path": "src/eidos/evaluation/runner.py",
+        "line_range": [
+          175,
+          304
+        ]
+      },
+      {
+        "id": "fn:src/eidos/evaluation/runner.py#datetime_slug",
+        "type": "Function",
+        "label": "datetime_slug",
+        "file_path": "src/eidos/evaluation/runner.py",
+        "line_range": [
+          307,
+          309
+        ]
+      },
+      {
+        "id": "dep:time",
+        "type": "Dependency",
+        "label": "time",
+        "file_path": null,
+        "line_range": null
+      },
+      {
+        "id": "dep:eidos.evaluation.models.TaskResult",
+        "type": "Dependency",
+        "label": "eidos.evaluation.models.TaskResult",
+        "file_path": null,
+        "line_range": null
+      },
+      {
+        "id": "dep:eidos.evaluation.models.EvaluationRun",
+        "type": "Dependency",
+        "label": "eidos.evaluation.models.EvaluationRun",
+        "file_path": null,
+        "line_range": null
+      },
+      {
+        "id": "dep:eidos.evaluation.models.ExperimentalArm",
+        "type": "Dependency",
+        "label": "eidos.evaluation.models.ExperimentalArm",
+        "file_path": null,
+        "line_range": null
+      },
+      {
+        "id": "dep:eidos.evaluation.models.ArmSummaryStats",
+        "type": "Dependency",
+        "label": "eidos.evaluation.models.ArmSummaryStats",
+        "file_path": null,
+        "line_range": null
+      },
+      {
+        "id": "dep:eidos.evaluation.benchmark.get_benchmark_suite",
+        "type": "Dependency",
+        "label": "eidos.evaluation.benchmark.get_benchmark_suite",
+        "file_path": null,
+        "line_range": null
+      },
+      {
+        "id": "dep:eidos.evaluation.stats.mean",
+        "type": "Dependency",
+        "label": "eidos.evaluation.stats.mean",
+        "file_path": null,
+        "line_range": null
+      },
+      {
+        "id": "dep:eidos.evaluation.stats.std_dev",
+        "type": "Dependency",
+        "label": "eidos.evaluation.stats.std_dev",
+        "file_path": null,
+        "line_range": null
+      },
+      {
+        "id": "dep:eidos.evaluation.stats.confidence_interval_95",
+        "type": "Dependency",
+        "label": "eidos.evaluation.stats.confidence_interval_95",
+        "file_path": null,
+        "line_range": null
+      },
+      {
+        "id": "dep:eidos.evaluation.stats.cohens_d",
+        "type": "Dependency",
+        "label": "eidos.evaluation.stats.cohens_d",
+        "file_path": null,
+        "line_range": null
+      },
+      {
+        "id": "dep:eidos.evaluation.stats.permutation_test_p_value",
+        "type": "Dependency",
+        "label": "eidos.evaluation.stats.permutation_test_p_value",
+        "file_path": null,
+        "line_range": null
+      },
+      {
+        "id": "dep:eidos.evaluation.stats.compute_relative_change",
+        "type": "Dependency",
+        "label": "eidos.evaluation.stats.compute_relative_change",
+        "file_path": null,
+        "line_range": null
+      },
+      {
+        "id": "file:src/eidos/evaluation/__init__.py",
+        "type": "File",
+        "label": "src/eidos/evaluation/__init__.py",
+        "file_path": "src/eidos/evaluation/__init__.py",
+        "line_range": null
+      },
+      {
+        "id": "dep:eidos.evaluation.runner.EvaluationRunner",
+        "type": "Dependency",
+        "label": "eidos.evaluation.runner.EvaluationRunner",
+        "file_path": null,
+        "line_range": null
+      },
+      {
+        "id": "dep:eidos.evaluation.stats.median",
+        "type": "Dependency",
+        "label": "eidos.evaluation.stats.median",
+        "file_path": null,
+        "line_range": null
+      },
+      {
+        "id": "dep:eidos.evaluation.stats.variance",
+        "type": "Dependency",
+        "label": "eidos.evaluation.stats.variance",
+        "file_path": null,
+        "line_range": null
+      },
+      {
+        "id": "dep:eidos.evaluation.stats.bootstrap_ci_95",
+        "type": "Dependency",
+        "label": "eidos.evaluation.stats.bootstrap_ci_95",
+        "file_path": null,
+        "line_range": null
+      },
+      {
         "id": "file:src/eidos/progress/projector.py",
         "type": "File",
         "label": "src/eidos/progress/projector.py",
@@ -1614,8 +2058,8 @@
         "label": "init",
         "file_path": "src/eidos/cli/main.py",
         "line_range": [
-          45,
-          76
+          50,
+          81
         ]
       },
       {
@@ -1624,8 +2068,8 @@
         "label": "doctor",
         "file_path": "src/eidos/cli/main.py",
         "line_range": [
-          79,
-          116
+          84,
+          121
         ]
       },
       {
@@ -1634,8 +2078,8 @@
         "label": "analyze",
         "file_path": "src/eidos/cli/main.py",
         "line_range": [
-          119,
-          136
+          124,
+          141
         ]
       },
       {
@@ -1644,8 +2088,8 @@
         "label": "graph_build",
         "file_path": "src/eidos/cli/main.py",
         "line_range": [
-          139,
-          166
+          144,
+          171
         ]
       },
       {
@@ -1654,8 +2098,8 @@
         "label": "graph_query",
         "file_path": "src/eidos/cli/main.py",
         "line_range": [
-          169,
-          183
+          174,
+          188
         ]
       },
       {
@@ -1664,8 +2108,8 @@
         "label": "spec_new",
         "file_path": "src/eidos/cli/main.py",
         "line_range": [
-          186,
-          208
+          191,
+          213
         ]
       },
       {
@@ -1674,8 +2118,8 @@
         "label": "spec_list",
         "file_path": "src/eidos/cli/main.py",
         "line_range": [
-          211,
-          231
+          216,
+          236
         ]
       },
       {
@@ -1684,8 +2128,8 @@
         "label": "invariant_list",
         "file_path": "src/eidos/cli/main.py",
         "line_range": [
-          234,
-          246
+          239,
+          251
         ]
       },
       {
@@ -1694,8 +2138,8 @@
         "label": "invariant_check",
         "file_path": "src/eidos/cli/main.py",
         "line_range": [
-          249,
-          259
+          254,
+          264
         ]
       },
       {
@@ -1704,8 +2148,8 @@
         "label": "verify",
         "file_path": "src/eidos/cli/main.py",
         "line_range": [
-          262,
-          285
+          267,
+          290
         ]
       },
       {
@@ -1714,8 +2158,8 @@
         "label": "progress_show",
         "file_path": "src/eidos/cli/main.py",
         "line_range": [
-          288,
-          307
+          293,
+          312
         ]
       },
       {
@@ -1724,8 +2168,8 @@
         "label": "passport_list",
         "file_path": "src/eidos/cli/main.py",
         "line_range": [
-          310,
-          328
+          315,
+          333
         ]
       },
       {
@@ -1734,8 +2178,8 @@
         "label": "context_assemble",
         "file_path": "src/eidos/cli/main.py",
         "line_range": [
-          331,
-          359
+          336,
+          364
         ]
       },
       {
@@ -1744,8 +2188,48 @@
         "label": "skills_list",
         "file_path": "src/eidos/cli/main.py",
         "line_range": [
-          362,
-          379
+          367,
+          384
+        ]
+      },
+      {
+        "id": "fn:src/eidos/cli/main.py#eval_tasks",
+        "type": "Function",
+        "label": "eval_tasks",
+        "file_path": "src/eidos/cli/main.py",
+        "line_range": [
+          388,
+          407
+        ]
+      },
+      {
+        "id": "fn:src/eidos/cli/main.py#eval_run",
+        "type": "Function",
+        "label": "eval_run",
+        "file_path": "src/eidos/cli/main.py",
+        "line_range": [
+          411,
+          473
+        ]
+      },
+      {
+        "id": "fn:src/eidos/cli/main.py#eval_ablation",
+        "type": "Function",
+        "label": "eval_ablation",
+        "file_path": "src/eidos/cli/main.py",
+        "line_range": [
+          477,
+          516
+        ]
+      },
+      {
+        "id": "fn:src/eidos/cli/main.py#eval_report",
+        "type": "Function",
+        "label": "eval_report",
+        "file_path": "src/eidos/cli/main.py",
+        "line_range": [
+          520,
+          542
         ]
       },
       {
@@ -2440,27 +2924,6 @@
         ]
       },
       {
-        "id": "dep:typing.Optional",
-        "type": "Dependency",
-        "label": "typing.Optional",
-        "file_path": null,
-        "line_range": null
-      },
-      {
-        "id": "dep:pydantic.BaseModel",
-        "type": "Dependency",
-        "label": "pydantic.BaseModel",
-        "file_path": null,
-        "line_range": null
-      },
-      {
-        "id": "dep:pydantic.Field",
-        "type": "Dependency",
-        "label": "pydantic.Field",
-        "file_path": null,
-        "line_range": null
-      },
-      {
         "id": "file:src/eidos/evolution/pipeline.py",
         "type": "File",
         "label": "src/eidos/evolution/pipeline.py",
@@ -2700,6 +3163,63 @@
         "line_range": [
           63,
           85
+        ]
+      },
+      {
+        "id": "file:tests/evaluation/test_evaluation_battery.py",
+        "type": "File",
+        "label": "tests/evaluation/test_evaluation_battery.py",
+        "file_path": "tests/evaluation/test_evaluation_battery.py",
+        "line_range": null
+      },
+      {
+        "id": "fn:tests/evaluation/test_evaluation_battery.py#test_benchmark_suite_integrity",
+        "type": "Function",
+        "label": "test_benchmark_suite_integrity",
+        "file_path": "tests/evaluation/test_evaluation_battery.py",
+        "line_range": [
+          24,
+          41
+        ]
+      },
+      {
+        "id": "fn:tests/evaluation/test_evaluation_battery.py#test_statistical_engine_calculations",
+        "type": "Function",
+        "label": "test_statistical_engine_calculations",
+        "file_path": "tests/evaluation/test_evaluation_battery.py",
+        "line_range": [
+          44,
+          68
+        ]
+      },
+      {
+        "id": "fn:tests/evaluation/test_evaluation_battery.py#test_evaluation_runner_controlled_trial",
+        "type": "Function",
+        "label": "test_evaluation_runner_controlled_trial",
+        "file_path": "tests/evaluation/test_evaluation_battery.py",
+        "line_range": [
+          71,
+          87
+        ]
+      },
+      {
+        "id": "fn:tests/evaluation/test_evaluation_battery.py#test_evaluation_run_matrix_execution",
+        "type": "Function",
+        "label": "test_evaluation_run_matrix_execution",
+        "file_path": "tests/evaluation/test_evaluation_battery.py",
+        "line_range": [
+          90,
+          108
+        ]
+      },
+      {
+        "id": "fn:tests/evaluation/test_evaluation_battery.py#test_cli_eval_commands",
+        "type": "Function",
+        "label": "test_cli_eval_commands",
+        "file_path": "tests/evaluation/test_evaluation_battery.py",
+        "line_range": [
+          111,
+          120
         ]
       },
       {
@@ -5377,6 +5897,662 @@
         "evidence_ref": null
       },
       {
+        "source": "file:src/eidos/evaluation/benchmark.py",
+        "target": "fn:src/eidos/evaluation/benchmark.py#get_benchmark_suite",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/benchmark.py",
+        "target": "dep:typing.Dict",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/benchmark.py",
+        "target": "dep:typing.List",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/benchmark.py",
+        "target": "dep:eidos.evaluation.models.TaskDefinition",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/benchmark.py",
+        "target": "dep:eidos.evaluation.models.TaskDifficulty",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/benchmark.py",
+        "target": "dep:eidos.evaluation.models.TaskType",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/models.py",
+        "target": "class:src/eidos/evaluation/models.py#TaskDifficulty",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/models.py",
+        "target": "class:src/eidos/evaluation/models.py#TaskType",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/models.py",
+        "target": "class:src/eidos/evaluation/models.py#ExperimentalArm",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/models.py",
+        "target": "class:src/eidos/evaluation/models.py#TaskDefinition",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/models.py",
+        "target": "class:src/eidos/evaluation/models.py#TaskResult",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/models.py",
+        "target": "class:src/eidos/evaluation/models.py#ArmSummaryStats",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/models.py",
+        "target": "class:src/eidos/evaluation/models.py#EvaluationRun",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/models.py",
+        "target": "dep:typing.List",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/models.py",
+        "target": "dep:typing.Dict",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/models.py",
+        "target": "dep:typing.Any",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/models.py",
+        "target": "dep:typing.Optional",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/models.py",
+        "target": "dep:enum.Enum",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/models.py",
+        "target": "dep:datetime.datetime",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/models.py",
+        "target": "dep:datetime.timezone",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/models.py",
+        "target": "dep:pydantic.BaseModel",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/models.py",
+        "target": "dep:pydantic.Field",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/stats.py",
+        "target": "fn:src/eidos/evaluation/stats.py#mean",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/stats.py",
+        "target": "fn:src/eidos/evaluation/stats.py#median",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/stats.py",
+        "target": "fn:src/eidos/evaluation/stats.py#variance",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/stats.py",
+        "target": "fn:src/eidos/evaluation/stats.py#std_dev",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/stats.py",
+        "target": "fn:src/eidos/evaluation/stats.py#confidence_interval_95",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/stats.py",
+        "target": "fn:src/eidos/evaluation/stats.py#bootstrap_ci_95",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/stats.py",
+        "target": "fn:src/eidos/evaluation/stats.py#cohens_d",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/stats.py",
+        "target": "fn:src/eidos/evaluation/stats.py#permutation_test_p_value",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/stats.py",
+        "target": "fn:src/eidos/evaluation/stats.py#compute_relative_change",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/stats.py",
+        "target": "dep:math",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/stats.py",
+        "target": "dep:random",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/stats.py",
+        "target": "dep:typing.List",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/stats.py",
+        "target": "dep:typing.Tuple",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/stats.py",
+        "target": "dep:typing.Dict",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/stats.py",
+        "target": "dep:typing.Any",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/runner.py",
+        "target": "class:src/eidos/evaluation/runner.py#EvaluationRunner",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/runner.py",
+        "target": "fn:src/eidos/evaluation/runner.py#__init__",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/runner.py",
+        "target": "fn:src/eidos/evaluation/runner.py#run_trial",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/runner.py",
+        "target": "fn:src/eidos/evaluation/runner.py#execute_evaluation",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/runner.py",
+        "target": "fn:src/eidos/evaluation/runner.py#datetime_slug",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/runner.py",
+        "target": "dep:os",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/runner.py",
+        "target": "dep:time",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/runner.py",
+        "target": "dep:uuid",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/runner.py",
+        "target": "dep:random",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/runner.py",
+        "target": "dep:pathlib.Path",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/runner.py",
+        "target": "dep:typing.List",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/runner.py",
+        "target": "dep:typing.Dict",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/runner.py",
+        "target": "dep:typing.Any",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/runner.py",
+        "target": "dep:typing.Optional",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/runner.py",
+        "target": "dep:eidos.evaluation.models.TaskDefinition",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/runner.py",
+        "target": "dep:eidos.evaluation.models.TaskResult",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/runner.py",
+        "target": "dep:eidos.evaluation.models.EvaluationRun",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/runner.py",
+        "target": "dep:eidos.evaluation.models.ExperimentalArm",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/runner.py",
+        "target": "dep:eidos.evaluation.models.ArmSummaryStats",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/runner.py",
+        "target": "dep:eidos.evaluation.benchmark.get_benchmark_suite",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/runner.py",
+        "target": "dep:eidos.evaluation.stats.mean",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/runner.py",
+        "target": "dep:eidos.evaluation.stats.std_dev",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/runner.py",
+        "target": "dep:eidos.evaluation.stats.confidence_interval_95",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/runner.py",
+        "target": "dep:eidos.evaluation.stats.cohens_d",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/runner.py",
+        "target": "dep:eidos.evaluation.stats.permutation_test_p_value",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/runner.py",
+        "target": "dep:eidos.evaluation.stats.compute_relative_change",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/runner.py",
+        "target": "dep:subprocess",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/__init__.py",
+        "target": "dep:eidos.evaluation.models.TaskDefinition",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/__init__.py",
+        "target": "dep:eidos.evaluation.models.TaskResult",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/__init__.py",
+        "target": "dep:eidos.evaluation.models.EvaluationRun",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/__init__.py",
+        "target": "dep:eidos.evaluation.models.ExperimentalArm",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/__init__.py",
+        "target": "dep:eidos.evaluation.models.TaskDifficulty",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/__init__.py",
+        "target": "dep:eidos.evaluation.models.TaskType",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/__init__.py",
+        "target": "dep:eidos.evaluation.models.ArmSummaryStats",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/__init__.py",
+        "target": "dep:eidos.evaluation.benchmark.get_benchmark_suite",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/__init__.py",
+        "target": "dep:eidos.evaluation.runner.EvaluationRunner",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/__init__.py",
+        "target": "dep:eidos.evaluation.stats.mean",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/__init__.py",
+        "target": "dep:eidos.evaluation.stats.median",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/__init__.py",
+        "target": "dep:eidos.evaluation.stats.variance",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/__init__.py",
+        "target": "dep:eidos.evaluation.stats.std_dev",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/__init__.py",
+        "target": "dep:eidos.evaluation.stats.confidence_interval_95",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/__init__.py",
+        "target": "dep:eidos.evaluation.stats.bootstrap_ci_95",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/__init__.py",
+        "target": "dep:eidos.evaluation.stats.cohens_d",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/__init__.py",
+        "target": "dep:eidos.evaluation.stats.permutation_test_p_value",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/evaluation/__init__.py",
+        "target": "dep:eidos.evaluation.stats.compute_relative_change",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
         "source": "file:src/eidos/progress/projector.py",
         "target": "class:src/eidos/progress/projector.py#ProgressProjector",
         "relation": "DEFINED_BY",
@@ -5922,6 +7098,38 @@
       },
       {
         "source": "file:src/eidos/cli/main.py",
+        "target": "fn:src/eidos/cli/main.py#eval_tasks",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/cli/main.py",
+        "target": "fn:src/eidos/cli/main.py#eval_run",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/cli/main.py",
+        "target": "fn:src/eidos/cli/main.py#eval_ablation",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/cli/main.py",
+        "target": "fn:src/eidos/cli/main.py#eval_report",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/cli/main.py",
         "target": "dep:pathlib.Path",
         "relation": "DEPENDS_ON",
         "epistemic_provenance": "EXTRACTED",
@@ -6059,6 +7267,30 @@
       {
         "source": "file:src/eidos/cli/main.py",
         "target": "dep:eidos.skills.gateway.SkillGateway",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/cli/main.py",
+        "target": "dep:eidos.evaluation.benchmark.get_benchmark_suite",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/cli/main.py",
+        "target": "dep:eidos.evaluation.runner.EvaluationRunner",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:src/eidos/cli/main.py",
+        "target": "dep:eidos.evaluation.models.ExperimentalArm",
         "relation": "DEPENDS_ON",
         "epistemic_provenance": "EXTRACTED",
         "confidence": 1.0,
@@ -7371,6 +8603,182 @@
       {
         "source": "file:tests/integration/test_verifier.py",
         "target": "dep:eidos.verification.runner.run_verification",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/evaluation/test_evaluation_battery.py",
+        "target": "fn:tests/evaluation/test_evaluation_battery.py#test_benchmark_suite_integrity",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/evaluation/test_evaluation_battery.py",
+        "target": "fn:tests/evaluation/test_evaluation_battery.py#test_statistical_engine_calculations",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/evaluation/test_evaluation_battery.py",
+        "target": "fn:tests/evaluation/test_evaluation_battery.py#test_evaluation_runner_controlled_trial",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/evaluation/test_evaluation_battery.py",
+        "target": "fn:tests/evaluation/test_evaluation_battery.py#test_evaluation_run_matrix_execution",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/evaluation/test_evaluation_battery.py",
+        "target": "fn:tests/evaluation/test_evaluation_battery.py#test_cli_eval_commands",
+        "relation": "DEFINED_BY",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/evaluation/test_evaluation_battery.py",
+        "target": "dep:math",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/evaluation/test_evaluation_battery.py",
+        "target": "dep:typer.testing.CliRunner",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/evaluation/test_evaluation_battery.py",
+        "target": "dep:eidos.cli.main.app",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/evaluation/test_evaluation_battery.py",
+        "target": "dep:eidos.evaluation.benchmark.get_benchmark_suite",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/evaluation/test_evaluation_battery.py",
+        "target": "dep:eidos.evaluation.models.ExperimentalArm",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/evaluation/test_evaluation_battery.py",
+        "target": "dep:eidos.evaluation.models.TaskDifficulty",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/evaluation/test_evaluation_battery.py",
+        "target": "dep:eidos.evaluation.models.TaskType",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/evaluation/test_evaluation_battery.py",
+        "target": "dep:eidos.evaluation.runner.EvaluationRunner",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/evaluation/test_evaluation_battery.py",
+        "target": "dep:eidos.evaluation.stats.mean",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/evaluation/test_evaluation_battery.py",
+        "target": "dep:eidos.evaluation.stats.median",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/evaluation/test_evaluation_battery.py",
+        "target": "dep:eidos.evaluation.stats.variance",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/evaluation/test_evaluation_battery.py",
+        "target": "dep:eidos.evaluation.stats.std_dev",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/evaluation/test_evaluation_battery.py",
+        "target": "dep:eidos.evaluation.stats.confidence_interval_95",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/evaluation/test_evaluation_battery.py",
+        "target": "dep:eidos.evaluation.stats.bootstrap_ci_95",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/evaluation/test_evaluation_battery.py",
+        "target": "dep:eidos.evaluation.stats.cohens_d",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/evaluation/test_evaluation_battery.py",
+        "target": "dep:eidos.evaluation.stats.permutation_test_p_value",
+        "relation": "DEPENDS_ON",
+        "epistemic_provenance": "EXTRACTED",
+        "confidence": 1.0,
+        "evidence_ref": null
+      },
+      {
+        "source": "file:tests/evaluation/test_evaluation_battery.py",
+        "target": "dep:eidos.evaluation.stats.compute_relative_change",
         "relation": "DEPENDS_ON",
         "epistemic_provenance": "EXTRACTED",
         "confidence": 1.0,

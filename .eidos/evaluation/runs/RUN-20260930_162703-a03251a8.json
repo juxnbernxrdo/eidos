@@ -1,0 +1,5074 @@
+{
+  "run_id": "RUN-20260930_162703-a03251a8",
+  "timestamp": "2026-09-30T21:27:03.346325",
+  "git_commit": "eba994766ba79ad415811ee22144ab78cd9802ad",
+  "model_identifier": "claude-3-5-sonnet-20241022",
+  "arms_evaluated": [
+    "B0_RAW_AGENT",
+    "B1_BASIC_HARNESS",
+    "B2_FULL_EIDOS"
+  ],
+  "tasks_evaluated": [
+    "TSK-EVAL-001",
+    "TSK-EVAL-002",
+    "TSK-EVAL-003",
+    "TSK-EVAL-004",
+    "TSK-EVAL-005",
+    "TSK-EVAL-006",
+    "TSK-EVAL-007",
+    "TSK-EVAL-008",
+    "TSK-EVAL-009",
+    "TSK-EVAL-010"
+  ],
+  "trials_per_task": 5,
+  "random_seeds": [
+    42,
+    59,
+    76,
+    93,
+    110
+  ],
+  "results": [
+    {
+      "trial_id": "TR-TSK-EVAL-005-B0_RAW_AGENT-93",
+      "task_id": "TSK-EVAL-005",
+      "arm": "B0_RAW_AGENT",
+      "seed": 93,
+      "success": false,
+      "public_tests_passed": false,
+      "hidden_tests_passed": false,
+      "verification_passed": false,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 5667,
+      "tokens_completion": 702,
+      "tokens_total": 6369,
+      "wall_clock_ms": 1009.6,
+      "tool_calls_count": 7,
+      "context_size_tokens": 4800,
+      "cost_usd": 0.027531,
+      "failure_mode": "MODEL_FAILURE",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B0_RAW_AGENT",
+          "task": "TSK-EVAL-005"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "MODEL_FAILURE"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-009-B2_FULL_EIDOS-93",
+      "task_id": "TSK-EVAL-009",
+      "arm": "B2_FULL_EIDOS",
+      "seed": 93,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 2613,
+      "tokens_completion": 325,
+      "tokens_total": 2938,
+      "wall_clock_ms": 1103.98,
+      "tool_calls_count": 8,
+      "context_size_tokens": 2160,
+      "cost_usd": 0.012714,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B2_FULL_EIDOS",
+          "task": "TSK-EVAL-009"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-008-B0_RAW_AGENT-110",
+      "task_id": "TSK-EVAL-008",
+      "arm": "B0_RAW_AGENT",
+      "seed": 110,
+      "success": false,
+      "public_tests_passed": false,
+      "hidden_tests_passed": false,
+      "verification_passed": false,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 9378,
+      "tokens_completion": 460,
+      "tokens_total": 9838,
+      "wall_clock_ms": 1593.3,
+      "tool_calls_count": 12,
+      "context_size_tokens": 8500,
+      "cost_usd": 0.035034,
+      "failure_mode": "MODEL_FAILURE",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B0_RAW_AGENT",
+          "task": "TSK-EVAL-008"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "MODEL_FAILURE"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-009-B2_FULL_EIDOS-110",
+      "task_id": "TSK-EVAL-009",
+      "arm": "B2_FULL_EIDOS",
+      "seed": 110,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 2558,
+      "tokens_completion": 527,
+      "tokens_total": 3085,
+      "wall_clock_ms": 1042.21,
+      "tool_calls_count": 8,
+      "context_size_tokens": 2160,
+      "cost_usd": 0.015579,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B2_FULL_EIDOS",
+          "task": "TSK-EVAL-009"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-006-B0_RAW_AGENT-42",
+      "task_id": "TSK-EVAL-006",
+      "arm": "B0_RAW_AGENT",
+      "seed": 42,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 5527,
+      "tokens_completion": 627,
+      "tokens_total": 6154,
+      "wall_clock_ms": 773.25,
+      "tool_calls_count": 6,
+      "context_size_tokens": 4800,
+      "cost_usd": 0.025986,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B0_RAW_AGENT",
+          "task": "TSK-EVAL-006"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-005-B0_RAW_AGENT-59",
+      "task_id": "TSK-EVAL-005",
+      "arm": "B0_RAW_AGENT",
+      "seed": 59,
+      "success": false,
+      "public_tests_passed": false,
+      "hidden_tests_passed": false,
+      "verification_passed": false,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 5314,
+      "tokens_completion": 261,
+      "tokens_total": 5575,
+      "wall_clock_ms": 891.24,
+      "tool_calls_count": 6,
+      "context_size_tokens": 4800,
+      "cost_usd": 0.019857,
+      "failure_mode": "MODEL_FAILURE",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B0_RAW_AGENT",
+          "task": "TSK-EVAL-005"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "MODEL_FAILURE"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-009-B2_FULL_EIDOS-42",
+      "task_id": "TSK-EVAL-009",
+      "arm": "B2_FULL_EIDOS",
+      "seed": 42,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 2417,
+      "tokens_completion": 302,
+      "tokens_total": 2719,
+      "wall_clock_ms": 866.4,
+      "tool_calls_count": 6,
+      "context_size_tokens": 2160,
+      "cost_usd": 0.011781,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B2_FULL_EIDOS",
+          "task": "TSK-EVAL-009"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-003-B1_BASIC_HARNESS-110",
+      "task_id": "TSK-EVAL-003",
+      "arm": "B1_BASIC_HARNESS",
+      "seed": 110,
+      "success": false,
+      "public_tests_passed": false,
+      "hidden_tests_passed": false,
+      "verification_passed": false,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 5678,
+      "tokens_completion": 460,
+      "tokens_total": 6138,
+      "wall_clock_ms": 993.3,
+      "tool_calls_count": 7,
+      "context_size_tokens": 4800,
+      "cost_usd": 0.023934,
+      "failure_mode": "MODEL_FAILURE",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B1_BASIC_HARNESS",
+          "task": "TSK-EVAL-003"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "MODEL_FAILURE"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-003-B2_FULL_EIDOS-42",
+      "task_id": "TSK-EVAL-003",
+      "arm": "B2_FULL_EIDOS",
+      "seed": 42,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 2417,
+      "tokens_completion": 302,
+      "tokens_total": 2719,
+      "wall_clock_ms": 866.4,
+      "tool_calls_count": 6,
+      "context_size_tokens": 2160,
+      "cost_usd": 0.011781,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B2_FULL_EIDOS",
+          "task": "TSK-EVAL-003"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-003-B1_BASIC_HARNESS-93",
+      "task_id": "TSK-EVAL-003",
+      "arm": "B1_BASIC_HARNESS",
+      "seed": 93,
+      "success": false,
+      "public_tests_passed": false,
+      "hidden_tests_passed": false,
+      "verification_passed": false,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 5667,
+      "tokens_completion": 702,
+      "tokens_total": 6369,
+      "wall_clock_ms": 1009.6,
+      "tool_calls_count": 7,
+      "context_size_tokens": 4800,
+      "cost_usd": 0.027531,
+      "failure_mode": "MODEL_FAILURE",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B1_BASIC_HARNESS",
+          "task": "TSK-EVAL-003"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "MODEL_FAILURE"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-005-B1_BASIC_HARNESS-42",
+      "task_id": "TSK-EVAL-005",
+      "arm": "B1_BASIC_HARNESS",
+      "seed": 42,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 5527,
+      "tokens_completion": 627,
+      "tokens_total": 6154,
+      "wall_clock_ms": 773.25,
+      "tool_calls_count": 6,
+      "context_size_tokens": 4800,
+      "cost_usd": 0.025986,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B1_BASIC_HARNESS",
+          "task": "TSK-EVAL-005"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-006-B2_FULL_EIDOS-42",
+      "task_id": "TSK-EVAL-006",
+      "arm": "B2_FULL_EIDOS",
+      "seed": 42,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 2417,
+      "tokens_completion": 302,
+      "tokens_total": 2719,
+      "wall_clock_ms": 866.4,
+      "tool_calls_count": 6,
+      "context_size_tokens": 2160,
+      "cost_usd": 0.011781,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B2_FULL_EIDOS",
+          "task": "TSK-EVAL-006"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-001-B0_RAW_AGENT-42",
+      "task_id": "TSK-EVAL-001",
+      "arm": "B0_RAW_AGENT",
+      "seed": 42,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 3227,
+      "tokens_completion": 627,
+      "tokens_total": 3854,
+      "wall_clock_ms": 413.25,
+      "tool_calls_count": 3,
+      "context_size_tokens": 2500,
+      "cost_usd": 0.019086,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B0_RAW_AGENT",
+          "task": "TSK-EVAL-001"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-010-B1_BASIC_HARNESS-59",
+      "task_id": "TSK-EVAL-010",
+      "arm": "B1_BASIC_HARNESS",
+      "seed": 59,
+      "success": false,
+      "public_tests_passed": false,
+      "hidden_tests_passed": false,
+      "verification_passed": false,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 9014,
+      "tokens_completion": 261,
+      "tokens_total": 9275,
+      "wall_clock_ms": 1491.24,
+      "tool_calls_count": 11,
+      "context_size_tokens": 8500,
+      "cost_usd": 0.030957,
+      "failure_mode": "MODEL_FAILURE",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B1_BASIC_HARNESS",
+          "task": "TSK-EVAL-010"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "MODEL_FAILURE"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-007-B1_BASIC_HARNESS-42",
+      "task_id": "TSK-EVAL-007",
+      "arm": "B1_BASIC_HARNESS",
+      "seed": 42,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 3227,
+      "tokens_completion": 627,
+      "tokens_total": 3854,
+      "wall_clock_ms": 413.25,
+      "tool_calls_count": 3,
+      "context_size_tokens": 2500,
+      "cost_usd": 0.019086,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B1_BASIC_HARNESS",
+          "task": "TSK-EVAL-007"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-003-B0_RAW_AGENT-76",
+      "task_id": "TSK-EVAL-003",
+      "arm": "B0_RAW_AGENT",
+      "seed": 76,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 5389,
+      "tokens_completion": 464,
+      "tokens_total": 5853,
+      "wall_clock_ms": 1013.52,
+      "tool_calls_count": 7,
+      "context_size_tokens": 4800,
+      "cost_usd": 0.023127,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B0_RAW_AGENT",
+          "task": "TSK-EVAL-003"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-009-B2_FULL_EIDOS-59",
+      "task_id": "TSK-EVAL-009",
+      "arm": "B2_FULL_EIDOS",
+      "seed": 59,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 2474,
+      "tokens_completion": 683,
+      "tokens_total": 3157,
+      "wall_clock_ms": 891.24,
+      "tool_calls_count": 6,
+      "context_size_tokens": 2160,
+      "cost_usd": 0.017667,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B2_FULL_EIDOS",
+          "task": "TSK-EVAL-009"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-002-B0_RAW_AGENT-93",
+      "task_id": "TSK-EVAL-002",
+      "arm": "B0_RAW_AGENT",
+      "seed": 93,
+      "success": false,
+      "public_tests_passed": false,
+      "hidden_tests_passed": false,
+      "verification_passed": false,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 5667,
+      "tokens_completion": 702,
+      "tokens_total": 6369,
+      "wall_clock_ms": 1009.6,
+      "tool_calls_count": 7,
+      "context_size_tokens": 4800,
+      "cost_usd": 0.027531,
+      "failure_mode": "MODEL_FAILURE",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B0_RAW_AGENT",
+          "task": "TSK-EVAL-002"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "MODEL_FAILURE"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-006-B1_BASIC_HARNESS-93",
+      "task_id": "TSK-EVAL-006",
+      "arm": "B1_BASIC_HARNESS",
+      "seed": 93,
+      "success": false,
+      "public_tests_passed": false,
+      "hidden_tests_passed": false,
+      "verification_passed": false,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 5667,
+      "tokens_completion": 702,
+      "tokens_total": 6369,
+      "wall_clock_ms": 1009.6,
+      "tool_calls_count": 7,
+      "context_size_tokens": 4800,
+      "cost_usd": 0.027531,
+      "failure_mode": "MODEL_FAILURE",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B1_BASIC_HARNESS",
+          "task": "TSK-EVAL-006"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "MODEL_FAILURE"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-003-B0_RAW_AGENT-42",
+      "task_id": "TSK-EVAL-003",
+      "arm": "B0_RAW_AGENT",
+      "seed": 42,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 5527,
+      "tokens_completion": 627,
+      "tokens_total": 6154,
+      "wall_clock_ms": 773.25,
+      "tool_calls_count": 6,
+      "context_size_tokens": 4800,
+      "cost_usd": 0.025986,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B0_RAW_AGENT",
+          "task": "TSK-EVAL-003"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-008-B2_FULL_EIDOS-110",
+      "task_id": "TSK-EVAL-008",
+      "arm": "B2_FULL_EIDOS",
+      "seed": 110,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 4223,
+      "tokens_completion": 527,
+      "tokens_total": 4750,
+      "wall_clock_ms": 1642.21,
+      "tool_calls_count": 13,
+      "context_size_tokens": 3825,
+      "cost_usd": 0.020574,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B2_FULL_EIDOS",
+          "task": "TSK-EVAL-008"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-009-B2_FULL_EIDOS-76",
+      "task_id": "TSK-EVAL-009",
+      "arm": "B2_FULL_EIDOS",
+      "seed": 76,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 2549,
+      "tokens_completion": 464,
+      "tokens_total": 3013,
+      "wall_clock_ms": 1013.52,
+      "tool_calls_count": 7,
+      "context_size_tokens": 2160,
+      "cost_usd": 0.014607,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B2_FULL_EIDOS",
+          "task": "TSK-EVAL-009"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-005-B2_FULL_EIDOS-76",
+      "task_id": "TSK-EVAL-005",
+      "arm": "B2_FULL_EIDOS",
+      "seed": 76,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 2549,
+      "tokens_completion": 464,
+      "tokens_total": 3013,
+      "wall_clock_ms": 1013.52,
+      "tool_calls_count": 7,
+      "context_size_tokens": 2160,
+      "cost_usd": 0.014607,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B2_FULL_EIDOS",
+          "task": "TSK-EVAL-005"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-009-B0_RAW_AGENT-93",
+      "task_id": "TSK-EVAL-009",
+      "arm": "B0_RAW_AGENT",
+      "seed": 93,
+      "success": false,
+      "public_tests_passed": false,
+      "hidden_tests_passed": false,
+      "verification_passed": false,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 5667,
+      "tokens_completion": 702,
+      "tokens_total": 6369,
+      "wall_clock_ms": 1009.6,
+      "tool_calls_count": 7,
+      "context_size_tokens": 4800,
+      "cost_usd": 0.027531,
+      "failure_mode": "MODEL_FAILURE",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B0_RAW_AGENT",
+          "task": "TSK-EVAL-009"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "MODEL_FAILURE"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-009-B1_BASIC_HARNESS-93",
+      "task_id": "TSK-EVAL-009",
+      "arm": "B1_BASIC_HARNESS",
+      "seed": 93,
+      "success": false,
+      "public_tests_passed": false,
+      "hidden_tests_passed": false,
+      "verification_passed": false,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 5667,
+      "tokens_completion": 702,
+      "tokens_total": 6369,
+      "wall_clock_ms": 1009.6,
+      "tool_calls_count": 7,
+      "context_size_tokens": 4800,
+      "cost_usd": 0.027531,
+      "failure_mode": "MODEL_FAILURE",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B1_BASIC_HARNESS",
+          "task": "TSK-EVAL-009"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "MODEL_FAILURE"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-010-B0_RAW_AGENT-59",
+      "task_id": "TSK-EVAL-010",
+      "arm": "B0_RAW_AGENT",
+      "seed": 59,
+      "success": false,
+      "public_tests_passed": false,
+      "hidden_tests_passed": false,
+      "verification_passed": false,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 9014,
+      "tokens_completion": 261,
+      "tokens_total": 9275,
+      "wall_clock_ms": 1491.24,
+      "tool_calls_count": 11,
+      "context_size_tokens": 8500,
+      "cost_usd": 0.030957,
+      "failure_mode": "MODEL_FAILURE",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B0_RAW_AGENT",
+          "task": "TSK-EVAL-010"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "MODEL_FAILURE"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-001-B0_RAW_AGENT-93",
+      "task_id": "TSK-EVAL-001",
+      "arm": "B0_RAW_AGENT",
+      "seed": 93,
+      "success": false,
+      "public_tests_passed": false,
+      "hidden_tests_passed": false,
+      "verification_passed": false,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 3367,
+      "tokens_completion": 702,
+      "tokens_total": 4069,
+      "wall_clock_ms": 649.6,
+      "tool_calls_count": 4,
+      "context_size_tokens": 2500,
+      "cost_usd": 0.020631,
+      "failure_mode": "MODEL_FAILURE",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B0_RAW_AGENT",
+          "task": "TSK-EVAL-001"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "MODEL_FAILURE"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-004-B1_BASIC_HARNESS-93",
+      "task_id": "TSK-EVAL-004",
+      "arm": "B1_BASIC_HARNESS",
+      "seed": 93,
+      "success": false,
+      "public_tests_passed": false,
+      "hidden_tests_passed": false,
+      "verification_passed": false,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 3367,
+      "tokens_completion": 702,
+      "tokens_total": 4069,
+      "wall_clock_ms": 649.6,
+      "tool_calls_count": 4,
+      "context_size_tokens": 2500,
+      "cost_usd": 0.020631,
+      "failure_mode": "MODEL_FAILURE",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B1_BASIC_HARNESS",
+          "task": "TSK-EVAL-004"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "MODEL_FAILURE"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-009-B1_BASIC_HARNESS-76",
+      "task_id": "TSK-EVAL-009",
+      "arm": "B1_BASIC_HARNESS",
+      "seed": 76,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 5389,
+      "tokens_completion": 464,
+      "tokens_total": 5853,
+      "wall_clock_ms": 1013.52,
+      "tool_calls_count": 7,
+      "context_size_tokens": 4800,
+      "cost_usd": 0.023127,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B1_BASIC_HARNESS",
+          "task": "TSK-EVAL-009"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-007-B0_RAW_AGENT-76",
+      "task_id": "TSK-EVAL-007",
+      "arm": "B0_RAW_AGENT",
+      "seed": 76,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 3089,
+      "tokens_completion": 464,
+      "tokens_total": 3553,
+      "wall_clock_ms": 653.52,
+      "tool_calls_count": 4,
+      "context_size_tokens": 2500,
+      "cost_usd": 0.016227,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B0_RAW_AGENT",
+          "task": "TSK-EVAL-007"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-005-B0_RAW_AGENT-42",
+      "task_id": "TSK-EVAL-005",
+      "arm": "B0_RAW_AGENT",
+      "seed": 42,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 5527,
+      "tokens_completion": 627,
+      "tokens_total": 6154,
+      "wall_clock_ms": 773.25,
+      "tool_calls_count": 6,
+      "context_size_tokens": 4800,
+      "cost_usd": 0.025986,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B0_RAW_AGENT",
+          "task": "TSK-EVAL-005"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-005-B1_BASIC_HARNESS-76",
+      "task_id": "TSK-EVAL-005",
+      "arm": "B1_BASIC_HARNESS",
+      "seed": 76,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 5389,
+      "tokens_completion": 464,
+      "tokens_total": 5853,
+      "wall_clock_ms": 1013.52,
+      "tool_calls_count": 7,
+      "context_size_tokens": 4800,
+      "cost_usd": 0.023127,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B1_BASIC_HARNESS",
+          "task": "TSK-EVAL-005"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-003-B2_FULL_EIDOS-76",
+      "task_id": "TSK-EVAL-003",
+      "arm": "B2_FULL_EIDOS",
+      "seed": 76,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 2549,
+      "tokens_completion": 464,
+      "tokens_total": 3013,
+      "wall_clock_ms": 1013.52,
+      "tool_calls_count": 7,
+      "context_size_tokens": 2160,
+      "cost_usd": 0.014607,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B2_FULL_EIDOS",
+          "task": "TSK-EVAL-003"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-010-B2_FULL_EIDOS-59",
+      "task_id": "TSK-EVAL-010",
+      "arm": "B2_FULL_EIDOS",
+      "seed": 59,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 1,
+      "tokens_prompt": 4589,
+      "tokens_completion": 461,
+      "tokens_total": 5050,
+      "wall_clock_ms": 1491.24,
+      "tool_calls_count": 13,
+      "context_size_tokens": 3825,
+      "cost_usd": 0.020682,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B2_FULL_EIDOS",
+          "task": "TSK-EVAL-010"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-010-B0_RAW_AGENT-76",
+      "task_id": "TSK-EVAL-010",
+      "arm": "B0_RAW_AGENT",
+      "seed": 76,
+      "success": false,
+      "public_tests_passed": true,
+      "hidden_tests_passed": false,
+      "verification_passed": true,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 9089,
+      "tokens_completion": 371,
+      "tokens_total": 9460,
+      "wall_clock_ms": 1613.52,
+      "tool_calls_count": 12,
+      "context_size_tokens": 8500,
+      "cost_usd": 0.032832,
+      "failure_mode": "FALSE_CONFIDENCE_EDGE_CASE",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B0_RAW_AGENT",
+          "task": "TSK-EVAL-010"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "FALSE_CONFIDENCE_EDGE_CASE"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-008-B1_BASIC_HARNESS-42",
+      "task_id": "TSK-EVAL-008",
+      "arm": "B1_BASIC_HARNESS",
+      "seed": 42,
+      "success": false,
+      "public_tests_passed": true,
+      "hidden_tests_passed": false,
+      "verification_passed": true,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 9227,
+      "tokens_completion": 596,
+      "tokens_total": 9823,
+      "wall_clock_ms": 1373.25,
+      "tool_calls_count": 11,
+      "context_size_tokens": 8500,
+      "cost_usd": 0.036621,
+      "failure_mode": "FALSE_CONFIDENCE_EDGE_CASE",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B1_BASIC_HARNESS",
+          "task": "TSK-EVAL-008"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "FALSE_CONFIDENCE_EDGE_CASE"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-008-B2_FULL_EIDOS-93",
+      "task_id": "TSK-EVAL-008",
+      "arm": "B2_FULL_EIDOS",
+      "seed": 93,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 1,
+      "tokens_prompt": 4728,
+      "tokens_completion": 512,
+      "tokens_total": 5240,
+      "wall_clock_ms": 1703.98,
+      "tool_calls_count": 15,
+      "context_size_tokens": 3825,
+      "cost_usd": 0.021864,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B2_FULL_EIDOS",
+          "task": "TSK-EVAL-008"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-006-B2_FULL_EIDOS-59",
+      "task_id": "TSK-EVAL-006",
+      "arm": "B2_FULL_EIDOS",
+      "seed": 59,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 2474,
+      "tokens_completion": 683,
+      "tokens_total": 3157,
+      "wall_clock_ms": 891.24,
+      "tool_calls_count": 6,
+      "context_size_tokens": 2160,
+      "cost_usd": 0.017667,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B2_FULL_EIDOS",
+          "task": "TSK-EVAL-006"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-008-B2_FULL_EIDOS-59",
+      "task_id": "TSK-EVAL-008",
+      "arm": "B2_FULL_EIDOS",
+      "seed": 59,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 1,
+      "tokens_prompt": 4589,
+      "tokens_completion": 461,
+      "tokens_total": 5050,
+      "wall_clock_ms": 1491.24,
+      "tool_calls_count": 13,
+      "context_size_tokens": 3825,
+      "cost_usd": 0.020682,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B2_FULL_EIDOS",
+          "task": "TSK-EVAL-008"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-005-B1_BASIC_HARNESS-59",
+      "task_id": "TSK-EVAL-005",
+      "arm": "B1_BASIC_HARNESS",
+      "seed": 59,
+      "success": false,
+      "public_tests_passed": false,
+      "hidden_tests_passed": false,
+      "verification_passed": false,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 5314,
+      "tokens_completion": 261,
+      "tokens_total": 5575,
+      "wall_clock_ms": 891.24,
+      "tool_calls_count": 6,
+      "context_size_tokens": 4800,
+      "cost_usd": 0.019857,
+      "failure_mode": "MODEL_FAILURE",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B1_BASIC_HARNESS",
+          "task": "TSK-EVAL-005"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "MODEL_FAILURE"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-006-B1_BASIC_HARNESS-59",
+      "task_id": "TSK-EVAL-006",
+      "arm": "B1_BASIC_HARNESS",
+      "seed": 59,
+      "success": false,
+      "public_tests_passed": false,
+      "hidden_tests_passed": false,
+      "verification_passed": false,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 5314,
+      "tokens_completion": 261,
+      "tokens_total": 5575,
+      "wall_clock_ms": 891.24,
+      "tool_calls_count": 6,
+      "context_size_tokens": 4800,
+      "cost_usd": 0.019857,
+      "failure_mode": "MODEL_FAILURE",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B1_BASIC_HARNESS",
+          "task": "TSK-EVAL-006"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "MODEL_FAILURE"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-007-B2_FULL_EIDOS-59",
+      "task_id": "TSK-EVAL-007",
+      "arm": "B2_FULL_EIDOS",
+      "seed": 59,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 1439,
+      "tokens_completion": 683,
+      "tokens_total": 2122,
+      "wall_clock_ms": 531.24,
+      "tool_calls_count": 3,
+      "context_size_tokens": 1125,
+      "cost_usd": 0.014562,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B2_FULL_EIDOS",
+          "task": "TSK-EVAL-007"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-007-B0_RAW_AGENT-59",
+      "task_id": "TSK-EVAL-007",
+      "arm": "B0_RAW_AGENT",
+      "seed": 59,
+      "success": false,
+      "public_tests_passed": false,
+      "hidden_tests_passed": false,
+      "verification_passed": false,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 3014,
+      "tokens_completion": 261,
+      "tokens_total": 3275,
+      "wall_clock_ms": 531.24,
+      "tool_calls_count": 3,
+      "context_size_tokens": 2500,
+      "cost_usd": 0.012957,
+      "failure_mode": "MODEL_FAILURE",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B0_RAW_AGENT",
+          "task": "TSK-EVAL-007"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "MODEL_FAILURE"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-002-B0_RAW_AGENT-59",
+      "task_id": "TSK-EVAL-002",
+      "arm": "B0_RAW_AGENT",
+      "seed": 59,
+      "success": false,
+      "public_tests_passed": false,
+      "hidden_tests_passed": false,
+      "verification_passed": false,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 5314,
+      "tokens_completion": 261,
+      "tokens_total": 5575,
+      "wall_clock_ms": 891.24,
+      "tool_calls_count": 6,
+      "context_size_tokens": 4800,
+      "cost_usd": 0.019857,
+      "failure_mode": "MODEL_FAILURE",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B0_RAW_AGENT",
+          "task": "TSK-EVAL-002"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "MODEL_FAILURE"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-007-B2_FULL_EIDOS-110",
+      "task_id": "TSK-EVAL-007",
+      "arm": "B2_FULL_EIDOS",
+      "seed": 110,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 1523,
+      "tokens_completion": 527,
+      "tokens_total": 2050,
+      "wall_clock_ms": 682.21,
+      "tool_calls_count": 5,
+      "context_size_tokens": 1125,
+      "cost_usd": 0.012474,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B2_FULL_EIDOS",
+          "task": "TSK-EVAL-007"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-006-B2_FULL_EIDOS-93",
+      "task_id": "TSK-EVAL-006",
+      "arm": "B2_FULL_EIDOS",
+      "seed": 93,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 2613,
+      "tokens_completion": 325,
+      "tokens_total": 2938,
+      "wall_clock_ms": 1103.98,
+      "tool_calls_count": 8,
+      "context_size_tokens": 2160,
+      "cost_usd": 0.012714,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B2_FULL_EIDOS",
+          "task": "TSK-EVAL-006"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-004-B0_RAW_AGENT-110",
+      "task_id": "TSK-EVAL-004",
+      "arm": "B0_RAW_AGENT",
+      "seed": 110,
+      "success": false,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 3378,
+      "tokens_completion": 576,
+      "tokens_total": 3954,
+      "wall_clock_ms": 633.3,
+      "tool_calls_count": 4,
+      "context_size_tokens": 2500,
+      "cost_usd": 0.018774,
+      "failure_mode": "SECURITY_INVARIANT_VIOLATION",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B0_RAW_AGENT",
+          "task": "TSK-EVAL-004"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "SECURITY_INVARIANT_VIOLATION"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-010-B2_FULL_EIDOS-42",
+      "task_id": "TSK-EVAL-010",
+      "arm": "B2_FULL_EIDOS",
+      "seed": 42,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 4082,
+      "tokens_completion": 302,
+      "tokens_total": 4384,
+      "wall_clock_ms": 1466.4,
+      "tool_calls_count": 11,
+      "context_size_tokens": 3825,
+      "cost_usd": 0.016776,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B2_FULL_EIDOS",
+          "task": "TSK-EVAL-010"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-007-B1_BASIC_HARNESS-93",
+      "task_id": "TSK-EVAL-007",
+      "arm": "B1_BASIC_HARNESS",
+      "seed": 93,
+      "success": false,
+      "public_tests_passed": false,
+      "hidden_tests_passed": false,
+      "verification_passed": false,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 3367,
+      "tokens_completion": 702,
+      "tokens_total": 4069,
+      "wall_clock_ms": 649.6,
+      "tool_calls_count": 4,
+      "context_size_tokens": 2500,
+      "cost_usd": 0.020631,
+      "failure_mode": "MODEL_FAILURE",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B1_BASIC_HARNESS",
+          "task": "TSK-EVAL-007"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "MODEL_FAILURE"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-005-B0_RAW_AGENT-110",
+      "task_id": "TSK-EVAL-005",
+      "arm": "B0_RAW_AGENT",
+      "seed": 110,
+      "success": false,
+      "public_tests_passed": false,
+      "hidden_tests_passed": false,
+      "verification_passed": false,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 5678,
+      "tokens_completion": 460,
+      "tokens_total": 6138,
+      "wall_clock_ms": 993.3,
+      "tool_calls_count": 7,
+      "context_size_tokens": 4800,
+      "cost_usd": 0.023934,
+      "failure_mode": "MODEL_FAILURE",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B0_RAW_AGENT",
+          "task": "TSK-EVAL-005"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "MODEL_FAILURE"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-009-B0_RAW_AGENT-76",
+      "task_id": "TSK-EVAL-009",
+      "arm": "B0_RAW_AGENT",
+      "seed": 76,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 5389,
+      "tokens_completion": 464,
+      "tokens_total": 5853,
+      "wall_clock_ms": 1013.52,
+      "tool_calls_count": 7,
+      "context_size_tokens": 4800,
+      "cost_usd": 0.023127,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B0_RAW_AGENT",
+          "task": "TSK-EVAL-009"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-007-B1_BASIC_HARNESS-59",
+      "task_id": "TSK-EVAL-007",
+      "arm": "B1_BASIC_HARNESS",
+      "seed": 59,
+      "success": false,
+      "public_tests_passed": false,
+      "hidden_tests_passed": false,
+      "verification_passed": false,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 3014,
+      "tokens_completion": 261,
+      "tokens_total": 3275,
+      "wall_clock_ms": 531.24,
+      "tool_calls_count": 3,
+      "context_size_tokens": 2500,
+      "cost_usd": 0.012957,
+      "failure_mode": "MODEL_FAILURE",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B1_BASIC_HARNESS",
+          "task": "TSK-EVAL-007"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "MODEL_FAILURE"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-006-B0_RAW_AGENT-59",
+      "task_id": "TSK-EVAL-006",
+      "arm": "B0_RAW_AGENT",
+      "seed": 59,
+      "success": false,
+      "public_tests_passed": false,
+      "hidden_tests_passed": false,
+      "verification_passed": false,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 5314,
+      "tokens_completion": 261,
+      "tokens_total": 5575,
+      "wall_clock_ms": 891.24,
+      "tool_calls_count": 6,
+      "context_size_tokens": 4800,
+      "cost_usd": 0.019857,
+      "failure_mode": "MODEL_FAILURE",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B0_RAW_AGENT",
+          "task": "TSK-EVAL-006"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "MODEL_FAILURE"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-003-B1_BASIC_HARNESS-59",
+      "task_id": "TSK-EVAL-003",
+      "arm": "B1_BASIC_HARNESS",
+      "seed": 59,
+      "success": false,
+      "public_tests_passed": false,
+      "hidden_tests_passed": false,
+      "verification_passed": false,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 5314,
+      "tokens_completion": 261,
+      "tokens_total": 5575,
+      "wall_clock_ms": 891.24,
+      "tool_calls_count": 6,
+      "context_size_tokens": 4800,
+      "cost_usd": 0.019857,
+      "failure_mode": "MODEL_FAILURE",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B1_BASIC_HARNESS",
+          "task": "TSK-EVAL-003"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "MODEL_FAILURE"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-008-B2_FULL_EIDOS-42",
+      "task_id": "TSK-EVAL-008",
+      "arm": "B2_FULL_EIDOS",
+      "seed": 42,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 4082,
+      "tokens_completion": 302,
+      "tokens_total": 4384,
+      "wall_clock_ms": 1466.4,
+      "tool_calls_count": 11,
+      "context_size_tokens": 3825,
+      "cost_usd": 0.016776,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B2_FULL_EIDOS",
+          "task": "TSK-EVAL-008"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-001-B0_RAW_AGENT-110",
+      "task_id": "TSK-EVAL-001",
+      "arm": "B0_RAW_AGENT",
+      "seed": 110,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 3378,
+      "tokens_completion": 615,
+      "tokens_total": 3993,
+      "wall_clock_ms": 633.3,
+      "tool_calls_count": 4,
+      "context_size_tokens": 2500,
+      "cost_usd": 0.019359,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B0_RAW_AGENT",
+          "task": "TSK-EVAL-001"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-002-B0_RAW_AGENT-76",
+      "task_id": "TSK-EVAL-002",
+      "arm": "B0_RAW_AGENT",
+      "seed": 76,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 5389,
+      "tokens_completion": 464,
+      "tokens_total": 5853,
+      "wall_clock_ms": 1013.52,
+      "tool_calls_count": 7,
+      "context_size_tokens": 4800,
+      "cost_usd": 0.023127,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B0_RAW_AGENT",
+          "task": "TSK-EVAL-002"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-002-B2_FULL_EIDOS-42",
+      "task_id": "TSK-EVAL-002",
+      "arm": "B2_FULL_EIDOS",
+      "seed": 42,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 2417,
+      "tokens_completion": 302,
+      "tokens_total": 2719,
+      "wall_clock_ms": 866.4,
+      "tool_calls_count": 6,
+      "context_size_tokens": 2160,
+      "cost_usd": 0.011781,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B2_FULL_EIDOS",
+          "task": "TSK-EVAL-002"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-005-B1_BASIC_HARNESS-110",
+      "task_id": "TSK-EVAL-005",
+      "arm": "B1_BASIC_HARNESS",
+      "seed": 110,
+      "success": false,
+      "public_tests_passed": false,
+      "hidden_tests_passed": false,
+      "verification_passed": false,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 5678,
+      "tokens_completion": 460,
+      "tokens_total": 6138,
+      "wall_clock_ms": 993.3,
+      "tool_calls_count": 7,
+      "context_size_tokens": 4800,
+      "cost_usd": 0.023934,
+      "failure_mode": "MODEL_FAILURE",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B1_BASIC_HARNESS",
+          "task": "TSK-EVAL-005"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "MODEL_FAILURE"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-004-B1_BASIC_HARNESS-59",
+      "task_id": "TSK-EVAL-004",
+      "arm": "B1_BASIC_HARNESS",
+      "seed": 59,
+      "success": false,
+      "public_tests_passed": false,
+      "hidden_tests_passed": false,
+      "verification_passed": false,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 3014,
+      "tokens_completion": 261,
+      "tokens_total": 3275,
+      "wall_clock_ms": 531.24,
+      "tool_calls_count": 3,
+      "context_size_tokens": 2500,
+      "cost_usd": 0.012957,
+      "failure_mode": "MODEL_FAILURE",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B1_BASIC_HARNESS",
+          "task": "TSK-EVAL-004"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "MODEL_FAILURE"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-001-B0_RAW_AGENT-76",
+      "task_id": "TSK-EVAL-001",
+      "arm": "B0_RAW_AGENT",
+      "seed": 76,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 3089,
+      "tokens_completion": 464,
+      "tokens_total": 3553,
+      "wall_clock_ms": 653.52,
+      "tool_calls_count": 4,
+      "context_size_tokens": 2500,
+      "cost_usd": 0.016227,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B0_RAW_AGENT",
+          "task": "TSK-EVAL-001"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-004-B1_BASIC_HARNESS-76",
+      "task_id": "TSK-EVAL-004",
+      "arm": "B1_BASIC_HARNESS",
+      "seed": 76,
+      "success": false,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 3089,
+      "tokens_completion": 371,
+      "tokens_total": 3460,
+      "wall_clock_ms": 653.52,
+      "tool_calls_count": 4,
+      "context_size_tokens": 2500,
+      "cost_usd": 0.014832,
+      "failure_mode": "SECURITY_INVARIANT_VIOLATION",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B1_BASIC_HARNESS",
+          "task": "TSK-EVAL-004"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "SECURITY_INVARIANT_VIOLATION"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-001-B2_FULL_EIDOS-110",
+      "task_id": "TSK-EVAL-001",
+      "arm": "B2_FULL_EIDOS",
+      "seed": 110,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 1523,
+      "tokens_completion": 527,
+      "tokens_total": 2050,
+      "wall_clock_ms": 682.21,
+      "tool_calls_count": 5,
+      "context_size_tokens": 1125,
+      "cost_usd": 0.012474,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B2_FULL_EIDOS",
+          "task": "TSK-EVAL-001"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-010-B0_RAW_AGENT-93",
+      "task_id": "TSK-EVAL-010",
+      "arm": "B0_RAW_AGENT",
+      "seed": 93,
+      "success": false,
+      "public_tests_passed": false,
+      "hidden_tests_passed": false,
+      "verification_passed": false,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 9367,
+      "tokens_completion": 702,
+      "tokens_total": 10069,
+      "wall_clock_ms": 1609.6,
+      "tool_calls_count": 12,
+      "context_size_tokens": 8500,
+      "cost_usd": 0.038631,
+      "failure_mode": "MODEL_FAILURE",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B0_RAW_AGENT",
+          "task": "TSK-EVAL-010"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "MODEL_FAILURE"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-003-B2_FULL_EIDOS-59",
+      "task_id": "TSK-EVAL-003",
+      "arm": "B2_FULL_EIDOS",
+      "seed": 59,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 2474,
+      "tokens_completion": 683,
+      "tokens_total": 3157,
+      "wall_clock_ms": 891.24,
+      "tool_calls_count": 6,
+      "context_size_tokens": 2160,
+      "cost_usd": 0.017667,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B2_FULL_EIDOS",
+          "task": "TSK-EVAL-003"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-010-B2_FULL_EIDOS-110",
+      "task_id": "TSK-EVAL-010",
+      "arm": "B2_FULL_EIDOS",
+      "seed": 110,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 4223,
+      "tokens_completion": 527,
+      "tokens_total": 4750,
+      "wall_clock_ms": 1642.21,
+      "tool_calls_count": 13,
+      "context_size_tokens": 3825,
+      "cost_usd": 0.020574,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B2_FULL_EIDOS",
+          "task": "TSK-EVAL-010"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-005-B2_FULL_EIDOS-110",
+      "task_id": "TSK-EVAL-005",
+      "arm": "B2_FULL_EIDOS",
+      "seed": 110,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 2558,
+      "tokens_completion": 527,
+      "tokens_total": 3085,
+      "wall_clock_ms": 1042.21,
+      "tool_calls_count": 8,
+      "context_size_tokens": 2160,
+      "cost_usd": 0.015579,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B2_FULL_EIDOS",
+          "task": "TSK-EVAL-005"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-006-B1_BASIC_HARNESS-76",
+      "task_id": "TSK-EVAL-006",
+      "arm": "B1_BASIC_HARNESS",
+      "seed": 76,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 5389,
+      "tokens_completion": 464,
+      "tokens_total": 5853,
+      "wall_clock_ms": 1013.52,
+      "tool_calls_count": 7,
+      "context_size_tokens": 4800,
+      "cost_usd": 0.023127,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B1_BASIC_HARNESS",
+          "task": "TSK-EVAL-006"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-010-B0_RAW_AGENT-42",
+      "task_id": "TSK-EVAL-010",
+      "arm": "B0_RAW_AGENT",
+      "seed": 42,
+      "success": false,
+      "public_tests_passed": true,
+      "hidden_tests_passed": false,
+      "verification_passed": true,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 9227,
+      "tokens_completion": 596,
+      "tokens_total": 9823,
+      "wall_clock_ms": 1373.25,
+      "tool_calls_count": 11,
+      "context_size_tokens": 8500,
+      "cost_usd": 0.036621,
+      "failure_mode": "FALSE_CONFIDENCE_EDGE_CASE",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B0_RAW_AGENT",
+          "task": "TSK-EVAL-010"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "FALSE_CONFIDENCE_EDGE_CASE"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-006-B0_RAW_AGENT-93",
+      "task_id": "TSK-EVAL-006",
+      "arm": "B0_RAW_AGENT",
+      "seed": 93,
+      "success": false,
+      "public_tests_passed": false,
+      "hidden_tests_passed": false,
+      "verification_passed": false,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 5667,
+      "tokens_completion": 702,
+      "tokens_total": 6369,
+      "wall_clock_ms": 1009.6,
+      "tool_calls_count": 7,
+      "context_size_tokens": 4800,
+      "cost_usd": 0.027531,
+      "failure_mode": "MODEL_FAILURE",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B0_RAW_AGENT",
+          "task": "TSK-EVAL-006"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "MODEL_FAILURE"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-003-B0_RAW_AGENT-59",
+      "task_id": "TSK-EVAL-003",
+      "arm": "B0_RAW_AGENT",
+      "seed": 59,
+      "success": false,
+      "public_tests_passed": false,
+      "hidden_tests_passed": false,
+      "verification_passed": false,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 5314,
+      "tokens_completion": 261,
+      "tokens_total": 5575,
+      "wall_clock_ms": 891.24,
+      "tool_calls_count": 6,
+      "context_size_tokens": 4800,
+      "cost_usd": 0.019857,
+      "failure_mode": "MODEL_FAILURE",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B0_RAW_AGENT",
+          "task": "TSK-EVAL-003"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "MODEL_FAILURE"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-007-B2_FULL_EIDOS-76",
+      "task_id": "TSK-EVAL-007",
+      "arm": "B2_FULL_EIDOS",
+      "seed": 76,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 1514,
+      "tokens_completion": 464,
+      "tokens_total": 1978,
+      "wall_clock_ms": 653.52,
+      "tool_calls_count": 4,
+      "context_size_tokens": 1125,
+      "cost_usd": 0.011502,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B2_FULL_EIDOS",
+          "task": "TSK-EVAL-007"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-002-B1_BASIC_HARNESS-59",
+      "task_id": "TSK-EVAL-002",
+      "arm": "B1_BASIC_HARNESS",
+      "seed": 59,
+      "success": false,
+      "public_tests_passed": false,
+      "hidden_tests_passed": false,
+      "verification_passed": false,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 5314,
+      "tokens_completion": 261,
+      "tokens_total": 5575,
+      "wall_clock_ms": 891.24,
+      "tool_calls_count": 6,
+      "context_size_tokens": 4800,
+      "cost_usd": 0.019857,
+      "failure_mode": "MODEL_FAILURE",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B1_BASIC_HARNESS",
+          "task": "TSK-EVAL-002"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "MODEL_FAILURE"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-001-B1_BASIC_HARNESS-110",
+      "task_id": "TSK-EVAL-001",
+      "arm": "B1_BASIC_HARNESS",
+      "seed": 110,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 3378,
+      "tokens_completion": 615,
+      "tokens_total": 3993,
+      "wall_clock_ms": 633.3,
+      "tool_calls_count": 4,
+      "context_size_tokens": 2500,
+      "cost_usd": 0.019359,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B1_BASIC_HARNESS",
+          "task": "TSK-EVAL-001"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-003-B0_RAW_AGENT-110",
+      "task_id": "TSK-EVAL-003",
+      "arm": "B0_RAW_AGENT",
+      "seed": 110,
+      "success": false,
+      "public_tests_passed": false,
+      "hidden_tests_passed": false,
+      "verification_passed": false,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 5678,
+      "tokens_completion": 460,
+      "tokens_total": 6138,
+      "wall_clock_ms": 993.3,
+      "tool_calls_count": 7,
+      "context_size_tokens": 4800,
+      "cost_usd": 0.023934,
+      "failure_mode": "MODEL_FAILURE",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B0_RAW_AGENT",
+          "task": "TSK-EVAL-003"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "MODEL_FAILURE"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-010-B1_BASIC_HARNESS-93",
+      "task_id": "TSK-EVAL-010",
+      "arm": "B1_BASIC_HARNESS",
+      "seed": 93,
+      "success": false,
+      "public_tests_passed": false,
+      "hidden_tests_passed": false,
+      "verification_passed": false,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 9367,
+      "tokens_completion": 702,
+      "tokens_total": 10069,
+      "wall_clock_ms": 1609.6,
+      "tool_calls_count": 12,
+      "context_size_tokens": 8500,
+      "cost_usd": 0.038631,
+      "failure_mode": "MODEL_FAILURE",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B1_BASIC_HARNESS",
+          "task": "TSK-EVAL-010"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "MODEL_FAILURE"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-008-B1_BASIC_HARNESS-59",
+      "task_id": "TSK-EVAL-008",
+      "arm": "B1_BASIC_HARNESS",
+      "seed": 59,
+      "success": false,
+      "public_tests_passed": false,
+      "hidden_tests_passed": false,
+      "verification_passed": false,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 9014,
+      "tokens_completion": 261,
+      "tokens_total": 9275,
+      "wall_clock_ms": 1491.24,
+      "tool_calls_count": 11,
+      "context_size_tokens": 8500,
+      "cost_usd": 0.030957,
+      "failure_mode": "MODEL_FAILURE",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B1_BASIC_HARNESS",
+          "task": "TSK-EVAL-008"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "MODEL_FAILURE"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-004-B0_RAW_AGENT-76",
+      "task_id": "TSK-EVAL-004",
+      "arm": "B0_RAW_AGENT",
+      "seed": 76,
+      "success": false,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 3089,
+      "tokens_completion": 371,
+      "tokens_total": 3460,
+      "wall_clock_ms": 653.52,
+      "tool_calls_count": 4,
+      "context_size_tokens": 2500,
+      "cost_usd": 0.014832,
+      "failure_mode": "SECURITY_INVARIANT_VIOLATION",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B0_RAW_AGENT",
+          "task": "TSK-EVAL-004"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "SECURITY_INVARIANT_VIOLATION"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-009-B0_RAW_AGENT-110",
+      "task_id": "TSK-EVAL-009",
+      "arm": "B0_RAW_AGENT",
+      "seed": 110,
+      "success": false,
+      "public_tests_passed": false,
+      "hidden_tests_passed": false,
+      "verification_passed": false,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 5678,
+      "tokens_completion": 460,
+      "tokens_total": 6138,
+      "wall_clock_ms": 993.3,
+      "tool_calls_count": 7,
+      "context_size_tokens": 4800,
+      "cost_usd": 0.023934,
+      "failure_mode": "MODEL_FAILURE",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B0_RAW_AGENT",
+          "task": "TSK-EVAL-009"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "MODEL_FAILURE"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-007-B0_RAW_AGENT-110",
+      "task_id": "TSK-EVAL-007",
+      "arm": "B0_RAW_AGENT",
+      "seed": 110,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 3378,
+      "tokens_completion": 615,
+      "tokens_total": 3993,
+      "wall_clock_ms": 633.3,
+      "tool_calls_count": 4,
+      "context_size_tokens": 2500,
+      "cost_usd": 0.019359,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B0_RAW_AGENT",
+          "task": "TSK-EVAL-007"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-008-B0_RAW_AGENT-59",
+      "task_id": "TSK-EVAL-008",
+      "arm": "B0_RAW_AGENT",
+      "seed": 59,
+      "success": false,
+      "public_tests_passed": false,
+      "hidden_tests_passed": false,
+      "verification_passed": false,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 9014,
+      "tokens_completion": 261,
+      "tokens_total": 9275,
+      "wall_clock_ms": 1491.24,
+      "tool_calls_count": 11,
+      "context_size_tokens": 8500,
+      "cost_usd": 0.030957,
+      "failure_mode": "MODEL_FAILURE",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B0_RAW_AGENT",
+          "task": "TSK-EVAL-008"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "MODEL_FAILURE"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-009-B0_RAW_AGENT-42",
+      "task_id": "TSK-EVAL-009",
+      "arm": "B0_RAW_AGENT",
+      "seed": 42,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 5527,
+      "tokens_completion": 627,
+      "tokens_total": 6154,
+      "wall_clock_ms": 773.25,
+      "tool_calls_count": 6,
+      "context_size_tokens": 4800,
+      "cost_usd": 0.025986,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B0_RAW_AGENT",
+          "task": "TSK-EVAL-009"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-007-B2_FULL_EIDOS-42",
+      "task_id": "TSK-EVAL-007",
+      "arm": "B2_FULL_EIDOS",
+      "seed": 42,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 1382,
+      "tokens_completion": 302,
+      "tokens_total": 1684,
+      "wall_clock_ms": 506.4,
+      "tool_calls_count": 3,
+      "context_size_tokens": 1125,
+      "cost_usd": 0.008676,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B2_FULL_EIDOS",
+          "task": "TSK-EVAL-007"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-008-B1_BASIC_HARNESS-76",
+      "task_id": "TSK-EVAL-008",
+      "arm": "B1_BASIC_HARNESS",
+      "seed": 76,
+      "success": false,
+      "public_tests_passed": true,
+      "hidden_tests_passed": false,
+      "verification_passed": true,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 9089,
+      "tokens_completion": 371,
+      "tokens_total": 9460,
+      "wall_clock_ms": 1613.52,
+      "tool_calls_count": 12,
+      "context_size_tokens": 8500,
+      "cost_usd": 0.032832,
+      "failure_mode": "FALSE_CONFIDENCE_EDGE_CASE",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B1_BASIC_HARNESS",
+          "task": "TSK-EVAL-008"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "FALSE_CONFIDENCE_EDGE_CASE"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-006-B2_FULL_EIDOS-76",
+      "task_id": "TSK-EVAL-006",
+      "arm": "B2_FULL_EIDOS",
+      "seed": 76,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 2549,
+      "tokens_completion": 464,
+      "tokens_total": 3013,
+      "wall_clock_ms": 1013.52,
+      "tool_calls_count": 7,
+      "context_size_tokens": 2160,
+      "cost_usd": 0.014607,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B2_FULL_EIDOS",
+          "task": "TSK-EVAL-006"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-007-B1_BASIC_HARNESS-110",
+      "task_id": "TSK-EVAL-007",
+      "arm": "B1_BASIC_HARNESS",
+      "seed": 110,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 3378,
+      "tokens_completion": 615,
+      "tokens_total": 3993,
+      "wall_clock_ms": 633.3,
+      "tool_calls_count": 4,
+      "context_size_tokens": 2500,
+      "cost_usd": 0.019359,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B1_BASIC_HARNESS",
+          "task": "TSK-EVAL-007"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-008-B2_FULL_EIDOS-76",
+      "task_id": "TSK-EVAL-008",
+      "arm": "B2_FULL_EIDOS",
+      "seed": 76,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 4214,
+      "tokens_completion": 464,
+      "tokens_total": 4678,
+      "wall_clock_ms": 1613.52,
+      "tool_calls_count": 12,
+      "context_size_tokens": 3825,
+      "cost_usd": 0.019602,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B2_FULL_EIDOS",
+          "task": "TSK-EVAL-008"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-002-B2_FULL_EIDOS-110",
+      "task_id": "TSK-EVAL-002",
+      "arm": "B2_FULL_EIDOS",
+      "seed": 110,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 2558,
+      "tokens_completion": 527,
+      "tokens_total": 3085,
+      "wall_clock_ms": 1042.21,
+      "tool_calls_count": 8,
+      "context_size_tokens": 2160,
+      "cost_usd": 0.015579,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B2_FULL_EIDOS",
+          "task": "TSK-EVAL-002"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-006-B1_BASIC_HARNESS-110",
+      "task_id": "TSK-EVAL-006",
+      "arm": "B1_BASIC_HARNESS",
+      "seed": 110,
+      "success": false,
+      "public_tests_passed": false,
+      "hidden_tests_passed": false,
+      "verification_passed": false,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 5678,
+      "tokens_completion": 460,
+      "tokens_total": 6138,
+      "wall_clock_ms": 993.3,
+      "tool_calls_count": 7,
+      "context_size_tokens": 4800,
+      "cost_usd": 0.023934,
+      "failure_mode": "MODEL_FAILURE",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B1_BASIC_HARNESS",
+          "task": "TSK-EVAL-006"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "MODEL_FAILURE"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-008-B0_RAW_AGENT-42",
+      "task_id": "TSK-EVAL-008",
+      "arm": "B0_RAW_AGENT",
+      "seed": 42,
+      "success": false,
+      "public_tests_passed": true,
+      "hidden_tests_passed": false,
+      "verification_passed": true,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 9227,
+      "tokens_completion": 596,
+      "tokens_total": 9823,
+      "wall_clock_ms": 1373.25,
+      "tool_calls_count": 11,
+      "context_size_tokens": 8500,
+      "cost_usd": 0.036621,
+      "failure_mode": "FALSE_CONFIDENCE_EDGE_CASE",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B0_RAW_AGENT",
+          "task": "TSK-EVAL-008"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "FALSE_CONFIDENCE_EDGE_CASE"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-010-B1_BASIC_HARNESS-76",
+      "task_id": "TSK-EVAL-010",
+      "arm": "B1_BASIC_HARNESS",
+      "seed": 76,
+      "success": false,
+      "public_tests_passed": true,
+      "hidden_tests_passed": false,
+      "verification_passed": true,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 9089,
+      "tokens_completion": 371,
+      "tokens_total": 9460,
+      "wall_clock_ms": 1613.52,
+      "tool_calls_count": 12,
+      "context_size_tokens": 8500,
+      "cost_usd": 0.032832,
+      "failure_mode": "FALSE_CONFIDENCE_EDGE_CASE",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B1_BASIC_HARNESS",
+          "task": "TSK-EVAL-010"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "FALSE_CONFIDENCE_EDGE_CASE"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-007-B0_RAW_AGENT-42",
+      "task_id": "TSK-EVAL-007",
+      "arm": "B0_RAW_AGENT",
+      "seed": 42,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 3227,
+      "tokens_completion": 627,
+      "tokens_total": 3854,
+      "wall_clock_ms": 413.25,
+      "tool_calls_count": 3,
+      "context_size_tokens": 2500,
+      "cost_usd": 0.019086,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B0_RAW_AGENT",
+          "task": "TSK-EVAL-007"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-002-B1_BASIC_HARNESS-110",
+      "task_id": "TSK-EVAL-002",
+      "arm": "B1_BASIC_HARNESS",
+      "seed": 110,
+      "success": false,
+      "public_tests_passed": false,
+      "hidden_tests_passed": false,
+      "verification_passed": false,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 5678,
+      "tokens_completion": 460,
+      "tokens_total": 6138,
+      "wall_clock_ms": 993.3,
+      "tool_calls_count": 7,
+      "context_size_tokens": 4800,
+      "cost_usd": 0.023934,
+      "failure_mode": "MODEL_FAILURE",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B1_BASIC_HARNESS",
+          "task": "TSK-EVAL-002"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "MODEL_FAILURE"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-005-B2_FULL_EIDOS-93",
+      "task_id": "TSK-EVAL-005",
+      "arm": "B2_FULL_EIDOS",
+      "seed": 93,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 2613,
+      "tokens_completion": 325,
+      "tokens_total": 2938,
+      "wall_clock_ms": 1103.98,
+      "tool_calls_count": 8,
+      "context_size_tokens": 2160,
+      "cost_usd": 0.012714,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B2_FULL_EIDOS",
+          "task": "TSK-EVAL-005"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-004-B0_RAW_AGENT-59",
+      "task_id": "TSK-EVAL-004",
+      "arm": "B0_RAW_AGENT",
+      "seed": 59,
+      "success": false,
+      "public_tests_passed": false,
+      "hidden_tests_passed": false,
+      "verification_passed": false,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 3014,
+      "tokens_completion": 261,
+      "tokens_total": 3275,
+      "wall_clock_ms": 531.24,
+      "tool_calls_count": 3,
+      "context_size_tokens": 2500,
+      "cost_usd": 0.012957,
+      "failure_mode": "MODEL_FAILURE",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B0_RAW_AGENT",
+          "task": "TSK-EVAL-004"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "MODEL_FAILURE"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-006-B0_RAW_AGENT-110",
+      "task_id": "TSK-EVAL-006",
+      "arm": "B0_RAW_AGENT",
+      "seed": 110,
+      "success": false,
+      "public_tests_passed": false,
+      "hidden_tests_passed": false,
+      "verification_passed": false,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 5678,
+      "tokens_completion": 460,
+      "tokens_total": 6138,
+      "wall_clock_ms": 993.3,
+      "tool_calls_count": 7,
+      "context_size_tokens": 4800,
+      "cost_usd": 0.023934,
+      "failure_mode": "MODEL_FAILURE",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B0_RAW_AGENT",
+          "task": "TSK-EVAL-006"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "MODEL_FAILURE"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-006-B1_BASIC_HARNESS-42",
+      "task_id": "TSK-EVAL-006",
+      "arm": "B1_BASIC_HARNESS",
+      "seed": 42,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 5527,
+      "tokens_completion": 627,
+      "tokens_total": 6154,
+      "wall_clock_ms": 773.25,
+      "tool_calls_count": 6,
+      "context_size_tokens": 4800,
+      "cost_usd": 0.025986,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B1_BASIC_HARNESS",
+          "task": "TSK-EVAL-006"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-003-B1_BASIC_HARNESS-76",
+      "task_id": "TSK-EVAL-003",
+      "arm": "B1_BASIC_HARNESS",
+      "seed": 76,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 5389,
+      "tokens_completion": 464,
+      "tokens_total": 5853,
+      "wall_clock_ms": 1013.52,
+      "tool_calls_count": 7,
+      "context_size_tokens": 4800,
+      "cost_usd": 0.023127,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B1_BASIC_HARNESS",
+          "task": "TSK-EVAL-003"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-010-B2_FULL_EIDOS-76",
+      "task_id": "TSK-EVAL-010",
+      "arm": "B2_FULL_EIDOS",
+      "seed": 76,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 4214,
+      "tokens_completion": 464,
+      "tokens_total": 4678,
+      "wall_clock_ms": 1613.52,
+      "tool_calls_count": 12,
+      "context_size_tokens": 3825,
+      "cost_usd": 0.019602,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B2_FULL_EIDOS",
+          "task": "TSK-EVAL-010"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-001-B2_FULL_EIDOS-42",
+      "task_id": "TSK-EVAL-001",
+      "arm": "B2_FULL_EIDOS",
+      "seed": 42,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 1382,
+      "tokens_completion": 302,
+      "tokens_total": 1684,
+      "wall_clock_ms": 506.4,
+      "tool_calls_count": 3,
+      "context_size_tokens": 1125,
+      "cost_usd": 0.008676,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B2_FULL_EIDOS",
+          "task": "TSK-EVAL-001"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-008-B1_BASIC_HARNESS-93",
+      "task_id": "TSK-EVAL-008",
+      "arm": "B1_BASIC_HARNESS",
+      "seed": 93,
+      "success": false,
+      "public_tests_passed": false,
+      "hidden_tests_passed": false,
+      "verification_passed": false,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 9367,
+      "tokens_completion": 702,
+      "tokens_total": 10069,
+      "wall_clock_ms": 1609.6,
+      "tool_calls_count": 12,
+      "context_size_tokens": 8500,
+      "cost_usd": 0.038631,
+      "failure_mode": "MODEL_FAILURE",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B1_BASIC_HARNESS",
+          "task": "TSK-EVAL-008"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "MODEL_FAILURE"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-002-B0_RAW_AGENT-42",
+      "task_id": "TSK-EVAL-002",
+      "arm": "B0_RAW_AGENT",
+      "seed": 42,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 5527,
+      "tokens_completion": 627,
+      "tokens_total": 6154,
+      "wall_clock_ms": 773.25,
+      "tool_calls_count": 6,
+      "context_size_tokens": 4800,
+      "cost_usd": 0.025986,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B0_RAW_AGENT",
+          "task": "TSK-EVAL-002"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-005-B1_BASIC_HARNESS-93",
+      "task_id": "TSK-EVAL-005",
+      "arm": "B1_BASIC_HARNESS",
+      "seed": 93,
+      "success": false,
+      "public_tests_passed": false,
+      "hidden_tests_passed": false,
+      "verification_passed": false,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 5667,
+      "tokens_completion": 702,
+      "tokens_total": 6369,
+      "wall_clock_ms": 1009.6,
+      "tool_calls_count": 7,
+      "context_size_tokens": 4800,
+      "cost_usd": 0.027531,
+      "failure_mode": "MODEL_FAILURE",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B1_BASIC_HARNESS",
+          "task": "TSK-EVAL-005"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "MODEL_FAILURE"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-004-B2_FULL_EIDOS-93",
+      "task_id": "TSK-EVAL-004",
+      "arm": "B2_FULL_EIDOS",
+      "seed": 93,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 1578,
+      "tokens_completion": 325,
+      "tokens_total": 1903,
+      "wall_clock_ms": 743.98,
+      "tool_calls_count": 5,
+      "context_size_tokens": 1125,
+      "cost_usd": 0.009609,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B2_FULL_EIDOS",
+          "task": "TSK-EVAL-004"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-007-B0_RAW_AGENT-93",
+      "task_id": "TSK-EVAL-007",
+      "arm": "B0_RAW_AGENT",
+      "seed": 93,
+      "success": false,
+      "public_tests_passed": false,
+      "hidden_tests_passed": false,
+      "verification_passed": false,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 3367,
+      "tokens_completion": 702,
+      "tokens_total": 4069,
+      "wall_clock_ms": 649.6,
+      "tool_calls_count": 4,
+      "context_size_tokens": 2500,
+      "cost_usd": 0.020631,
+      "failure_mode": "MODEL_FAILURE",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B0_RAW_AGENT",
+          "task": "TSK-EVAL-007"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "MODEL_FAILURE"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-001-B1_BASIC_HARNESS-42",
+      "task_id": "TSK-EVAL-001",
+      "arm": "B1_BASIC_HARNESS",
+      "seed": 42,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 3227,
+      "tokens_completion": 627,
+      "tokens_total": 3854,
+      "wall_clock_ms": 413.25,
+      "tool_calls_count": 3,
+      "context_size_tokens": 2500,
+      "cost_usd": 0.019086,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B1_BASIC_HARNESS",
+          "task": "TSK-EVAL-001"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-009-B1_BASIC_HARNESS-42",
+      "task_id": "TSK-EVAL-009",
+      "arm": "B1_BASIC_HARNESS",
+      "seed": 42,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 5527,
+      "tokens_completion": 627,
+      "tokens_total": 6154,
+      "wall_clock_ms": 773.25,
+      "tool_calls_count": 6,
+      "context_size_tokens": 4800,
+      "cost_usd": 0.025986,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B1_BASIC_HARNESS",
+          "task": "TSK-EVAL-009"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-003-B0_RAW_AGENT-93",
+      "task_id": "TSK-EVAL-003",
+      "arm": "B0_RAW_AGENT",
+      "seed": 93,
+      "success": false,
+      "public_tests_passed": false,
+      "hidden_tests_passed": false,
+      "verification_passed": false,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 5667,
+      "tokens_completion": 702,
+      "tokens_total": 6369,
+      "wall_clock_ms": 1009.6,
+      "tool_calls_count": 7,
+      "context_size_tokens": 4800,
+      "cost_usd": 0.027531,
+      "failure_mode": "MODEL_FAILURE",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B0_RAW_AGENT",
+          "task": "TSK-EVAL-003"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "MODEL_FAILURE"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-006-B0_RAW_AGENT-76",
+      "task_id": "TSK-EVAL-006",
+      "arm": "B0_RAW_AGENT",
+      "seed": 76,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 5389,
+      "tokens_completion": 464,
+      "tokens_total": 5853,
+      "wall_clock_ms": 1013.52,
+      "tool_calls_count": 7,
+      "context_size_tokens": 4800,
+      "cost_usd": 0.023127,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B0_RAW_AGENT",
+          "task": "TSK-EVAL-006"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-003-B2_FULL_EIDOS-110",
+      "task_id": "TSK-EVAL-003",
+      "arm": "B2_FULL_EIDOS",
+      "seed": 110,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 2558,
+      "tokens_completion": 527,
+      "tokens_total": 3085,
+      "wall_clock_ms": 1042.21,
+      "tool_calls_count": 8,
+      "context_size_tokens": 2160,
+      "cost_usd": 0.015579,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B2_FULL_EIDOS",
+          "task": "TSK-EVAL-003"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-010-B1_BASIC_HARNESS-42",
+      "task_id": "TSK-EVAL-010",
+      "arm": "B1_BASIC_HARNESS",
+      "seed": 42,
+      "success": false,
+      "public_tests_passed": true,
+      "hidden_tests_passed": false,
+      "verification_passed": true,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 9227,
+      "tokens_completion": 596,
+      "tokens_total": 9823,
+      "wall_clock_ms": 1373.25,
+      "tool_calls_count": 11,
+      "context_size_tokens": 8500,
+      "cost_usd": 0.036621,
+      "failure_mode": "FALSE_CONFIDENCE_EDGE_CASE",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B1_BASIC_HARNESS",
+          "task": "TSK-EVAL-010"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "FALSE_CONFIDENCE_EDGE_CASE"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-004-B0_RAW_AGENT-42",
+      "task_id": "TSK-EVAL-004",
+      "arm": "B0_RAW_AGENT",
+      "seed": 42,
+      "success": false,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 3227,
+      "tokens_completion": 596,
+      "tokens_total": 3823,
+      "wall_clock_ms": 413.25,
+      "tool_calls_count": 3,
+      "context_size_tokens": 2500,
+      "cost_usd": 0.018621,
+      "failure_mode": "SECURITY_INVARIANT_VIOLATION",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B0_RAW_AGENT",
+          "task": "TSK-EVAL-004"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "SECURITY_INVARIANT_VIOLATION"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-001-B2_FULL_EIDOS-76",
+      "task_id": "TSK-EVAL-001",
+      "arm": "B2_FULL_EIDOS",
+      "seed": 76,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 1514,
+      "tokens_completion": 464,
+      "tokens_total": 1978,
+      "wall_clock_ms": 653.52,
+      "tool_calls_count": 4,
+      "context_size_tokens": 1125,
+      "cost_usd": 0.011502,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B2_FULL_EIDOS",
+          "task": "TSK-EVAL-001"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-004-B0_RAW_AGENT-93",
+      "task_id": "TSK-EVAL-004",
+      "arm": "B0_RAW_AGENT",
+      "seed": 93,
+      "success": false,
+      "public_tests_passed": false,
+      "hidden_tests_passed": false,
+      "verification_passed": false,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 3367,
+      "tokens_completion": 702,
+      "tokens_total": 4069,
+      "wall_clock_ms": 649.6,
+      "tool_calls_count": 4,
+      "context_size_tokens": 2500,
+      "cost_usd": 0.020631,
+      "failure_mode": "MODEL_FAILURE",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B0_RAW_AGENT",
+          "task": "TSK-EVAL-004"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "MODEL_FAILURE"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-001-B2_FULL_EIDOS-59",
+      "task_id": "TSK-EVAL-001",
+      "arm": "B2_FULL_EIDOS",
+      "seed": 59,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 1439,
+      "tokens_completion": 683,
+      "tokens_total": 2122,
+      "wall_clock_ms": 531.24,
+      "tool_calls_count": 3,
+      "context_size_tokens": 1125,
+      "cost_usd": 0.014562,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B2_FULL_EIDOS",
+          "task": "TSK-EVAL-001"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-001-B2_FULL_EIDOS-93",
+      "task_id": "TSK-EVAL-001",
+      "arm": "B2_FULL_EIDOS",
+      "seed": 93,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 1578,
+      "tokens_completion": 325,
+      "tokens_total": 1903,
+      "wall_clock_ms": 743.98,
+      "tool_calls_count": 5,
+      "context_size_tokens": 1125,
+      "cost_usd": 0.009609,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B2_FULL_EIDOS",
+          "task": "TSK-EVAL-001"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-009-B0_RAW_AGENT-59",
+      "task_id": "TSK-EVAL-009",
+      "arm": "B0_RAW_AGENT",
+      "seed": 59,
+      "success": false,
+      "public_tests_passed": false,
+      "hidden_tests_passed": false,
+      "verification_passed": false,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 5314,
+      "tokens_completion": 261,
+      "tokens_total": 5575,
+      "wall_clock_ms": 891.24,
+      "tool_calls_count": 6,
+      "context_size_tokens": 4800,
+      "cost_usd": 0.019857,
+      "failure_mode": "MODEL_FAILURE",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B0_RAW_AGENT",
+          "task": "TSK-EVAL-009"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "MODEL_FAILURE"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-009-B1_BASIC_HARNESS-59",
+      "task_id": "TSK-EVAL-009",
+      "arm": "B1_BASIC_HARNESS",
+      "seed": 59,
+      "success": false,
+      "public_tests_passed": false,
+      "hidden_tests_passed": false,
+      "verification_passed": false,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 5314,
+      "tokens_completion": 261,
+      "tokens_total": 5575,
+      "wall_clock_ms": 891.24,
+      "tool_calls_count": 6,
+      "context_size_tokens": 4800,
+      "cost_usd": 0.019857,
+      "failure_mode": "MODEL_FAILURE",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B1_BASIC_HARNESS",
+          "task": "TSK-EVAL-009"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "MODEL_FAILURE"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-002-B2_FULL_EIDOS-76",
+      "task_id": "TSK-EVAL-002",
+      "arm": "B2_FULL_EIDOS",
+      "seed": 76,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 2549,
+      "tokens_completion": 464,
+      "tokens_total": 3013,
+      "wall_clock_ms": 1013.52,
+      "tool_calls_count": 7,
+      "context_size_tokens": 2160,
+      "cost_usd": 0.014607,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B2_FULL_EIDOS",
+          "task": "TSK-EVAL-002"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-002-B0_RAW_AGENT-110",
+      "task_id": "TSK-EVAL-002",
+      "arm": "B0_RAW_AGENT",
+      "seed": 110,
+      "success": false,
+      "public_tests_passed": false,
+      "hidden_tests_passed": false,
+      "verification_passed": false,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 5678,
+      "tokens_completion": 460,
+      "tokens_total": 6138,
+      "wall_clock_ms": 993.3,
+      "tool_calls_count": 7,
+      "context_size_tokens": 4800,
+      "cost_usd": 0.023934,
+      "failure_mode": "MODEL_FAILURE",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B0_RAW_AGENT",
+          "task": "TSK-EVAL-002"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "MODEL_FAILURE"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-010-B1_BASIC_HARNESS-110",
+      "task_id": "TSK-EVAL-010",
+      "arm": "B1_BASIC_HARNESS",
+      "seed": 110,
+      "success": false,
+      "public_tests_passed": false,
+      "hidden_tests_passed": false,
+      "verification_passed": false,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 9378,
+      "tokens_completion": 460,
+      "tokens_total": 9838,
+      "wall_clock_ms": 1593.3,
+      "tool_calls_count": 12,
+      "context_size_tokens": 8500,
+      "cost_usd": 0.035034,
+      "failure_mode": "MODEL_FAILURE",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B1_BASIC_HARNESS",
+          "task": "TSK-EVAL-010"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "MODEL_FAILURE"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-003-B2_FULL_EIDOS-93",
+      "task_id": "TSK-EVAL-003",
+      "arm": "B2_FULL_EIDOS",
+      "seed": 93,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 2613,
+      "tokens_completion": 325,
+      "tokens_total": 2938,
+      "wall_clock_ms": 1103.98,
+      "tool_calls_count": 8,
+      "context_size_tokens": 2160,
+      "cost_usd": 0.012714,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B2_FULL_EIDOS",
+          "task": "TSK-EVAL-003"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-004-B1_BASIC_HARNESS-110",
+      "task_id": "TSK-EVAL-004",
+      "arm": "B1_BASIC_HARNESS",
+      "seed": 110,
+      "success": false,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 3378,
+      "tokens_completion": 576,
+      "tokens_total": 3954,
+      "wall_clock_ms": 633.3,
+      "tool_calls_count": 4,
+      "context_size_tokens": 2500,
+      "cost_usd": 0.018774,
+      "failure_mode": "SECURITY_INVARIANT_VIOLATION",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B1_BASIC_HARNESS",
+          "task": "TSK-EVAL-004"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "SECURITY_INVARIANT_VIOLATION"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-006-B2_FULL_EIDOS-110",
+      "task_id": "TSK-EVAL-006",
+      "arm": "B2_FULL_EIDOS",
+      "seed": 110,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 2558,
+      "tokens_completion": 527,
+      "tokens_total": 3085,
+      "wall_clock_ms": 1042.21,
+      "tool_calls_count": 8,
+      "context_size_tokens": 2160,
+      "cost_usd": 0.015579,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B2_FULL_EIDOS",
+          "task": "TSK-EVAL-006"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-002-B1_BASIC_HARNESS-42",
+      "task_id": "TSK-EVAL-002",
+      "arm": "B1_BASIC_HARNESS",
+      "seed": 42,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 5527,
+      "tokens_completion": 627,
+      "tokens_total": 6154,
+      "wall_clock_ms": 773.25,
+      "tool_calls_count": 6,
+      "context_size_tokens": 4800,
+      "cost_usd": 0.025986,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B1_BASIC_HARNESS",
+          "task": "TSK-EVAL-002"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-007-B2_FULL_EIDOS-93",
+      "task_id": "TSK-EVAL-007",
+      "arm": "B2_FULL_EIDOS",
+      "seed": 93,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 1578,
+      "tokens_completion": 325,
+      "tokens_total": 1903,
+      "wall_clock_ms": 743.98,
+      "tool_calls_count": 5,
+      "context_size_tokens": 1125,
+      "cost_usd": 0.009609,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B2_FULL_EIDOS",
+          "task": "TSK-EVAL-007"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-007-B1_BASIC_HARNESS-76",
+      "task_id": "TSK-EVAL-007",
+      "arm": "B1_BASIC_HARNESS",
+      "seed": 76,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 3089,
+      "tokens_completion": 464,
+      "tokens_total": 3553,
+      "wall_clock_ms": 653.52,
+      "tool_calls_count": 4,
+      "context_size_tokens": 2500,
+      "cost_usd": 0.016227,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B1_BASIC_HARNESS",
+          "task": "TSK-EVAL-007"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-001-B0_RAW_AGENT-59",
+      "task_id": "TSK-EVAL-001",
+      "arm": "B0_RAW_AGENT",
+      "seed": 59,
+      "success": false,
+      "public_tests_passed": false,
+      "hidden_tests_passed": false,
+      "verification_passed": false,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 3014,
+      "tokens_completion": 261,
+      "tokens_total": 3275,
+      "wall_clock_ms": 531.24,
+      "tool_calls_count": 3,
+      "context_size_tokens": 2500,
+      "cost_usd": 0.012957,
+      "failure_mode": "MODEL_FAILURE",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B0_RAW_AGENT",
+          "task": "TSK-EVAL-001"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "MODEL_FAILURE"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-005-B2_FULL_EIDOS-59",
+      "task_id": "TSK-EVAL-005",
+      "arm": "B2_FULL_EIDOS",
+      "seed": 59,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 2474,
+      "tokens_completion": 683,
+      "tokens_total": 3157,
+      "wall_clock_ms": 891.24,
+      "tool_calls_count": 6,
+      "context_size_tokens": 2160,
+      "cost_usd": 0.017667,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B2_FULL_EIDOS",
+          "task": "TSK-EVAL-005"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-008-B1_BASIC_HARNESS-110",
+      "task_id": "TSK-EVAL-008",
+      "arm": "B1_BASIC_HARNESS",
+      "seed": 110,
+      "success": false,
+      "public_tests_passed": false,
+      "hidden_tests_passed": false,
+      "verification_passed": false,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 9378,
+      "tokens_completion": 460,
+      "tokens_total": 9838,
+      "wall_clock_ms": 1593.3,
+      "tool_calls_count": 12,
+      "context_size_tokens": 8500,
+      "cost_usd": 0.035034,
+      "failure_mode": "MODEL_FAILURE",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B1_BASIC_HARNESS",
+          "task": "TSK-EVAL-008"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "MODEL_FAILURE"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-004-B2_FULL_EIDOS-59",
+      "task_id": "TSK-EVAL-004",
+      "arm": "B2_FULL_EIDOS",
+      "seed": 59,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 1439,
+      "tokens_completion": 683,
+      "tokens_total": 2122,
+      "wall_clock_ms": 531.24,
+      "tool_calls_count": 3,
+      "context_size_tokens": 1125,
+      "cost_usd": 0.014562,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B2_FULL_EIDOS",
+          "task": "TSK-EVAL-004"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-008-B0_RAW_AGENT-76",
+      "task_id": "TSK-EVAL-008",
+      "arm": "B0_RAW_AGENT",
+      "seed": 76,
+      "success": false,
+      "public_tests_passed": true,
+      "hidden_tests_passed": false,
+      "verification_passed": true,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 9089,
+      "tokens_completion": 371,
+      "tokens_total": 9460,
+      "wall_clock_ms": 1613.52,
+      "tool_calls_count": 12,
+      "context_size_tokens": 8500,
+      "cost_usd": 0.032832,
+      "failure_mode": "FALSE_CONFIDENCE_EDGE_CASE",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B0_RAW_AGENT",
+          "task": "TSK-EVAL-008"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "FALSE_CONFIDENCE_EDGE_CASE"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-004-B1_BASIC_HARNESS-42",
+      "task_id": "TSK-EVAL-004",
+      "arm": "B1_BASIC_HARNESS",
+      "seed": 42,
+      "success": false,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 3227,
+      "tokens_completion": 596,
+      "tokens_total": 3823,
+      "wall_clock_ms": 413.25,
+      "tool_calls_count": 3,
+      "context_size_tokens": 2500,
+      "cost_usd": 0.018621,
+      "failure_mode": "SECURITY_INVARIANT_VIOLATION",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B1_BASIC_HARNESS",
+          "task": "TSK-EVAL-004"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "SECURITY_INVARIANT_VIOLATION"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-010-B2_FULL_EIDOS-93",
+      "task_id": "TSK-EVAL-010",
+      "arm": "B2_FULL_EIDOS",
+      "seed": 93,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 1,
+      "tokens_prompt": 4728,
+      "tokens_completion": 512,
+      "tokens_total": 5240,
+      "wall_clock_ms": 1703.98,
+      "tool_calls_count": 15,
+      "context_size_tokens": 3825,
+      "cost_usd": 0.021864,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B2_FULL_EIDOS",
+          "task": "TSK-EVAL-010"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-009-B1_BASIC_HARNESS-110",
+      "task_id": "TSK-EVAL-009",
+      "arm": "B1_BASIC_HARNESS",
+      "seed": 110,
+      "success": false,
+      "public_tests_passed": false,
+      "hidden_tests_passed": false,
+      "verification_passed": false,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 5678,
+      "tokens_completion": 460,
+      "tokens_total": 6138,
+      "wall_clock_ms": 993.3,
+      "tool_calls_count": 7,
+      "context_size_tokens": 4800,
+      "cost_usd": 0.023934,
+      "failure_mode": "MODEL_FAILURE",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B1_BASIC_HARNESS",
+          "task": "TSK-EVAL-009"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "MODEL_FAILURE"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-004-B2_FULL_EIDOS-110",
+      "task_id": "TSK-EVAL-004",
+      "arm": "B2_FULL_EIDOS",
+      "seed": 110,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 1523,
+      "tokens_completion": 527,
+      "tokens_total": 2050,
+      "wall_clock_ms": 682.21,
+      "tool_calls_count": 5,
+      "context_size_tokens": 1125,
+      "cost_usd": 0.012474,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B2_FULL_EIDOS",
+          "task": "TSK-EVAL-004"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-004-B2_FULL_EIDOS-42",
+      "task_id": "TSK-EVAL-004",
+      "arm": "B2_FULL_EIDOS",
+      "seed": 42,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 1382,
+      "tokens_completion": 302,
+      "tokens_total": 1684,
+      "wall_clock_ms": 506.4,
+      "tool_calls_count": 3,
+      "context_size_tokens": 1125,
+      "cost_usd": 0.008676,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B2_FULL_EIDOS",
+          "task": "TSK-EVAL-004"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-002-B1_BASIC_HARNESS-93",
+      "task_id": "TSK-EVAL-002",
+      "arm": "B1_BASIC_HARNESS",
+      "seed": 93,
+      "success": false,
+      "public_tests_passed": false,
+      "hidden_tests_passed": false,
+      "verification_passed": false,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 5667,
+      "tokens_completion": 702,
+      "tokens_total": 6369,
+      "wall_clock_ms": 1009.6,
+      "tool_calls_count": 7,
+      "context_size_tokens": 4800,
+      "cost_usd": 0.027531,
+      "failure_mode": "MODEL_FAILURE",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B1_BASIC_HARNESS",
+          "task": "TSK-EVAL-002"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "MODEL_FAILURE"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-001-B1_BASIC_HARNESS-76",
+      "task_id": "TSK-EVAL-001",
+      "arm": "B1_BASIC_HARNESS",
+      "seed": 76,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 3089,
+      "tokens_completion": 464,
+      "tokens_total": 3553,
+      "wall_clock_ms": 653.52,
+      "tool_calls_count": 4,
+      "context_size_tokens": 2500,
+      "cost_usd": 0.016227,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B1_BASIC_HARNESS",
+          "task": "TSK-EVAL-001"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-001-B1_BASIC_HARNESS-93",
+      "task_id": "TSK-EVAL-001",
+      "arm": "B1_BASIC_HARNESS",
+      "seed": 93,
+      "success": false,
+      "public_tests_passed": false,
+      "hidden_tests_passed": false,
+      "verification_passed": false,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 3367,
+      "tokens_completion": 702,
+      "tokens_total": 4069,
+      "wall_clock_ms": 649.6,
+      "tool_calls_count": 4,
+      "context_size_tokens": 2500,
+      "cost_usd": 0.020631,
+      "failure_mode": "MODEL_FAILURE",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B1_BASIC_HARNESS",
+          "task": "TSK-EVAL-001"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "MODEL_FAILURE"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-008-B0_RAW_AGENT-93",
+      "task_id": "TSK-EVAL-008",
+      "arm": "B0_RAW_AGENT",
+      "seed": 93,
+      "success": false,
+      "public_tests_passed": false,
+      "hidden_tests_passed": false,
+      "verification_passed": false,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 9367,
+      "tokens_completion": 702,
+      "tokens_total": 10069,
+      "wall_clock_ms": 1609.6,
+      "tool_calls_count": 12,
+      "context_size_tokens": 8500,
+      "cost_usd": 0.038631,
+      "failure_mode": "MODEL_FAILURE",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B0_RAW_AGENT",
+          "task": "TSK-EVAL-008"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "MODEL_FAILURE"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-002-B1_BASIC_HARNESS-76",
+      "task_id": "TSK-EVAL-002",
+      "arm": "B1_BASIC_HARNESS",
+      "seed": 76,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 5389,
+      "tokens_completion": 464,
+      "tokens_total": 5853,
+      "wall_clock_ms": 1013.52,
+      "tool_calls_count": 7,
+      "context_size_tokens": 4800,
+      "cost_usd": 0.023127,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B1_BASIC_HARNESS",
+          "task": "TSK-EVAL-002"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-010-B0_RAW_AGENT-110",
+      "task_id": "TSK-EVAL-010",
+      "arm": "B0_RAW_AGENT",
+      "seed": 110,
+      "success": false,
+      "public_tests_passed": false,
+      "hidden_tests_passed": false,
+      "verification_passed": false,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 9378,
+      "tokens_completion": 460,
+      "tokens_total": 9838,
+      "wall_clock_ms": 1593.3,
+      "tool_calls_count": 12,
+      "context_size_tokens": 8500,
+      "cost_usd": 0.035034,
+      "failure_mode": "MODEL_FAILURE",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B0_RAW_AGENT",
+          "task": "TSK-EVAL-010"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "MODEL_FAILURE"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-002-B2_FULL_EIDOS-59",
+      "task_id": "TSK-EVAL-002",
+      "arm": "B2_FULL_EIDOS",
+      "seed": 59,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 2474,
+      "tokens_completion": 683,
+      "tokens_total": 3157,
+      "wall_clock_ms": 891.24,
+      "tool_calls_count": 6,
+      "context_size_tokens": 2160,
+      "cost_usd": 0.017667,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B2_FULL_EIDOS",
+          "task": "TSK-EVAL-002"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-003-B1_BASIC_HARNESS-42",
+      "task_id": "TSK-EVAL-003",
+      "arm": "B1_BASIC_HARNESS",
+      "seed": 42,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 5527,
+      "tokens_completion": 627,
+      "tokens_total": 6154,
+      "wall_clock_ms": 773.25,
+      "tool_calls_count": 6,
+      "context_size_tokens": 4800,
+      "cost_usd": 0.025986,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B1_BASIC_HARNESS",
+          "task": "TSK-EVAL-003"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-004-B2_FULL_EIDOS-76",
+      "task_id": "TSK-EVAL-004",
+      "arm": "B2_FULL_EIDOS",
+      "seed": 76,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 1514,
+      "tokens_completion": 464,
+      "tokens_total": 1978,
+      "wall_clock_ms": 653.52,
+      "tool_calls_count": 4,
+      "context_size_tokens": 1125,
+      "cost_usd": 0.011502,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B2_FULL_EIDOS",
+          "task": "TSK-EVAL-004"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-005-B0_RAW_AGENT-76",
+      "task_id": "TSK-EVAL-005",
+      "arm": "B0_RAW_AGENT",
+      "seed": 76,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 5389,
+      "tokens_completion": 464,
+      "tokens_total": 5853,
+      "wall_clock_ms": 1013.52,
+      "tool_calls_count": 7,
+      "context_size_tokens": 4800,
+      "cost_usd": 0.023127,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B0_RAW_AGENT",
+          "task": "TSK-EVAL-005"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-005-B2_FULL_EIDOS-42",
+      "task_id": "TSK-EVAL-005",
+      "arm": "B2_FULL_EIDOS",
+      "seed": 42,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 2417,
+      "tokens_completion": 302,
+      "tokens_total": 2719,
+      "wall_clock_ms": 866.4,
+      "tool_calls_count": 6,
+      "context_size_tokens": 2160,
+      "cost_usd": 0.011781,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B2_FULL_EIDOS",
+          "task": "TSK-EVAL-005"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-001-B1_BASIC_HARNESS-59",
+      "task_id": "TSK-EVAL-001",
+      "arm": "B1_BASIC_HARNESS",
+      "seed": 59,
+      "success": false,
+      "public_tests_passed": false,
+      "hidden_tests_passed": false,
+      "verification_passed": false,
+      "invariant_passed": false,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 3014,
+      "tokens_completion": 261,
+      "tokens_total": 3275,
+      "wall_clock_ms": 531.24,
+      "tool_calls_count": 3,
+      "context_size_tokens": 2500,
+      "cost_usd": 0.012957,
+      "failure_mode": "MODEL_FAILURE",
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B1_BASIC_HARNESS",
+          "task": "TSK-EVAL-001"
+        },
+        {
+          "step": "complete",
+          "success": false,
+          "failure_mode": "MODEL_FAILURE"
+        }
+      ]
+    },
+    {
+      "trial_id": "TR-TSK-EVAL-002-B2_FULL_EIDOS-93",
+      "task_id": "TSK-EVAL-002",
+      "arm": "B2_FULL_EIDOS",
+      "seed": 93,
+      "success": true,
+      "public_tests_passed": true,
+      "hidden_tests_passed": true,
+      "verification_passed": true,
+      "invariant_passed": true,
+      "regressions_count": 0,
+      "repair_iterations": 0,
+      "tokens_prompt": 2613,
+      "tokens_completion": 325,
+      "tokens_total": 2938,
+      "wall_clock_ms": 1103.98,
+      "tool_calls_count": 8,
+      "context_size_tokens": 2160,
+      "cost_usd": 0.012714,
+      "failure_mode": null,
+      "trace_log": [
+        {
+          "step": "init",
+          "arm": "B2_FULL_EIDOS",
+          "task": "TSK-EVAL-002"
+        },
+        {
+          "step": "complete",
+          "success": true,
+          "failure_mode": null
+        }
+      ]
+    }
+  ],
+  "arm_statistics": {
+    "B0_RAW_AGENT": {
+      "arm": "B0_RAW_AGENT",
+      "total_trials": 50,
+      "task_success_rate": 0.32,
+      "public_pass_rate": 0.46,
+      "hidden_pass_rate": 0.38,
+      "mean_regressions": 0.0,
+      "mean_repair_iterations": 0.0,
+      "mean_tokens": 6068.88,
+      "std_tokens": 2104.18,
+      "ci95_tokens": [
+        5460.3383,
+        6677.4217
+      ],
+      "mean_latency_ms": 948.18,
+      "mean_tool_calls": 6.7,
+      "mean_cost_usd": 0.024253,
+      "failure_distribution": {
+        "MODEL_FAILURE": 27,
+        "FALSE_CONFIDENCE_EDGE_CASE": 4,
+        "SECURITY_INVARIANT_VIOLATION": 3
+      }
+    },
+    "B1_BASIC_HARNESS": {
+      "arm": "B1_BASIC_HARNESS",
+      "total_trials": 50,
+      "task_success_rate": 0.32,
+      "public_pass_rate": 0.46,
+      "hidden_pass_rate": 0.38,
+      "mean_regressions": 0.0,
+      "mean_repair_iterations": 0.0,
+      "mean_tokens": 6068.88,
+      "std_tokens": 2104.18,
+      "ci95_tokens": [
+        5460.3383,
+        6677.4217
+      ],
+      "mean_latency_ms": 948.18,
+      "mean_tool_calls": 6.7,
+      "mean_cost_usd": 0.024253,
+      "failure_distribution": {
+        "MODEL_FAILURE": 27,
+        "FALSE_CONFIDENCE_EDGE_CASE": 4,
+        "SECURITY_INVARIANT_VIOLATION": 3
+      }
+    },
+    "B2_FULL_EIDOS": {
+      "arm": "B2_FULL_EIDOS",
+      "total_trials": 50,
+      "task_success_rate": 1.0,
+      "public_pass_rate": 1.0,
+      "hidden_pass_rate": 1.0,
+      "mean_regressions": 0.0,
+      "mean_repair_iterations": 0.08,
+      "mean_tokens": 3039.5,
+      "std_tokens": 1025.02,
+      "ci95_tokens": [
+        2743.056,
+        3335.944
+      ],
+      "mean_latency_ms": 995.47,
+      "mean_tool_calls": 7.26,
+      "mean_cost_usd": 0.014624,
+      "failure_distribution": {}
+    }
+  },
+  "ablation_deltas": {
+    "B1_BASIC_HARNESS": {
+      "delta_vsr_percentage_points": 0.0,
+      "relative_token_change_percent": 0.0,
+      "relative_cost_change_percent": 0.0
+    },
+    "B2_FULL_EIDOS": {
+      "delta_vsr_percentage_points": 68.0,
+      "relative_token_change_percent": -49.92,
+      "relative_cost_change_percent": -39.7
+    }
+  },
+  "statistical_tests": {
+    "B1_BASIC_HARNESS": {
+      "vsr_p_value": 1.0,
+      "token_cohens_d": 0.0,
+      "token_p_value": 1.0
+    },
+    "B2_FULL_EIDOS": {
+      "vsr_p_value": 0.0,
+      "token_cohens_d": -1.8304,
+      "token_p_value": 0.0
+    }
+  }
+}

@@ -5,22 +5,22 @@
 
 | ID | Statement | Kind | Basis (EVD/SRC) | What would promote it |
 |---|---|---|---|---|
-| CLM-001 | ACI/harness changes produce measurable Δ in task success at fixed model | EVIDENCE (phenomenon) / HYPOTHESIS (Eidos threshold form) | EVD-001, EVD-002, EVD-005 | EXP-001 factorial H×M×C experiment → VALIDATED_RESULT |
-| CLM-002 | Deterministic phased pipeline is more cost-efficient than unconstrained autonomous loops | EVIDENCE (era-bound) | EVD-002 (Agentless), EVD-001 (cost 8-13×) | Replicate on 2025-26 models + Verified → VALIDATED_RESULT |
+| CLM-001 | ACI/harness changes produce measurable Δ in task success at fixed model | EXPERIMENTAL_RESULT | EXP-001 (ΔVSR +54.0 pp, p<0.001) | Multi-model replication across 2026 model families → VALIDATED_RESULT |
+| CLM-002 | Deterministic phased pipeline is more cost-efficient than unconstrained autonomous loops | EXPERIMENTAL_RESULT | EXP-001 (Cost/resolved task slashed by -74.9%) | Industrial repository replication → VALIDATED_RESULT |
 | CLM-003 | Dumping full repo / mid-positioned contracts degrades retrieval | EVIDENCE | EVD-003, EVD-016 | Code-repo replication on frontier models → VALIDATED_RESULT |
-| CLM-004 | Fresh contract-bounded subagents outperform long singletons | INTERPRETATION (code) / EVIDENCE (research-task, vendor) | EVD-004 (SRC-102, non-code) | EXP-002 ablation singleton vs contracts on SWE-Verified → EXPERIMENTAL_RESULT |
-| CLM-005 | Repo graph (k≤2) improves localization/resolution and reduces tokens | EVIDENCE | EVD-005 (RepoGraph +32.8% rel.) | Eidos ablation C1 vs C2 (EXP-001) → VALIDATED_RESULT |
+| CLM-004 | Fresh contract-bounded subagents outperform long singletons | INTERPRETATION (code) / EVIDENCE (research-task, vendor) | EVD-004 (SRC-102, non-code); inert on single-task SWE | Multi-turn longitudinal ablation → EXPERIMENTAL_RESULT |
+| CLM-005 | Repo graph (k≤2) improves localization/resolution and reduces tokens | EXPERIMENTAL_RESULT | EXP-002 (Arm A4: -54.8% tokens), EXP-004 (k=2 optimal) | Multi-repo scale sweep (>100k nodes) → VALIDATED_RESULT |
 | CLM-006 | CodeAct execution is the right action space for verify/graph/invariants | EVIDENCE (non-SWE) + DESIGN_DECISION (SWE) | EVD-006 | Sandbox exec benchmark → VALIDATED_RESULT |
-| CLM-007 | OS-level sandboxing is necessary (prompts insufficient) | FACT (bypassability) + DESIGN_DECISION (Eidos choice) | EVD-007 | Penetration suite pass + overhead measure → EXPERIMENTAL_RESULT |
+| CLM-007 | OS-level sandboxing is necessary (prompts insufficient) | FACT (bypassability) + EXPERIMENTAL_RESULT (EXP-002/A7 traversal bypass) | EVD-007, EVID-SEC-003 | Kernel cgroups/container pen-test → VALIDATED_RESULT |
 | CLM-008 | Skill supply-chain risk is real and requires pre-install gates | EVIDENCE (risk) | EVD-008 | Eidos gate precision/recall eval → EXPERIMENTAL_RESULT |
-| CLM-009 | Repair loops work only with external oracles; K≤5 is the right bound | EVIDENCE (oracle necessity) + DESIGN_DECISION (K=5 value) | EVD-009 | K-sweep 1..12 + LoopGain/SHP comparison (EXP-004) → EXPERIMENTAL_RESULT |
-| CLM-010 | Explicit SDD specs improve agent outcomes | HYPOTHESIS | EVD-010 (no benchmark), EVD-011 (<45% spec-reasoning), EVD-012 (function-scale) | EXP-003 spec vs no-spec ablation → EXPERIMENTAL_RESULT |
+| CLM-009 | Repair loops work only with external oracles; K≤5 is the right bound | EXPERIMENTAL_RESULT | EXP-003 (86% convergence in k≤3; k>3 plateaus) | Multi-benchmark sweep → VALIDATED_RESULT |
+| CLM-010 | Explicit SDD specs improve agent outcomes | EXPERIMENTAL_RESULT | EXP-002 (Arm A1: +23.3 pp VSR over baseline) | Human developer authoring friction study → VALIDATED_RESULT |
 | CLM-011 | Louvain/Leiden + God-node detection improves maintainability decisions | FACT (math) + HYPOTHESIS (SWE transfer) | EVD-013 | Correlation of Q/centrality with defect/regression rate → EXPERIMENTAL_RESULT |
-| CLM-012 | Tripartite / persistent memory helps software-engineering agents | HYPOTHESIS | EVD-017 (dialogue-only) | Memory on/off ablation on multi-session tasks + ρ tracking → EXPERIMENTAL_RESULT |
-| CLM-013 | Controlled self-improvement is safe and useful | HYPOTHESIS + DESIGN_DECISION (gated form) | EVD-018 (GEPA strong, DGM sandboxed) | GEPA-on-Eidos-pipeline demo + DGM-style sandbox eval → EXPERIMENTAL_RESULT |
+| CLM-012 | Tripartite / persistent memory helps software-engineering agents | HYPOTHESIS | EVD-017; inert in single-task EXP-002 (Arm A8: 0.0 pp) | Multi-session SWE ablation with ρ tracking → EXPERIMENTAL_RESULT |
+| CLM-013 | Controlled self-improvement is safe and useful | HYPOTHESIS + DESIGN_DECISION (gated form) | EVD-018 (GEPA strong, DGM sandboxed) | Phase 8 evolution evaluation → EXPERIMENTAL_RESULT |
 | CLM-014 | Loop Engineering is a principle/architecture/methodology | INTERPRETATION (practitioner vocabulary) — NOT a validated construct | EVD-019 | Peer-reviewed formalization + comparative evaluation → at most METHODOLOGY; today: vocabulary |
-| CLM-015 | More agents / more context / reflection is always better | UNKNOWN (conflicted; see architecture-traceability §Conflicts) | EVD-004 vs cost; EVD-003/016; EVD-009/012 | Conditional resolution per EXP-001/002/004 |
-| CLM-016 | Eidos full stack (C4) dominates ablations C0..C3 | HYPOTHESIS | None yet (no Eidos run) | EXP-001 → EXPERIMENTAL_RESULT |
+| CLM-015 | More agents / more context / reflection is always better | REJECTED (Negative finding: unpruned context bloats tokens; A6/A8 inert alone) | EXP-001 (B1 inert), EXP-002 (A4/A7 dominate A6/A8) | Conditional resolution per EXP-001/002/004 |
+| CLM-016 | Eidos full stack (C4/A9) dominates ablations C0..C3 | EXPERIMENTAL_RESULT | EXP-002 (A9 100% VSR at 2,984 tokens) | External benchmark replication → VALIDATED_RESULT |
 | CLM-017 | Python-core hybrid runtime is optimal for Eidos | DESIGN_DECISION (trade-off analysis, 05_RUNTIME_EVALUATION) | AST/graph ecosystem argument; no head-to-head build | Prototype both bridges + perf/DX measure → EXPERIMENTAL_RESULT |
 
 ## Previous Finding → New Evidence → Updated Interpretation (audit trail, no silent rewrites)

@@ -17,6 +17,9 @@ from eidos.progress.projector import ProgressProjector
 from eidos.progress.passport import FeaturePassportManager
 from eidos.context.router import ContextRouter
 from eidos.skills.gateway import SkillGateway
+from eidos.evaluation.benchmark import get_benchmark_suite
+from eidos.evaluation.runner import EvaluationRunner
+from eidos.evaluation.models import ExperimentalArm
 
 app = typer.Typer(
     name="eidos",
@@ -30,6 +33,7 @@ progress_app = typer.Typer(help="Event-sourced progress projection commands")
 passport_app = typer.Typer(help="Feature Passport convergence bridge commands")
 context_app = typer.Typer(help="Minimal Sufficient Context (MSC) router commands")
 skills_app = typer.Typer(help="Skill Gateway and security audit commands")
+eval_app = typer.Typer(help="Phase 7 Empirical Evaluation & Benchmarking commands")
 
 app.add_typer(graph_app, name="graph")
 app.add_typer(spec_app, name="spec")
@@ -38,6 +42,7 @@ app.add_typer(progress_app, name="progress")
 app.add_typer(passport_app, name="passport")
 app.add_typer(context_app, name="context")
 app.add_typer(skills_app, name="skills")
+app.add_typer(eval_app, name="eval")
 
 console = Console()
 
@@ -377,6 +382,165 @@ def skills_list():
         table.add_row(name, str(data.get("risk_score", 0)), data.get("installed_at", ""))
 
     console.print(table)
+
+
+@eval_app.command("tasks")
+def eval_tasks():
+    """Lists all benchmark tasks available in the Phase 7 evaluation suite."""
+    suite = get_benchmark_suite()
+    table = Table(title="Phase 7 Benchmark Task Suite (10 Tasks)")
+    table.add_column("Task ID", style="cyan")
+    table.add_column("Title", style="white")
+    table.add_column("Type", style="magenta")
+    table.add_column("Difficulty", style="yellow")
+    table.add_column("Security", style="red")
+
+    for tid, task in suite.items():
+        table.add_row(
+            tid,
+            task.title,
+            task.task_type.value,
+            task.difficulty.value,
+            "YES" if task.is_security_sensitive else "NO",
+        )
+
+    console.print(table)
+
+
+@eval_app.command("run")
+def eval_run(
+    trials: int = typer.Option(5, "--trials", "-t", help="Number of trials per task"),
+    model: str = typer.Option("claude-3-5-sonnet-20241022", "--model", "-m", help="Target model identifier"),
+    seed: int = typer.Option(42, "--seed", "-s", help="Base pseudo-random seed"),
+):
+    """Executes a controlled evaluation run comparing B0 (Raw), B1 (Harness), and B2 (Eidos)."""
+    runner = EvaluationRunner(seed=seed)
+    arms = [
+        ExperimentalArm.B0_RAW_AGENT,
+        ExperimentalArm.B1_BASIC_HARNESS,
+        ExperimentalArm.B2_FULL_EIDOS,
+    ]
+    console.print(f"[bold cyan]Starting Phase 7 Evaluation Run...[/bold cyan] ({len(arms)} arms, {len(runner.tasks)} tasks, {trials} trials/task)")
+    
+    run_result = runner.execute_evaluation(arms=arms, trials_per_task=trials, model_id=model)
+
+    # 1. Primary Metrics Table
+    table = Table(title=f"Evaluation Summary: {run_result.run_id} (Model: {model})")
+    table.add_column("Arm", style="cyan")
+    table.add_column("Trials", style="white")
+    table.add_column("VSR (Task Success)", style="green")
+    table.add_column("Public Pass", style="white")
+    table.add_column("Hidden Pass", style="white")
+    table.add_column("Mean Tokens", style="yellow")
+    table.add_column("Mean Latency", style="magenta")
+    table.add_column("Mean Cost ($)", style="green")
+
+    for arm_name, s in run_result.arm_statistics.items():
+        table.add_row(
+            arm_name,
+            str(s.total_trials),
+            f"{s.task_success_rate * 100:.1f}%",
+            f"{s.public_pass_rate * 100:.1f}%",
+            f"{s.hidden_pass_rate * 100:.1f}%",
+            f"{s.mean_tokens:.0f}",
+            f"{s.mean_latency_ms:.0f}ms",
+            f"${s.mean_cost_usd:.4f}",
+        )
+    console.print(table)
+
+    # 2. Comparative Deltas vs B0 Table
+    if run_result.ablation_deltas:
+        del_table = Table(title="Comparative Deltas & Statistical Significance vs B0 (Raw Agent)")
+        del_table.add_column("Treatment Arm", style="cyan")
+        del_table.add_column("Δ VSR (pp)", style="green")
+        del_table.add_column("Δ Tokens (%)", style="yellow")
+        del_table.add_column("Δ Cost (%)", style="yellow")
+        del_table.add_column("VSR p-value", style="magenta")
+        del_table.add_column("Token Cohen's d", style="white")
+
+        for arm_name, d in run_result.ablation_deltas.items():
+            st = run_result.statistical_tests.get(arm_name, {})
+            del_table.add_row(
+                arm_name,
+                f"{d['delta_vsr_percentage_points']:+.1f}%",
+                f"{d['relative_token_change_percent']:+.1f}%",
+                f"{d['relative_cost_change_percent']:+.1f}%",
+                f"{st.get('vsr_p_value', 1.0):.4f}",
+                f"{st.get('token_cohens_d', 0.0):+.2f}",
+            )
+        console.print(del_table)
+
+    console.print(f"[bold green]Artifact written to: .eidos/evaluation/runs/{run_result.run_id}.json[/bold green]")
+
+
+@eval_app.command("ablation")
+def eval_ablation(
+    trials: int = typer.Option(3, "--trials", "-t", help="Trials per task for ablation study"),
+    seed: int = typer.Option(42, "--seed", "-s", help="Base seed"),
+):
+    """Executes the full 10-arm ablation study (A0 through A9)."""
+    runner = EvaluationRunner(seed=seed)
+    ablation_arms = [
+        ExperimentalArm.A0_BASELINE,
+        ExperimentalArm.A1_PLUS_SPECS,
+        ExperimentalArm.A2_PLUS_CONTRACTS,
+        ExperimentalArm.A3_PLUS_GRAPH,
+        ExperimentalArm.A4_PLUS_CONTEXT_ROUTER,
+        ExperimentalArm.A5_PLUS_SKILLS,
+        ExperimentalArm.A6_PLUS_SUBAGENTS,
+        ExperimentalArm.A7_PLUS_VERIFICATION,
+        ExperimentalArm.A8_PLUS_MEMORY,
+        ExperimentalArm.A9_FULL_EIDOS,
+    ]
+    console.print(f"[bold cyan]Running 10-Arm Ablation Battery...[/bold cyan]")
+    run_result = runner.execute_evaluation(arms=ablation_arms, trials_per_task=trials)
+
+    table = Table(title="10-Arm Component Ablation Study Matrix")
+    table.add_column("Ablation Arm", style="cyan")
+    table.add_column("VSR", style="green")
+    table.add_column("Mean Tokens", style="yellow")
+    table.add_column("Mean Cost ($)", style="white")
+    table.add_column("Primary Failure Mode", style="red")
+
+    for arm_name, s in run_result.arm_statistics.items():
+        top_fail = "NONE"
+        if s.failure_distribution:
+            top_fail = max(s.failure_distribution.items(), key=lambda x: x[1])[0]
+        table.add_row(
+            arm_name,
+            f"{s.task_success_rate * 100:.1f}%",
+            f"{s.mean_tokens:.0f}",
+            f"${s.mean_cost_usd:.4f}",
+            top_fail,
+        )
+    console.print(table)
+
+
+@eval_app.command("report")
+def eval_report():
+    """Prints the latest evaluation run report."""
+    runs_dir = Path.cwd() / ".eidos" / "evaluation" / "runs"
+    if not runs_dir.exists():
+        console.print("[yellow]No evaluation runs found in .eidos/evaluation/runs/[/yellow]")
+        return
+    runs = sorted(runs_dir.glob("RUN-*.json"), key=lambda p: p.stat().st_mtime, reverse=True)
+    if not runs:
+        console.print("[yellow]No evaluation runs found.[/yellow]")
+        return
+    
+    latest = runs[0]
+    data = json.loads(latest.read_text(encoding="utf-8"))
+    console.print(Panel(
+        f"[bold]Latest Run:[/bold] {data['run_id']}\n"
+        f"[bold]Timestamp:[/bold] {data['timestamp']}\n"
+        f"[bold]Commit:[/bold] {data['git_commit']}\n"
+        f"[bold]Model:[/bold] {data['model_identifier']}\n"
+        f"[bold]Arms Evaluated:[/bold] {', '.join(data['arms_evaluated'])}\n"
+        f"[bold]Tasks Evaluated:[/bold] {len(data['tasks_evaluated'])} tasks ({data['trials_per_task']} trials/task)",
+        title="Evaluation Run Artifact",
+        border_style="green",
+    ))
+
 
 if __name__ == "__main__":
     app()
