@@ -13,6 +13,10 @@ from eidos.intelligence.invariants import check_invariants, load_default_invaria
 from eidos.graph.engine import RepositoryGraphEngine
 from eidos.verification.runner import run_verification
 from eidos.progress.logger import ProgressLogger
+from eidos.progress.projector import ProgressProjector
+from eidos.progress.passport import FeaturePassportManager
+from eidos.context.router import ContextRouter
+from eidos.skills.gateway import SkillGateway
 
 app = typer.Typer(
     name="eidos",
@@ -22,10 +26,18 @@ app = typer.Typer(
 graph_app = typer.Typer(help="Repository Intelligence Graph commands")
 spec_app = typer.Typer(help="Specification-Driven Development commands")
 invariant_app = typer.Typer(help="Architectural Invariant enforcement commands")
+progress_app = typer.Typer(help="Event-sourced progress projection commands")
+passport_app = typer.Typer(help="Feature Passport convergence bridge commands")
+context_app = typer.Typer(help="Minimal Sufficient Context (MSC) router commands")
+skills_app = typer.Typer(help="Skill Gateway and security audit commands")
 
 app.add_typer(graph_app, name="graph")
 app.add_typer(spec_app, name="spec")
 app.add_typer(invariant_app, name="invariant")
+app.add_typer(progress_app, name="progress")
+app.add_typer(passport_app, name="passport")
+app.add_typer(context_app, name="context")
+app.add_typer(skills_app, name="skills")
 
 console = Console()
 
@@ -271,6 +283,100 @@ def verify():
     
     if not result.converged:
         raise typer.Exit(code=1)
+
+@progress_app.command("show")
+def progress_show():
+    """Projects active workspace progress from immutable event log."""
+    cwd = Path.cwd()
+    projector = ProgressProjector(cwd)
+    summary = projector.project_workspace()
+
+    table = Table(title="Eidos Progress & Observability Projector")
+    table.add_column("Dimension", style="cyan")
+    table.add_column("Value", style="green")
+
+    table.add_row("Total Tasks", str(summary["total_tasks"]))
+    table.add_row("Converged Tasks", str(summary["converged_tasks"]))
+    table.add_row("Unconverged Tasks", str(summary["unconverged_tasks"]))
+    table.add_row("Verified Success Rate (VSR)", f"{summary['verified_success_rate']}%")
+    table.add_row("Total Tokens Consumed", str(summary["total_tokens_consumed"]))
+    table.add_row("Total Cost (USD)", f"${summary['total_cost_usd']:.4f}")
+    table.add_row("Total Repairs", str(summary["total_repairs"]))
+    table.add_row("Tool Invocations", str(summary["total_tool_invocations"]))
+
+    console.print(table)
+
+@passport_app.command("list")
+def passport_list():
+    """Lists stamped Feature Passports."""
+    cwd = Path.cwd()
+    manager = FeaturePassportManager(cwd)
+    passports = list(manager.passports_dir.glob("*.json"))
+
+    table = Table(title="Feature Passports")
+    table.add_column("Feature ID", style="cyan")
+    table.add_column("Status", style="green")
+    table.add_column("Passport ID", style="magenta")
+
+    for pf in sorted(passports):
+        try:
+            data = json.loads(pf.read_text(encoding="utf-8"))
+            table.add_row(data.get("feature_id", pf.stem), data.get("status", "UNKNOWN"), data.get("passport_id", ""))
+        except Exception:
+            continue
+
+    console.print(table)
+
+@context_app.command("assemble")
+def context_assemble(
+    target: str = typer.Argument(..., help="Target file to route"),
+    max_tokens: int = typer.Option(4000, "--max-tokens", "-m", help="Total token budget"),
+):
+    """Assembles Minimal Sufficient Context (MSC) for a target file."""
+    cwd = Path.cwd()
+    router = ContextRouter(cwd)
+    req = {
+        "request_id": "CLI-REQ-01",
+        "task": {"task_id": "TASK-CLI", "objective": f"Route context for {target}", "target_files": [target]},
+        "context_sources": {"include_graph": True, "include_rules": True, "include_specs": True, "include_evidence": True},
+        "budget_constraints": {"max_tokens": max_tokens, "reserve_for_generation": 1000, "k_hop_limit": 1},
+        "security_constraints": {"quarantine_adversarial": True, "isolated_project_id": f"PROJ-{cwd.name.upper()}"},
+    }
+    result = router.assemble_context(req)
+    resp = result["routing_response"]
+
+    table = Table(title=f"Minimal Sufficient Context (MSC) - {target}")
+    table.add_column("Property", style="cyan")
+    table.add_column("Value", style="green")
+
+    table.add_row("MSC ID", resp["msc_id"])
+    table.add_row("Assembled Tokens", str(resp["total_tokens"]))
+    table.add_row("Assembled Items", str(len(resp["assembled_items"])))
+    table.add_row("Pinned Contracts", ", ".join(resp["pinned_boundary_contracts"]))
+    table.add_row("Budget Exhausted", str(resp["budget_exhausted"]))
+    table.add_row("Quarantined Exclusions", str(len(resp["quarantined_exclusions"])))
+
+    console.print(table)
+
+@skills_app.command("list")
+def skills_list():
+    """Lists installed and pinned skills."""
+    cwd = Path.cwd()
+    lock_file = cwd / ".eidos" / "skills-lock.json"
+    if not lock_file.exists():
+        console.print("[yellow]No skills installed. skills-lock.json not found.[/yellow]")
+        return
+
+    lock = json.loads(lock_file.read_text(encoding="utf-8"))
+    table = Table(title="Installed Agent Skills (skills-lock.json)")
+    table.add_column("Skill Name", style="cyan")
+    table.add_column("Risk Score", style="green")
+    table.add_column("Installed At", style="white")
+
+    for name, data in lock.items():
+        table.add_row(name, str(data.get("risk_score", 0)), data.get("installed_at", ""))
+
+    console.print(table)
 
 if __name__ == "__main__":
     app()

@@ -7,6 +7,7 @@ from pydantic import BaseModel, Field
 
 class NodeType(str, Enum):
     FILE = "File"
+    DIRECTORY = "Directory"
     MODULE = "Module"
     CLASS = "Class"
     FUNCTION = "Function"
@@ -17,10 +18,15 @@ class NodeType(str, Enum):
     SPEC = "Spec"
     SUBSPEC = "SubSpec"
     TASK = "Task"
+    CONTRACT = "Contract"
     AGENT = "Agent"
     SKILL = "Skill"
     RULE = "Rule"
+    COMMIT = "Commit"
     FINDING = "Finding"
+    SESSION = "Session"
+    FEATURE = "Feature"
+    EVIDENCE = "Evidence"
 
 class EdgeRelation(str, Enum):
     IMPLEMENTS = "IMPLEMENTS"
@@ -125,12 +131,17 @@ class VerificationResultModel(BaseModel):
     verification_id: str
     task_id: str
     converged: bool
+    verdict: str = "CONVERGED"
     test_passed: int = 0
     test_failed: int = 0
     type_errors: int = 0
     lint_violations: int = 0
     invariant_violations: list[str] = Field(default_factory=list)
     drift_detected: list[str] = Field(default_factory=list)
+    oracle_trace: Optional[str] = None
+    repair_eligibility: dict[str, Any] = Field(default_factory=dict)
+    escalation_payload: Optional[dict[str, Any]] = None
+    layer_results: dict[str, Any] = Field(default_factory=dict)
     timestamp: str = Field(default_factory=lambda: datetime.now(timezone.utc).isoformat())
 
 class ProgressEventModel(BaseModel):
